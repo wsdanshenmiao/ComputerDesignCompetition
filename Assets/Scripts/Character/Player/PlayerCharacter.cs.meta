@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7881288afa1c63469201d975653e966
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - templateCharacterPara: {fileID: 11400000, guid: e58afccb77ce57b4bbfe822aeb5fbe94, type: 2}
+  - characterPara: {instanceID: 0}
+  - templatePlayerPara: {fileID: 11400000, guid: f0b324b2a0c2a6f4fa383cb01c03e7e9, type: 2}
+  - playerPara: {instanceID: 0}
+  executionOrder: -1
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
