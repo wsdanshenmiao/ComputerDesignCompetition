@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Character : MonoBehaviour, ISaveable
+public class Character : MonoBehaviour
 {
     public CharacterSO templateCharacterPara;
     [HideInInspector] public CharacterSO charaPara;
@@ -68,8 +68,6 @@ public class Character : MonoBehaviour, ISaveable
 
     protected virtual void Start()
     {
-        ISaveable saveable = this;
-        saveable.RegisterSaveData();
     }
 
     protected virtual void Update()
@@ -79,8 +77,6 @@ public class Character : MonoBehaviour, ISaveable
 
     protected virtual void OnDestroy()
     {
-        ISaveable saveable = this;
-        saveable.UnRegitsterSaveData();
     }
 
     /// <summary>

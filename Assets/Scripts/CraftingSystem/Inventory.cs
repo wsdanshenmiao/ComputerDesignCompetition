@@ -6,18 +6,17 @@ using UnityEngine;
 public class Inventory
 {
     private List<Item> items;
+    public event EventHandler OnItemListChanged; 
 
     public Inventory()
     {
         items = new List<Item>();
-        
-        AddItem(new Item{itemType = Item.ItemType.Magnet, amount = 1});
     }
 
     public void AddItem(Item item)
     {
         items.Add(item);
-        Debug.Log("AddItem");
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Item> GetItems()

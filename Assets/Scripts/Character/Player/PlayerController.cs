@@ -21,7 +21,6 @@ using UnityEngine.InputSystem;
 public class PlayerController : Singleton<PlayerController>
 {
     [Header("事件监听")]
-    [SerializeField] private BoolEventSO changeSizeEvent;
     public SceneLoadEventSO SceneLoadEvent;
     public VoidEventSO AfterSceneLoadEvent;
 
@@ -42,7 +41,12 @@ public class PlayerController : Singleton<PlayerController>
     public bool touchRightWall => physicsCheck.touchRightWall;
 
     public bool finishLoadScene = false;
-
+    
+    
+    [SerializeField] private UI_Inventory uiInventory;
+    private Inventory inventory;
+    
+    
     protected override void Awake()
     {
         base.Awake();
@@ -53,12 +57,12 @@ public class PlayerController : Singleton<PlayerController>
         }
         playerCharacter = GetComponent<PlayerCharacter>();
         rigidBody = GetComponent<Rigidbody2D>();
+        inventory = new Inventory();
     }
 
     protected void OnEnable()
     {
         playerInput.EnableGamePlayInput();
-        changeSizeEvent.OnEventRaised += OnChangeSize;
         SceneLoadEvent.OnEventRaised += OnSceneLoad;
         AfterSceneLoadEvent.OnEventRaised += AfterSceneLoad;
     }
@@ -68,12 +72,12 @@ public class PlayerController : Singleton<PlayerController>
         float scale = playerCharacter.playerPara.originSize;
         transform.localScale = new Vector3(scale, scale, scale);
         originGravity = rigidBody.gravityScale;
+        uiInventory.SetInventory(inventory);
     }
 
     protected void OnDisable()
     {
         playerInput.DisableGamePlayInput();
-        changeSizeEvent.OnEventRaised -= OnChangeSize;
         SceneLoadEvent.OnEventRaised -= OnSceneLoad;
         AfterSceneLoadEvent.OnEventRaised -= AfterSceneLoad;
     }
