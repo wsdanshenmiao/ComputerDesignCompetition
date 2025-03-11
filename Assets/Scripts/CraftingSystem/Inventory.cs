@@ -1,26 +1,38 @@
 
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Inventory
 {
-    private List<Item> items;
+    private List<Item> itemList;
     public event EventHandler OnItemListChanged; 
 
     public Inventory()
     {
-        items = new List<Item>();
+        itemList = new List<Item>();
     }
 
     public void AddItem(Item item)
     {
-        items.Add(item);
+        // 可堆叠
+        bool hasItem = false;
+        foreach(Item inventoryItem in itemList) {
+            if (item.itemScriptableObject.itemType == 
+                inventoryItem.itemScriptableObject.itemType) {
+                inventoryItem.amount++;
+                hasItem = true;
+                break;
+            }
+        }
+        // 没有则新建
+        if (!hasItem) {
+            itemList.Add(item);
+        }
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Item> GetItems()
     {
-        return items;
+        return itemList;
     }
 }

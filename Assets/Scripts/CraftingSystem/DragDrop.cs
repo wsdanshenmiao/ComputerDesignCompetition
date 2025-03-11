@@ -6,11 +6,14 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour
 {
     private Vector3 startPos;
-    [SerializeField] private RectTransform correctTrans;
+    private Vector3 targetPos;
     [SerializeField] private bool isFinished;
     private bool canDragging;
     
-    RectTransform rectTransform;
+    private RectTransform rectTransform;
+    
+    // 一次只能移动一个， 防止重复移动
+    static private DragDrop catchDrag;
     
     void Awake()
     {
@@ -28,7 +31,12 @@ public class DragDrop : MonoBehaviour
         DragAndDrop();
     }
 
-    void DragAndDrop()
+    public void SetTargetPos(Vector3 targetPos)
+    {
+        this.targetPos = targetPos;
+    }
+    
+    private void DragAndDrop()
     {
         // 鼠标位置
         if (Input.GetMouseButtonDown(0)) {
@@ -37,9 +45,10 @@ public class DragDrop : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             canDragging = false;
-            if (Mathf.Abs(rectTransform.position.x - correctTrans.position.x) < rectTransform.rect.width / 10 &&
-                Mathf.Abs(rectTransform.position.y - correctTrans.position.y) < rectTransform.rect.height / 10) {
-                rectTransform.position = correctTrans.position;
+            catchDrag = null;
+            if (Mathf.Abs(rectTransform.position.x - targetPos.x) < rectTransform.rect.width / 10 &&
+                Mathf.Abs(rectTransform.position.y - targetPos.y) < rectTransform.rect.height / 10) {
+                rectTransform.position = targetPos;
             }
             else {
                 rectTransform.position = startPos;
@@ -48,7 +57,9 @@ public class DragDrop : MonoBehaviour
         if (canDragging) {
             Vector2 pos = rectTransform.position;
             if (Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 && 
-                Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2) {
+                Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2 &&
+                catchDrag == null || catchDrag == this) {
+                catchDrag = this;
                 rectTransform.position = Input.mousePosition;
             }
         }

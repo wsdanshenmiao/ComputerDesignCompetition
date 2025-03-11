@@ -58,6 +58,8 @@ public class PlayerController : Singleton<PlayerController>
         playerCharacter = GetComponent<PlayerCharacter>();
         rigidBody = GetComponent<Rigidbody2D>();
         inventory = new Inventory();
+        //inventory.AddItem(new Item(){itemType = Item.ItemType.MetallicCard, amount = 1});
+        //inventory.AddItem(new Item(){itemType = Item.ItemType.Magnet, amount = 1});
     }
 
     protected void OnEnable()

@@ -1,4 +1,6 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ItemAssets : Singleton<ItemAssets>
 {
@@ -7,4 +9,9 @@ public class ItemAssets : Singleton<ItemAssets>
     
     public Sprite magnetSprite;
     public Sprite metallicCardSprite;
+    public Sprite magneticNeedleSprite;
+
+    public RectTransform magnetTargetPos; 
+    public RectTransform metallicCardTargetPos;
+    public RectTransform magneticNeedleTargetPos;
 }
