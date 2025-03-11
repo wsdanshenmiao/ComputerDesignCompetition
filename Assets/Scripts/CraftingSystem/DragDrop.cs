@@ -11,9 +11,11 @@ public class DragDrop : MonoBehaviour
     private bool canDragging;
     
     private RectTransform rectTransform;
+
+    public float catchDis = 1;
     
-    // 一次只能移动一个， 防止重复移动
-    static private DragDrop catchDrag;
+    // 一次只能移动一个， 防止重复移动, 为null时则没有拖动物品
+    static public DragDrop catchDrag;
     
     void Awake()
     {
@@ -45,14 +47,14 @@ public class DragDrop : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             canDragging = false;
-            catchDrag = null;
-            if (Mathf.Abs(rectTransform.position.x - targetPos.x) < rectTransform.rect.width / 10 &&
-                Mathf.Abs(rectTransform.position.y - targetPos.y) < rectTransform.rect.height / 10) {
+            if (Mathf.Abs(rectTransform.position.x - targetPos.x) < catchDis&&
+                Mathf.Abs(rectTransform.position.y - targetPos.y) < catchDis) {
                 rectTransform.position = targetPos;
             }
             else {
                 rectTransform.position = startPos;
             }
+            catchDrag = null;
         }
         if (canDragging) {
             Vector2 pos = rectTransform.position;

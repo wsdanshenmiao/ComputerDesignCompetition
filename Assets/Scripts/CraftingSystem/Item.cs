@@ -11,7 +11,7 @@ public class Item
         Magnet, MetallicCard, MagneticNeedle
     }
     
-    [FormerlySerializedAs("scriptableObject")] public ItemScriptableObject itemScriptableObject;
+    public ItemScriptableObject itemScriptableObject;
     public int amount;
 
     public Sprite GetSprite()

@@ -43,10 +43,6 @@ public class PlayerController : Singleton<PlayerController>
     public bool finishLoadScene = false;
     
     
-    [SerializeField] private UI_Inventory uiInventory;
-    private Inventory inventory;
-    
-    
     protected override void Awake()
     {
         base.Awake();
@@ -56,10 +52,7 @@ public class PlayerController : Singleton<PlayerController>
             physicsCheck = GetComponent<PhysicsCheck>();
         }
         playerCharacter = GetComponent<PlayerCharacter>();
-        rigidBody = GetComponent<Rigidbody2D>();
-        inventory = new Inventory();
-        //inventory.AddItem(new Item(){itemType = Item.ItemType.MetallicCard, amount = 1});
-        //inventory.AddItem(new Item(){itemType = Item.ItemType.Magnet, amount = 1});
+        rigidBody = GetComponent<Rigidbody2D>(); 
     }
 
     protected void OnEnable()
@@ -74,7 +67,6 @@ public class PlayerController : Singleton<PlayerController>
         float scale = playerCharacter.playerPara.originSize;
         transform.localScale = new Vector3(scale, scale, scale);
         originGravity = rigidBody.gravityScale;
-        uiInventory.SetInventory(inventory);
     }
 
     protected void OnDisable()
