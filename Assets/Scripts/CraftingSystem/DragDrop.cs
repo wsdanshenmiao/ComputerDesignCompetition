@@ -1,22 +1,25 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour
 {
+    // 事件广播
+    [SerializeField] private SlotChangeEvent SlotChangeEvent;
+
+    private Item item;
+
     private Vector3 startPos;
-    private Vector3 targetPos;
-    [SerializeField] private bool isFinished;
+
+    private CraftingSlot target;
+
     private bool canDragging;
-    
+
     private RectTransform rectTransform;
 
     public float catchDis = 1;
-    
+
     // 一次只能移动一个， 防止重复移动, 为null时则没有拖动物品
-    static public DragDrop catchDrag;
-    
+    static private DragDrop catchDrag;
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -33,39 +36,61 @@ public class DragDrop : MonoBehaviour
         DragAndDrop();
     }
 
-    public void SetTargetPos(Vector3 targetPos)
+    public void SetTarget(CraftingSlot target)
     {
-        this.targetPos = targetPos;
+        this.target = target;
     }
-    
+
+    public void SetItem(Item item)
+    {
+        this.item = item;
+    }
+
+    static public DragDrop GetCatchDrop()
+    {
+        return catchDrag;
+    }
+
     private void DragAndDrop()
     {
         // 鼠标位置
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             canDragging = true;
+            if (target != null)
+            {
+                target.item = null;
+            }
         }
         if (Input.GetMouseButtonUp(0))
         {
             canDragging = false;
-            if (Mathf.Abs(rectTransform.position.x - targetPos.x) < catchDis&&
-                Mathf.Abs(rectTransform.position.y - targetPos.y) < catchDis) {
-                rectTransform.position = targetPos;
+
+            if (target != null &&
+                Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
+                Mathf.Abs(rectTransform.position.y - target.rectTransform.position.y) < catchDis)
+            {
+                rectTransform.position = target.rectTransform.position;
+                target.item = item;
             }
-            else {
+            else
+            {
                 rectTransform.position = startPos;
             }
             catchDrag = null;
         }
-        if (canDragging) {
+        if (canDragging)
+        {
             Vector2 pos = rectTransform.position;
-            if (Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 && 
+            if (Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
                 Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2 &&
-                catchDrag == null || catchDrag == this) {
+                catchDrag == null || catchDrag == this)
+            {
                 catchDrag = this;
                 rectTransform.position = Input.mousePosition;
             }
         }
 
-        
+
     }
 }
