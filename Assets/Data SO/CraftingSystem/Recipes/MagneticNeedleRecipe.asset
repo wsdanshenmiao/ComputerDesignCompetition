@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
   m_Name: MagneticNeedleRecipe
   m_EditorClassIdentifier: 
-  outputItem: {fileID: 0}
+  outputItem: {fileID: 11400000, guid: a492e2bae6ff9d946af871ad603522a9, type: 2}
   inputItems:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: afd5cdb9fc147e549ab9bd81559d5ca3, type: 2}
+  - {fileID: 11400000, guid: 233b3d8e38889ac419d0921029f6fb9a, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
