@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class DragDrop : MonoBehaviour
@@ -14,6 +15,8 @@ public class DragDrop : MonoBehaviour
     private bool canDragging;
 
     private RectTransform rectTransform;
+    
+    private TMP_Text  text;
 
     public float catchDis = 1;
 
@@ -23,6 +26,7 @@ public class DragDrop : MonoBehaviour
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        text = GetComponentInChildren<TMP_Text>();
     }
 
     private void Start()
@@ -44,6 +48,9 @@ public class DragDrop : MonoBehaviour
     public void SetItem(Item item)
     {
         this.item = item;
+        if (text != null) {
+            text.text = item?.amount.ToString();
+        }
     }
 
     static public DragDrop GetCatchDrop()
@@ -53,10 +60,13 @@ public class DragDrop : MonoBehaviour
 
     private void DragAndDrop()
     {
+        Vector2 pos = rectTransform.position;
+        bool touchDrop = Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
+                         Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2;
         // 鼠标位置
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && touchDrop)
         {
-            canDragging = true;
+            canDragging = !canDragging;
             if (target != null)
             {
                 target.item = null;
@@ -64,8 +74,6 @@ public class DragDrop : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            canDragging = false;
-
             if (target != null &&
                 Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
                 Mathf.Abs(rectTransform.position.y - target.rectTransform.position.y) < catchDis)
@@ -81,10 +89,7 @@ public class DragDrop : MonoBehaviour
         }
         if (canDragging)
         {
-            Vector2 pos = rectTransform.position;
-            if (Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
-                Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2 &&
-                catchDrag == null || catchDrag == this)
+            if ( canDragging && catchDrag == null || catchDrag == this)
             {
                 catchDrag = this;
                 rectTransform.position = Input.mousePosition;

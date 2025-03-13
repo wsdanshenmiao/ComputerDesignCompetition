@@ -43,13 +43,13 @@ public class CraftingSystem : Singleton<CraftingSystem>
         {
             itemScriptableObject = items.Find(
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Magnet; }),
-            amount = 1
+            amount = 4
         });
         inventory.AddItem(new Item()
         {
             itemScriptableObject = items.Find(
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.MetallicCard; }),
-            amount = 1
+            amount = 4
         });
     }
 
@@ -67,14 +67,14 @@ public class CraftingSystem : Singleton<CraftingSystem>
     /// 根据现在合成台中的物品判断能合成什么物品
     /// </summary>
     /// <returns></returns> 能合成的物品，没有则返回null 
-    public ItemScriptableObject GetRecipes()
+    public RecipeScriptableObject GetRecipes()
     {
-        ItemScriptableObject ret = null;
+        RecipeScriptableObject ret = null;
         foreach (RecipeScriptableObject recipe in recipes)
         {
             if (CheckRecipe(recipe))
             {
-                ret = recipe.outputItem;
+                ret = recipe;
                 break;
             }
         }
@@ -117,7 +117,7 @@ public class CraftingSystem : Singleton<CraftingSystem>
             throw new System.IndexOutOfRangeException();
         }
 
-        var item = craftingSlots[y * (int)craftingTableSize.x + x].item;
+        var item = craftingSlots[y * craftingTableSize.x + x].item;
         return item == null ? null : item.itemScriptableObject;
     }
 

@@ -10,6 +10,8 @@ public class UI_Inventory : MonoBehaviour
     #region Public
     public float itemCellSize;
     public float tableCellSize;
+
+    public uint itemCellX = 4;
     #endregion
 
     #region Private
@@ -98,8 +100,8 @@ public class UI_Inventory : MonoBehaviour
 
     private void SetOutputSlot()
     {
-        var itemScriptableObject = CraftingSystem.Instance.GetRecipes();
-        if (itemScriptableObject == null)
+        var recipe = CraftingSystem.Instance.GetRecipes();
+        if (recipe == null)
         {
             outputCraftingSlot.SetImage(null);
             outputCraftingSlot.item = null;
@@ -107,11 +109,11 @@ public class UI_Inventory : MonoBehaviour
         }
         else if (outputCraftingSlot.item == null)
         {
-            outputCraftingSlot.SetImage(itemScriptableObject.itemSprite);
+            outputCraftingSlot.SetImage(recipe.outputItem.itemSprite);
             outputCraftingSlot.item = new Item()
             {
-                itemScriptableObject = itemScriptableObject,
-                amount = 1
+                itemScriptableObject = recipe.outputItem,
+                amount = recipe.amount
             };
         }
     }
@@ -159,21 +161,23 @@ public class UI_Inventory : MonoBehaviour
         int x = 0, y = 0;
         foreach (var item in inventory.GetItems())
         {
-            RectTransform trans = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
-            trans.gameObject.SetActive(true);
-            trans.anchoredPosition = new Vector2(trans.anchoredPosition.x + x * itemCellSize,
-                trans.anchoredPosition.y - y * itemCellSize);
-            DragDrop dragDrop = trans.GetComponent<DragDrop>();
-            dragDrop.SetItem(item);
-            Image image = trans.Find("Image").GetComponent<Image>();
-            image.sprite = item.GetSprite();
-            x++;
-            if (x >= CraftingSystem.craftingTableSize.x)
-            {
-                x = 0;
-                y++;
+            for (int i = 0; i < item.amount; i++) {
+                RectTransform trans = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
+                trans.gameObject.SetActive(true);
+                trans.anchoredPosition = new Vector2(trans.anchoredPosition.x + x * itemCellSize,
+                    trans.anchoredPosition.y - y * itemCellSize);
+                DragDrop dragDrop = trans.GetComponent<DragDrop>();
+                dragDrop.SetItem(item);
+                Image image = trans.Find("Image").GetComponent<Image>();
+                image.sprite = item.GetSprite();
+                x++;
+                if (x >= itemCellX)
+                {
+                    x = 0;
+                    y++;
+                }
+                itemSlots.Add(dragDrop);
             }
-            itemSlots.Add(dragDrop);
         }
     }
 
