@@ -42,7 +42,6 @@ public class UI_Inventory : MonoBehaviour
         int2 craftingTableSize = CraftingSystem.craftingTableSize;
         int size = craftingTableSize.x * craftingTableSize.y;
         craftingSlots = new CraftingSlot[size];
-
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("ItemSlotTemplate");
 

@@ -37,7 +37,6 @@ public class CraftingSystem : Singleton<CraftingSystem>
     {
         uiInventory.SetInventory(inventory);
         craftingSlots = uiInventory.GetCraftingTable();
-
         // Test
         inventory.AddItem(new Item()
         {
@@ -49,6 +48,24 @@ public class CraftingSystem : Singleton<CraftingSystem>
         {
             itemScriptableObject = items.Find(
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.MetallicCard; }),
+            amount = 1
+        });        
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Bowl; }),
+            amount = 1
+        });
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Water; }),
+            amount = 1
+        });
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Foam; }),
             amount = 1
         });
     }

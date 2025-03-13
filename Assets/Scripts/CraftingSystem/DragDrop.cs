@@ -15,7 +15,7 @@ public class DragDrop : MonoBehaviour
 
     private RectTransform rectTransform;
 
-    public float catchDis = 1;
+    public float catchDis = 30;
 
     // 一次只能移动一个， 防止重复移动, 为null时则没有拖动物品
     static private DragDrop catchDrag;

@@ -7,7 +7,7 @@ public class Item
 {
     public enum ItemType
     {
-        Magnet, MetallicCard, MagneticNeedle
+        Magnet, MetallicCard, MagneticNeedle, Bowl, Water, WaterBowl, Foam, FoamNeedle, Compass
     }
     
     public ItemScriptableObject itemScriptableObject;
@@ -30,6 +30,12 @@ public class Item
             case ItemType.Magnet: return ItemAssets.Instance.magnetSprite;
             case ItemType.MetallicCard: return ItemAssets.Instance.metallicCardSprite;
             case ItemType.MagneticNeedle: return ItemAssets.Instance.magneticNeedleSprite;
+            case ItemType.Bowl: return ItemAssets.Instance.bowlSprite;
+            case ItemType.Water: return ItemAssets.Instance.waterSprite;
+            case ItemType.WaterBowl: return ItemAssets.Instance.waterBowlSprite;
+            case ItemType.Foam: return ItemAssets.Instance.foamSprite;
+            case ItemType.FoamNeedle: return ItemAssets.Instance.foamNeedleSprite;
+            case ItemType.Compass: return ItemAssets.Instance.compassSprite;
         }
     }
 

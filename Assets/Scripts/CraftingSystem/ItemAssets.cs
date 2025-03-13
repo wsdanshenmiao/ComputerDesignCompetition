@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ItemAssets : Singleton<ItemAssets>
 {
@@ -8,6 +9,12 @@ public class ItemAssets : Singleton<ItemAssets>
     public Sprite magnetSprite;
     public Sprite metallicCardSprite;
     public Sprite magneticNeedleSprite;
+    public Sprite bowlSprite;
+    public Sprite waterSprite;
+    public Sprite waterBowlSprite;
+    public Sprite foamSprite;
+    public Sprite foamNeedleSprite;
+    public Sprite compassSprite;
 
     public RectTransform magnetTargetPos; 
     public RectTransform metallicCardTargetPos;

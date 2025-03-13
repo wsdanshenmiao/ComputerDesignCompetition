@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
+  m_Name: CompassRecipe
+  m_EditorClassIdentifier: 
+  outputItem: {fileID: 11400000, guid: 79288f1e2eb5c3441bd3a9af1d9323b3, type: 2}
+  inputItems:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 652dfc370d9b36e44bcd3d7d53da00c7, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0260b440a9d1d0a49955bd7f07eaaa71, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
