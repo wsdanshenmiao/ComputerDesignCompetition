@@ -21,7 +21,7 @@ public class Inventory
             if (item.itemScriptableObject.itemType ==
                 inventoryItem.itemScriptableObject.itemType)
             {
-                inventoryItem.amount++;
+                inventoryItem.amount += item.amount;
                 hasItem = true;
                 break;
             }

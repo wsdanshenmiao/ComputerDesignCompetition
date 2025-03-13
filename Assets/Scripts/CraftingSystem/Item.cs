@@ -11,7 +11,7 @@ public class Item
     }
     
     public ItemScriptableObject itemScriptableObject;
-    public int amount;
+    public uint amount;
 
     public Sprite GetSprite()
     {
@@ -36,16 +36,6 @@ public class Item
             case ItemType.Foam: return ItemAssets.Instance.foamSprite;
             case ItemType.FoamNeedle: return ItemAssets.Instance.foamNeedleSprite;
             case ItemType.Compass: return ItemAssets.Instance.compassSprite;
-        }
-    }
-
-    public Vector3 GetTargetPos()
-    {
-        switch (itemScriptableObject.itemType) {
-            default: 
-            case ItemType.Magnet: return ItemAssets.Instance.magnetTargetPos.position;
-            case ItemType.MetallicCard: return ItemAssets.Instance.metallicCardTargetPos.position;
-            case ItemType.MagneticNeedle: return ItemAssets.Instance.magneticNeedleTargetPos.position;
         }
     }
 }

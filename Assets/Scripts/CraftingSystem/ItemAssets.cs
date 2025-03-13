@@ -1,10 +1,11 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class ItemAssets : Singleton<ItemAssets>
 {
     public Transform itemPrefab;
-    
     
     public Sprite magnetSprite;
     public Sprite metallicCardSprite;

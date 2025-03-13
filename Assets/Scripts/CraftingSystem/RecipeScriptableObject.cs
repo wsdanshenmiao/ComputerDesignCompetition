@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class RecipeScriptableObject : ScriptableObject
 {
     public ItemScriptableObject outputItem;
+    public uint amount = 1;
     
     public ItemScriptableObject[] inputItems = new ItemScriptableObject[(int)
         (CraftingSystem.craftingTableSize.x * CraftingSystem.craftingTableSize.y)];
