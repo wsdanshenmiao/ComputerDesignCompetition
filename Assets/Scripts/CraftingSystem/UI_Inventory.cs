@@ -123,17 +123,13 @@ public class UI_Inventory : MonoBehaviour
 
     private void SetNearestCraftingSlot()
     {
-        var drop = DragDrop.GetCatchDrop();
-        // 检测是否拖拽物品
-        if (drop == null) return;
-
         // 为物品设置最近的槽
         float minDis = float.MaxValue;
         CraftingSlot nearest = craftingSlots[0];
-        Vector3 dragPos = drop.GetComponent<RectTransform>().position;
+        Vector3 mousePosition = Input.mousePosition;
         foreach (var slot in craftingSlots)
         {
-            float dis = Vector3.Distance(slot.rectTransform.position, dragPos);
+            float dis = Vector3.Distance(slot.rectTransform.position, mousePosition);
             if (dis < minDis)
             {
                 minDis = dis;
@@ -141,8 +137,7 @@ public class UI_Inventory : MonoBehaviour
             }
         }
 
-        DragDrop.preTarget = drop.target;
-        drop.SetTarget(nearest);
+        DragDrop.target = nearest;
     }
 
     private CraftingSlot[] GetCraftingSlots()

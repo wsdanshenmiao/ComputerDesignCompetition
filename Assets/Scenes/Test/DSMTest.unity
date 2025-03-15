@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlotChangeEvent: {fileID: 0}
-  target: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
   catchDis: 100
 --- !u!1 &1526548369
 GameObject:

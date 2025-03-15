@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using TMPro;
 using UnityEngine;
 
@@ -8,9 +9,7 @@ public class DragDrop : MonoBehaviour
 
     private Item item;
 
-    private Vector3 startPos;
-
-    public CraftingSlot target;
+    public Vector3 startPos;
 
     private bool canDragging;
 
@@ -20,9 +19,11 @@ public class DragDrop : MonoBehaviour
 
     public float catchDis = 1;
 
-    // 一次只能移动一个， 防止重复移动, 为null时则没有拖动物品
-    static private DragDrop catchDrag;
-
+    static private DragDrop catchDrag;  // 一次只能有一个移动, 没有拖动则为空
+    static public CraftingSlot target;  // 一次只能锁定一个槽
+    static private bool isFirst = true;
+    static private bool firstIsDrag = false;
+    
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -42,7 +43,7 @@ public class DragDrop : MonoBehaviour
 
     public void SetTarget(CraftingSlot target)
     {
-        this.target = target;
+        DragDrop.target = target;
     }
 
     public void SetItem(Item item)
@@ -65,39 +66,53 @@ public class DragDrop : MonoBehaviour
         bool touchDrop = Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
                          Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2;
 
-        if (Input.GetMouseButtonDown(0) && touchDrop) {
-            // 检测先前是否拿起物品,拿起物品则可以放下
-            if (canDragging && target != null)    // 拿起来了要放下
-            {
-                // 检测点击时是否在合成槽中
-                if ( Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
-                    Mathf.Abs(rectTransform.position.y - target.rectTransform.position.y) < catchDis) {
-                    rectTransform.position = target.rectTransform.position;
-                    target.item = item;
+        if (catchDrag != null) {
+            catchDrag.rectTransform.position = Input.mousePosition;
+        }
+
+        // 没碰到自己就走
+        if (!(Input.GetMouseButtonDown(0) && touchDrop)) return;
+
+        // 是否碰到合成槽
+        if (target != null && // 没必要处理
+            Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
+            Mathf.Abs(rectTransform.position.y - target.rectTransform.position.y) < catchDis) {
+            if (catchDrag == null) {
+                catchDrag = this;
+                target.item = null;
+            }
+            else if (target.item == null) {  // 直接放上去
+                catchDrag.rectTransform.position = target.rectTransform.position;
+                target.item = catchDrag.item;
+                catchDrag = null;
+            }
+            else {
+                if (isFirst) {
+                    catchDrag.rectTransform.position = target.rectTransform.position;
+                    target.item = catchDrag.item;
+                    if (catchDrag != this) {
+                        firstIsDrag = false;
+                        catchDrag = this;
+                    }
+                    else {
+                        firstIsDrag = true;
+                    }
+                    isFirst = false;
                 }
                 else {
-                    rectTransform.position = startPos;
-                    if (target.item != null && target.item == item) {  // 可能时交换,还可能是自己换自己
-                        target.item = null;
-                    }
-                }
-
-                if (catchDrag == this) {
-                    catchDrag = null;
+                    catchDrag = firstIsDrag ? this : catchDrag;
+                    isFirst = true;
                 }
             }
-            else {  // 要拿起来
-                if (target != null && target.item != null && target.item == item) {
-                    target.item = null;
-                }
+        }
+        else {
+            if (catchDrag == null) {
                 catchDrag = this;
             }
-            // 切换状态
-            canDragging = !canDragging;
-        }
-        if (canDragging)
-        {
-            rectTransform.position = Input.mousePosition;
+            else {
+                catchDrag.rectTransform.position = catchDrag.startPos;
+                catchDrag = catchDrag == this ? null : this;
+            }
         }
     }
 }
