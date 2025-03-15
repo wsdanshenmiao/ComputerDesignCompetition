@@ -498,7 +498,19 @@ MonoBehaviour:
   fadeDuration: 1
   onTransitionComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2086981931}
+        m_TargetAssemblyTypeName: DialogManager2, Assembly-CSharp
+        m_MethodName: OpenButtonCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &338404146
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1871,7 +1883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f5a45ec454289428264de0eb516124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogDataFile: {fileID: 4900000, guid: 40ed7cf095ebf104ba0dcdcde8a280d1, type: 3}
+  dialogDataFiles:
+  - {fileID: 4900000, guid: 40ed7cf095ebf104ba0dcdcde8a280d1, type: 3}
   spriteLeft: {fileID: 184927561}
   spriteRight: {fileID: 1052592204}
   nameText: {fileID: 1830775596}
@@ -1879,16 +1892,19 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 64ef3588b7d74194e9945112e9f9b6f6, type: 3}
   - {fileID: 21300000, guid: ee94b21ca0fe3124785f0b3e9c88a9c3, type: 3}
-  dialogIndex: 0
   nextButton: {fileID: 1656887759}
   optionButtonPrefab: {fileID: 7650304515376075422, guid: 00c916a40a698e647b6df086bf7950aa,
     type: 3}
   buttonGroup: {fileID: 671676899}
   DialogCanvas: {fileID: 246367201}
   KeyCanvas: {fileID: 394190376}
+  ButtonCanvas: {fileID: 1021497941}
   typingSpeed: 0.05
   fadeEffect: 0.5
   SpriteSwitcher: {fileID: 338404145}
+  OnDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

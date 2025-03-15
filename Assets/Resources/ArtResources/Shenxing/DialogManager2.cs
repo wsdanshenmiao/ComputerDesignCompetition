@@ -9,10 +9,12 @@ using UnityEngine.UI;
 
 public class DialogManager2 : MonoBehaviour
 {
+    #region 变量
+    private TextAsset dialogDataFile;
     /// <summary>
-    /// 对话文本文件，csv格式
+    /// 在这个数组中配置好所有会用到的csv文件
     /// </summary>
-    public TextAsset dialogDataFile;
+    public TextAsset[] dialogDataFiles;
 
     /// <summary>
     /// 左侧角色图像组件
@@ -46,7 +48,7 @@ public class DialogManager2 : MonoBehaviour
     /// <summary>
     /// 当前即将开始的对话的索引值
     /// </summary>
-    public int dialogIndex = 0;
+    private int dialogIndex = 0;
 
     /// <summary>
     /// 按行分割好的对话文本
@@ -72,6 +74,7 @@ public class DialogManager2 : MonoBehaviour
     [Header("Canvas物体")]
     public GameObject DialogCanvas;
     public GameObject KeyCanvas;
+    public GameObject ButtonCanvas;
 
     [Header("打字效果相关")]
     private bool isTyping = false; // 当前是否正在打字
@@ -79,9 +82,16 @@ public class DialogManager2 : MonoBehaviour
     private string currentSentence; // 储存正在显示的完整例子
     private Coroutine typingCoroutine; // 打字效果的携程引用
 
+    [Header("立绘效果相关")]
     public float fadeEffect = 0.5f; // 设置立绘出现但不是正在说话时的半透明的程度
 
+    [Header("背景图片切换器")]
     public SpriteSwitcher SpriteSwitcher;
+
+    [Header("事件")] 
+    public UnityEngine.Events.UnityEvent OnDialogEnd; //可以监听更换场景之类的函数方法
+    
+    #endregion
     
     private void Awake()
     {
@@ -92,9 +102,7 @@ public class DialogManager2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ReadText(dialogDataFile);
-        
-        ShowDialogRow();
+        OpenDialog(0);
     }
 
     // Update is called once per frame
@@ -223,6 +231,7 @@ public class DialogManager2 : MonoBehaviour
             
             else if (cells[0] == "^" && int.Parse(cells[1]) == dialogIndex)
             {
+                CloseButtonCanvas();
                 CloseKeyCanvas();
                 CloseNormalDialog();
                 
@@ -234,14 +243,13 @@ public class DialogManager2 : MonoBehaviour
             // 结束
             else if (cells[0] == "END" && int.Parse(cells[1]) == dialogIndex)
             {
-                OpenKeyCanvas();
+                CloseButtonCanvas();
+                CloseKeyCanvas();
                 CloseNormalDialog();
-                if (typingCoroutine != null)
-                {
-                    StopCoroutine(typingCoroutine);
-                }
-                typingCoroutine = StartCoroutine(TypeText("", "剧情结束"));
+
                 Debug.Log("剧情结束");
+                OnDialogEnd?.Invoke();
+                break; //防止反复执行本代码段，从而反复出发结束事件
             }
 
             index++;
@@ -305,6 +313,23 @@ public class DialogManager2 : MonoBehaviour
     }
 
     /// <summary>
+    /// 开启第i段对话
+    /// </summary>
+    /// <param name="_index"></param>
+    public void OpenDialog(int _index)
+    {
+        dialogDataFile = dialogDataFiles[_index];
+        ReadText(dialogDataFile);
+        
+        // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
+        spriteLeft.sprite = null;
+        spriteRight.sprite = null;
+        
+        ShowDialogRow();
+    }
+
+    #region 显示or隐藏Canvas
+    /// <summary>
     /// 打开对话框、人物名字和人物立绘
     /// </summary>
     public void OpenNormalDialog()
@@ -333,5 +358,16 @@ public class DialogManager2 : MonoBehaviour
     {
         KeyCanvas.SetActive(false);
     }
+
+    public void OpenButtonCanvas()
+    {
+        ButtonCanvas.SetActive(true);
+    }
+
+    public void CloseButtonCanvas()
+    {
+        ButtonCanvas.SetActive(false);
+    }
+    #endregion
     
 }
