@@ -99,16 +99,15 @@ public class UI_Inventory : MonoBehaviour
 
     private void SetOutputSlot()
     {
+        // 检测当前是否能合成物品
         var recipe = CraftingSystem.Instance.GetRecipes();
         if (recipe == null)
         {
-            outputCraftingSlot.SetImage(null);
             outputCraftingSlot.item = null;
 
         }
         else if (outputCraftingSlot.item == null)
         {
-            outputCraftingSlot.SetImage(recipe.outputItem.itemSprite);
             outputCraftingSlot.item = new Item()
             {
                 itemScriptableObject = recipe.outputItem,
@@ -119,12 +118,14 @@ public class UI_Inventory : MonoBehaviour
 
     private void SetNearestCraftingSlot()
     {
-        if (DragDrop.GetCatchDrop() == null) return;
+        var drop = DragDrop.GetCatchDrop();
+        // 检测是否拖拽物品
+        if (drop == null) return;
 
         // 为物品设置最近的槽
         float minDis = float.MaxValue;
         CraftingSlot nearest = craftingSlots[0];
-        Vector3 dragPos = DragDrop.GetCatchDrop().GetComponent<RectTransform>().position;
+        Vector3 dragPos = drop.GetComponent<RectTransform>().position;
         foreach (var slot in craftingSlots)
         {
             float dis = Vector3.Distance(slot.rectTransform.position, dragPos);
@@ -134,7 +135,7 @@ public class UI_Inventory : MonoBehaviour
                 nearest = slot;
             }
         }
-        DragDrop.GetCatchDrop().SetTarget(nearest);
+        drop.SetTarget(nearest);
     }
 
     private CraftingSlot[] GetCraftingSlots()
