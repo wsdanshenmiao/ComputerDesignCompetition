@@ -10,7 +10,7 @@ public class DragDrop : MonoBehaviour
 
     private Vector3 startPos;
 
-    private CraftingSlot target;
+    public CraftingSlot target;
 
     private bool canDragging;
 
@@ -64,30 +64,33 @@ public class DragDrop : MonoBehaviour
         // 检测是否在图标上
         bool touchDrop = Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
                          Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2;
-        
-        if (Input.GetMouseButtonDown(0) && touchDrop)
-        {
+
+        if (Input.GetMouseButtonDown(0) && touchDrop) {
             // 检测先前是否拿起物品,拿起物品则可以放下
-            if (canDragging)    // 拿起来了要放下
+            if (canDragging && target != null)    // 拿起来了要放下
             {
                 // 检测点击时是否在合成槽中
-                if (Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
+                if ( Mathf.Abs(rectTransform.position.x - target.rectTransform.position.x) < catchDis &&
                     Mathf.Abs(rectTransform.position.y - target.rectTransform.position.y) < catchDis) {
                     rectTransform.position = target.rectTransform.position;
                     target.item = item;
                 }
                 else {
                     rectTransform.position = startPos;
-                    target.item = null;
+                    if (target.item != null && target.item == item) {  // 可能时交换,还可能是自己换自己
+                        target.item = null;
+                    }
                 }
 
-                catchDrag = null;
+                if (catchDrag == this) {
+                    catchDrag = null;
+                }
             }
             else {  // 要拿起来
-                catchDrag = this;
-                if (target != null) {
+                if (target != null && target.item != null && target.item == item) {
                     target.item = null;
                 }
+                catchDrag = this;
             }
             // 切换状态
             canDragging = !canDragging;

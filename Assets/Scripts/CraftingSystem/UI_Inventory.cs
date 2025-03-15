@@ -63,6 +63,10 @@ public class UI_Inventory : MonoBehaviour
     {
         SetNearestCraftingSlot();
         SetOutputSlot();
+        /*foreach (var slot in craftingSlots) {
+            Debug.Log(slot.index);
+            Debug.Log(slot.item);
+        }*/
     }
 
     private void OnDisable()
@@ -136,6 +140,8 @@ public class UI_Inventory : MonoBehaviour
                 nearest = slot;
             }
         }
+
+        DragDrop.preTarget = drop.target;
         drop.SetTarget(nearest);
     }
 
