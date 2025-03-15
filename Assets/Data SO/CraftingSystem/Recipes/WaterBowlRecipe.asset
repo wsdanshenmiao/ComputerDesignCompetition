@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WaterBowlRecipe
   m_EditorClassIdentifier: 
   outputItem: {fileID: 11400000, guid: 0260b440a9d1d0a49955bd7f07eaaa71, type: 2}
+  amount: 2
   inputItems:
   - {fileID: 0}
   - {fileID: 11400000, guid: 707b2007a5db3014a9e89d3b5837d5f4, type: 2}

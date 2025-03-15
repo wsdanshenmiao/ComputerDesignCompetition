@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FoamNeedleRecipe
   m_EditorClassIdentifier: 
   outputItem: {fileID: 11400000, guid: 652dfc370d9b36e44bcd3d7d53da00c7, type: 2}
+  amount: 4
   inputItems:
   - {fileID: 11400000, guid: a492e2bae6ff9d946af871ad603522a9, type: 2}
   - {fileID: 11400000, guid: a2df0a32701224e40aab4b7eb51cd6a2, type: 2}

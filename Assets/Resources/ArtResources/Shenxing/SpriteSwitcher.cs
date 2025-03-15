@@ -1,26 +1,106 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class SpriteSwitcher : MonoBehaviour
 {
+    [Header("Settings")]
     public Sprite[] sprites;
-    private SpriteRenderer spriteRenderer;
-    private int currentIndex = 0;
+    public float fadeDuration = 1f;
+    
+    [Header("Events")]
+    public UnityEngine.Events.UnityEvent onTransitionComplete;
+
+    private SpriteRenderer _baseRenderer;
+    private SpriteRenderer _overlayRenderer;
+    private int _currentIndex = -1; // 初始索引改为-1
+    private Sequence _transitionSequence;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (sprites.Length > 0)
+        // 初始化基础渲染器
+        _baseRenderer = GetComponent<SpriteRenderer>() ?? gameObject.AddComponent<SpriteRenderer>();
+        _baseRenderer.sprite = null; // 确保初始不显示
+
+        // 创建覆盖层渲染器
+        _overlayRenderer = new GameObject("OverlayRenderer").AddComponent<SpriteRenderer>();
+        _overlayRenderer.transform.SetParent(transform);
+        _overlayRenderer.transform.localPosition = Vector3.zero;
+        _overlayRenderer.sortingOrder = _baseRenderer.sortingOrder + 1;
+        _overlayRenderer.color = new Color(1, 1, 1, 0);
+    }
+
+    public void NextSprite()
+    {
+        if (sprites.Length == 0)
         {
-            spriteRenderer.sprite = sprites[0]; // 初始显示第一张
+            Debug.LogWarning("No sprites available");
+            return;
+        }
+
+        // 停止正在进行的动画
+        if (_transitionSequence != null && _transitionSequence.IsActive())
+            _transitionSequence.Kill();
+
+        // 计算下一个索引
+        int nextIndex = (_currentIndex + 1) % sprites.Length;
+        
+        // 有效性检查
+        if (nextIndex >= sprites.Length || sprites[nextIndex] == null)
+        {
+            Debug.LogError($"Invalid sprite index: {nextIndex}");
+            return;
+        }
+
+        // 配置覆盖层
+        _overlayRenderer.sprite = sprites[nextIndex];
+        _overlayRenderer.color = new Color(1, 1, 1, 0);
+
+        // 如果是第一次切换，初始化基础层
+        if (_currentIndex == -1)
+        {
+            _baseRenderer.color = Color.clear;
+            _baseRenderer.sprite = sprites[nextIndex];
+        }
+
+        // 创建动画序列
+        _transitionSequence = DOTween.Sequence()
+            .Append(_overlayRenderer.DOFade(1, fadeDuration).SetEase(Ease.Linear))
+            .AppendCallback(() =>
+            {
+                // 更新基础层
+                _baseRenderer.sprite = sprites[nextIndex];
+                _baseRenderer.color = Color.white;
+                _currentIndex = nextIndex;
+                
+                // 重置覆盖层
+                _overlayRenderer.color = new Color(1, 1, 1, 0);
+                _overlayRenderer.sprite = null;
+                
+                // 触发回调
+                onTransitionComplete.Invoke();
+            })
+            .OnKill(() => 
+            {
+                if (_overlayRenderer != null)
+                    _overlayRenderer.color = new Color(1, 1, 1, 0);
+            });
+
+        // 如果是第一次显示，直接渐入基础层
+        if (_currentIndex == -1)
+        {
+            _transitionSequence = DOTween.Sequence()
+                .Append(_baseRenderer.DOFade(1, fadeDuration).SetEase(Ease.Linear))
+                .OnComplete(() => 
+                {
+                    _currentIndex = nextIndex;
+                    onTransitionComplete.Invoke();
+                });
         }
     }
 
-    // 外部调用此方法切换到下一张
-    public void NextSprite()
+    void OnDestroy()
     {
-        currentIndex = (currentIndex + 1) % sprites.Length;
-        spriteRenderer.sprite = sprites[currentIndex];
+        if (_transitionSequence != null)
+            _transitionSequence.Kill();
     }
 }

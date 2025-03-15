@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogManager2 : MonoBehaviour
@@ -50,7 +51,7 @@ public class DialogManager2 : MonoBehaviour
     /// <summary>
     /// 按行分割好的对话文本
     /// </summary>
-    public string[] dialogRows;
+    private string[] dialogRows;
     
     /// <summary>
     /// 对话继续按钮
@@ -60,17 +61,17 @@ public class DialogManager2 : MonoBehaviour
     /// <summary>
     /// 选项按钮的预制体
     /// </summary>
-    public GameObject optionButton;
+    public GameObject optionButtonPrefab;
 
     /// <summary>
     /// 选项按钮父物体，用于自动排列
     /// </summary>
     public GameObject buttonGroup;
     
-    /// <summary>
-    /// 将 Dialog Canvas 拖到这里
-    /// </summary>
+    
+    [Header("Canvas物体")]
     public GameObject DialogCanvas;
+    public GameObject KeyCanvas;
 
     [Header("打字效果相关")]
     private bool isTyping = false; // 当前是否正在打字
@@ -191,7 +192,11 @@ public class DialogManager2 : MonoBehaviour
             // 正常对话
             if (cells[0] == "#" && int.Parse(cells[1]) == dialogIndex)
             {
-                OpenDialog();
+                OpenKeyCanvas();
+                if (cells[2] == "")
+                    CloseNormalDialog(); //环境说话
+                else
+                    OpenNormalDialog(); // 人物正常对话
                 
                 // UpdateText(cells[2], cells[4]);
                 if (typingCoroutine != null)
@@ -200,7 +205,8 @@ public class DialogManager2 : MonoBehaviour
                 }
                 typingCoroutine = StartCoroutine(TypeText(cells[2], cells[4]));
                 
-                UpdateImage(cells[2], cells[3]);
+                if(cells[2] != "")
+                    UpdateImage(cells[2], cells[3]); // 只有人物对话才要执行这个函数
 
                 dialogIndex = int.Parse(cells[5]);
                 break; //如果成功读取了，就可以停止查找了
@@ -209,13 +215,17 @@ public class DialogManager2 : MonoBehaviour
             // 选项
             else if (cells[0] == "&" && int.Parse(cells[1]) == dialogIndex)
             {
-                OpenDialog();
+                OpenKeyCanvas();
+                OpenNormalDialog();
                 nextButton.gameObject.SetActive(false);
                 GenerateOption(index); // 这里需要递归加载按钮
             }
             
             else if (cells[0] == "^" && int.Parse(cells[1]) == dialogIndex)
             {
+                CloseKeyCanvas();
+                CloseNormalDialog();
+                
                 SpriteSwitcher.NextSprite();
                 dialogIndex = int.Parse(cells[5]);
                 break;
@@ -224,7 +234,13 @@ public class DialogManager2 : MonoBehaviour
             // 结束
             else if (cells[0] == "END" && int.Parse(cells[1]) == dialogIndex)
             {
-                CloseDialog();
+                OpenKeyCanvas();
+                CloseNormalDialog();
+                if (typingCoroutine != null)
+                {
+                    StopCoroutine(typingCoroutine);
+                }
+                typingCoroutine = StartCoroutine(TypeText("", "剧情结束"));
                 Debug.Log("剧情结束");
             }
 
@@ -265,7 +281,7 @@ public class DialogManager2 : MonoBehaviour
         string[] cells = dialogRows[_index].Split(',');
         if (cells[0] == "&")
         {
-            GameObject button = Instantiate(optionButton, buttonGroup.transform);
+            GameObject button = Instantiate(optionButtonPrefab, buttonGroup.transform);
         
             //绑定按钮事件
             button.GetComponentInChildren<TMP_Text>().text = cells[4];
@@ -288,18 +304,34 @@ public class DialogManager2 : MonoBehaviour
         nextButton.gameObject.SetActive(true);
     }
 
-    public void OpenDialog()
+    /// <summary>
+    /// 打开对话框、人物名字和人物立绘
+    /// </summary>
+    public void OpenNormalDialog()
     {
         DialogCanvas.SetActive(true);
         spriteLeft.gameObject.SetActive(true);
         spriteRight.gameObject.SetActive(true);
     }
 
-    public void CloseDialog()
+    /// <summary>
+    /// 关闭对话框、人物名字和人物立绘
+    /// </summary>
+    public void CloseNormalDialog()
     {
         DialogCanvas.SetActive(false);
         spriteLeft.gameObject.SetActive(false);
         spriteRight.gameObject.SetActive(false);
+    }
+
+    public void OpenKeyCanvas()
+    {
+        KeyCanvas.SetActive(true);
+    }
+
+    public void CloseKeyCanvas()
+    {
+        KeyCanvas.SetActive(false);
     }
     
 }

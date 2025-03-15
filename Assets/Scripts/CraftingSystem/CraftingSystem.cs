@@ -41,14 +41,26 @@ public class CraftingSystem : Singleton<CraftingSystem>
         inventory.AddItem(new Item()
         {
             itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Bowl; }),
+            amount = 2
+        });
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Water; }),
+            amount = 2
+        });
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Magnet; }),
-            amount = 4
+            amount = 2
         });
         inventory.AddItem(new Item()
         {
             itemScriptableObject = items.Find(
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.MetallicCard; }),
-            amount = 4
+            amount = 2
         });
     }
 
