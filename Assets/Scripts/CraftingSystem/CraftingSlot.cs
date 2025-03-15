@@ -31,6 +31,13 @@ public class CraftingSlot : MonoBehaviour
     {
         if (!isOutputSlot) return;
 
+        if (item != null) {
+            image.sprite = item.itemScriptableObject.itemSprite;
+        }
+        else {
+            image.sprite = null;
+        }
+        
         Vector2 pos = rectTransform.position;
         if (Input.GetMouseButtonDown(0) &&
             Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
@@ -44,11 +51,5 @@ public class CraftingSlot : MonoBehaviour
                 CompoundEvent?.OnEventRaised();
             }
         }
-    }
-
-
-    public void SetImage(Sprite sprite)
-    {
-        image.sprite = sprite;
     }
 }
