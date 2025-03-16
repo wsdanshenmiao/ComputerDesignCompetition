@@ -66,8 +66,8 @@ public class DragDrop : MonoBehaviour
         bool touchDrop = Mathf.Abs(Input.mousePosition.x - pos.x) < rectTransform.rect.width / 2 &&
                          Mathf.Abs(Input.mousePosition.y - pos.y) < rectTransform.rect.height / 2;
 
-        if (catchDrag != null) {
-            catchDrag.rectTransform.position = Input.mousePosition;
+        if (catchDrag != null && catchDrag == this) {
+            rectTransform.position = Input.mousePosition;
         }
 
         // 没碰到自己就走
@@ -100,7 +100,9 @@ public class DragDrop : MonoBehaviour
                     isFirst = false;
                 }
                 else {
-                    catchDrag = firstIsDrag ? this : catchDrag;
+                    if (firstIsDrag) {
+                        catchDrag = this;
+                    }
                     isFirst = true;
                 }
             }
