@@ -439,7 +439,7 @@ RectTransform:
   - {fileID: 1195949913}
   - {fileID: 1830775595}
   - {fileID: 671676900}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1266155258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -659,7 +659,7 @@ RectTransform:
   m_Children:
   - {fileID: 1998652538}
   - {fileID: 238241357}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1266155258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -956,7 +956,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1656887758}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1266155258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1240,6 +1240,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195949912}
   m_CullTransparentMesh: 1
+--- !u!1 &1266155257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266155258}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1266155258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266155257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 246367205}
+  - {fileID: 394190380}
+  - {fileID: 1021497945}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266176614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &1883348949
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1912,9 +1946,7 @@ SceneRoots:
   - {fileID: 1266176617}
   - {fileID: 1021795437}
   - {fileID: 2086981930}
-  - {fileID: 246367205}
-  - {fileID: 394190380}
-  - {fileID: 1021497945}
+  - {fileID: 1266155258}
   - {fileID: 1878092597}
   - {fileID: 184927562}
   - {fileID: 1052592205}

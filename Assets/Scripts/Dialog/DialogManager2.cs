@@ -174,9 +174,10 @@ public class DialogManager2 : MonoBehaviour
         }
     }
 
-    public void UpdateBGImage()
+    // 目前没用到
+    public void UpdateBGImage(int _index)
     {
-        SpriteSwitcher.NextSprite();
+        SpriteSwitcher.NextSprite(_index);
     }
     
 
@@ -235,7 +236,10 @@ public class DialogManager2 : MonoBehaviour
                 CloseKeyCanvas();
                 CloseNormalDialog();
                 
-                SpriteSwitcher.NextSprite();
+                if (cells[2] == "")
+                    SpriteSwitcher.NextSprite(-1); // 如果是-1就是默认选择当前图片数组的下一张图片
+                else
+                    SpriteSwitcher.NextSprite(int.Parse(cells[2])); // 可以选择指定第i张图片
                 dialogIndex = int.Parse(cells[5]);
                 break;
             }

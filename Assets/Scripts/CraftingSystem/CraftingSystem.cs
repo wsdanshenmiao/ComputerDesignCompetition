@@ -62,6 +62,12 @@ public class CraftingSystem : Singleton<CraftingSystem>
                 delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.MetallicCard; }),
             amount = 2
         });
+        inventory.AddItem(new Item()
+        {
+            itemScriptableObject = items.Find(
+                delegate (ItemScriptableObject item) { return item.itemType == Item.ItemType.Foam; }),
+            amount = 2
+        });
     }
 
     public void AddItem(Item item)

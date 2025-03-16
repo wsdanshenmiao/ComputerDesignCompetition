@@ -29,7 +29,7 @@ public class SpriteSwitcher : MonoBehaviour
         _overlayRenderer.color = new Color(1, 1, 1, 0);
     }
 
-    public void NextSprite()
+    public void NextSprite(int _nextIndex)
     {
         if (sprites.Length == 0)
         {
@@ -42,24 +42,25 @@ public class SpriteSwitcher : MonoBehaviour
             _transitionSequence.Kill();
 
         // 计算下一个索引
-        int nextIndex = (_currentIndex + 1) % sprites.Length;
+        if (_nextIndex == -1) // 使用下一张背景图片
+            _nextIndex = (_currentIndex + 1) % sprites.Length;
         
         // 有效性检查
-        if (nextIndex >= sprites.Length || sprites[nextIndex] == null)
+        if (_nextIndex >= sprites.Length || sprites[_nextIndex] == null)
         {
-            Debug.LogError($"Invalid sprite index: {nextIndex}");
+            Debug.LogError($"Invalid sprite index: {_nextIndex}");
             return;
         }
 
         // 配置覆盖层
-        _overlayRenderer.sprite = sprites[nextIndex];
+        _overlayRenderer.sprite = sprites[_nextIndex];
         _overlayRenderer.color = new Color(1, 1, 1, 0);
 
         // 如果是第一次切换，初始化基础层
         if (_currentIndex == -1)
         {
             _baseRenderer.color = Color.clear;
-            _baseRenderer.sprite = sprites[nextIndex];
+            _baseRenderer.sprite = sprites[_nextIndex];
         }
 
         // 创建动画序列
@@ -68,9 +69,9 @@ public class SpriteSwitcher : MonoBehaviour
             .AppendCallback(() =>
             {
                 // 更新基础层
-                _baseRenderer.sprite = sprites[nextIndex];
+                _baseRenderer.sprite = sprites[_nextIndex];
                 _baseRenderer.color = Color.white;
-                _currentIndex = nextIndex;
+                _currentIndex = _nextIndex;
                 
                 // 重置覆盖层
                 _overlayRenderer.color = new Color(1, 1, 1, 0);
@@ -92,7 +93,7 @@ public class SpriteSwitcher : MonoBehaviour
                 .Append(_baseRenderer.DOFade(1, fadeDuration).SetEase(Ease.Linear))
                 .OnComplete(() => 
                 {
-                    _currentIndex = nextIndex;
+                    _currentIndex = _nextIndex;
                     onTransitionComplete.Invoke();
                 });
         }

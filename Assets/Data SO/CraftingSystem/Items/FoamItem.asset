@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Foam
   itemType: 6
-  itemSprite: {fileID: 21300000, guid: 9abf05076d59d524e8244be28d61926c, type: 3}
+  itemSprite: {fileID: 21300000, guid: 8a5cc453fba28334188d639009cdb8d1, type: 3}
