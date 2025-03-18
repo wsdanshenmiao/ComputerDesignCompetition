@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de1f0259fc6bda04e9b31642218cd4f9, type: 3}
-  m_Name: Cooking Scene
+  m_Name: Level3
   m_EditorClassIdentifier: 
-  SceneType: 2
+  SceneType: 1
   sceneReference:
-    m_AssetGUID: 39d67790f079eb04f9918b8b040072de
+    m_AssetGUID: c1b830c7fec53af459f669e9cf4dd03d
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

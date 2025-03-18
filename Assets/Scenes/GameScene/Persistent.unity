@@ -515,17 +515,17 @@ PrefabInstance:
     - target: {fileID: 4102306477712287901, guid: cef878f5c04df8a44922a57cfc3a3636,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4102306477712287901, guid: cef878f5c04df8a44922a57cfc3a3636,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4102306477712287901, guid: cef878f5c04df8a44922a57cfc3a3636,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4102306477712287901, guid: cef878f5c04df8a44922a57cfc3a3636,
         type: 3}
@@ -547,6 +547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5560301131944528262, guid: cef878f5c04df8a44922a57cfc3a3636,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -560,6 +565,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1161708360907179950, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
+        type: 3}
+      propertyPath: leftOffset.x
+      value: -0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161708360907179950, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
+        type: 3}
+      propertyPath: rightOffset.x
+      value: 0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 5266806642159637936, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
       propertyPath: showCurrState
@@ -631,7 +646,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 2495278910044162969}
   - {fileID: 5681154087919120875}
+  - {fileID: 4242100063351096146}
   - {fileID: 1713315494}
   - {fileID: 1778557508}
   - {fileID: 1239913554}
-  - {fileID: 4242100063351096146}

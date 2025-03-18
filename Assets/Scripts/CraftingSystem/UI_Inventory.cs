@@ -1,17 +1,24 @@
 using System;
 using System.Collections.Generic;
-using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
+    [Serializable]
+    public class CompositionInfo
+    {
+        public Item.ItemType itemType;
+        public Sprite infoSprite;
+    }
+    
     #region Public
     public float itemCellSize;
     public float tableCellSize;
 
     public uint itemCellX = 4;
+    public List<CompositionInfo> compositionInfos;
     #endregion
 
     #region Private
@@ -26,8 +33,9 @@ public class UI_Inventory : MonoBehaviour
     private Transform craftingSlotTemplate;
 
     // 物品栏
-    private Transform itemSlotContainer;
-    private Transform itemSlotTemplate;
+    private Transform itemSlotContainer;    // 合成台
+    private Transform itemSlotTemplate;     // 玩家背包
+    private Image compositionInfo;           // 显示物体的详细信息
 
     // 所有的物品
     private List<DragDrop> itemSlots;
@@ -49,6 +57,8 @@ public class UI_Inventory : MonoBehaviour
 
         craftingTable = transform.Find("CraftingTable");
         craftingSlotTemplate = craftingTable.Find("SlotTemplate");
+        
+        compositionInfo = transform.Find("ObjectInfo").GetComponent<Image>();
     }
 
     private void OnEnable()
@@ -62,6 +72,7 @@ public class UI_Inventory : MonoBehaviour
     {
         SetNearestCraftingSlot();
         SetOutputSlot();
+        SetObjectInfo();
         /*foreach (var slot in craftingSlots) {
             Debug.Log(slot.index);
             Debug.Log(slot.item);
@@ -230,5 +241,21 @@ public class UI_Inventory : MonoBehaviour
         outputTrans.anchoredPosition = new Vector2(outputX, outputY);
 
         outputCraftingSlot = outputSlot;
+    }
+
+    private void SetObjectInfo()
+    {
+        var drag = DragDrop.touchedDrop;
+        if (drag != null) {
+            var type = drag.GetItem().itemScriptableObject.itemType;
+            var info = compositionInfos.Find(delegate(CompositionInfo info)
+            {
+                return info.itemType == type;
+            });
+            compositionInfo.sprite = info == null ? null : info.infoSprite;
+        }
+        else {
+            compositionInfo.sprite = null;
+        }
     }
 }

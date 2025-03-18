@@ -18,6 +18,7 @@ public class DragDrop : MonoBehaviour
     public float catchDis = 30;
 
     static private DragDrop catchDrag;  // 一次只能有一个移动, 没有拖动则为空
+    static public DragDrop touchedDrop;  // 鼠标触碰到的物体
     static public CraftingSlot target;  // 一次只能锁定一个槽
     static private bool isFirst = true;
     static private bool firstIsDrag = false;
@@ -36,6 +37,11 @@ public class DragDrop : MonoBehaviour
     void Update()
     {
         DragAndDrop();
+    }
+
+    public Item GetItem()
+    {
+        return item;
     }
 
     public void SetTarget(CraftingSlot target)
@@ -65,6 +71,13 @@ public class DragDrop : MonoBehaviour
 
         if (catchDrag != null && catchDrag == this) {
             rectTransform.position = Input.mousePosition;
+        }
+
+        if (touchDrop) {    // 触碰到的自己
+            touchedDrop = this;
+        }
+        else if (touchedDrop == this) {
+            touchedDrop = null;
         }
 
         // 没碰到自己就走
