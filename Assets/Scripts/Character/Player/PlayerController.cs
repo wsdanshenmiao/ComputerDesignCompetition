@@ -40,7 +40,7 @@ public class PlayerController : Singleton<PlayerController>
     public bool touchLeftWall => physicsCheck.touchLeftWall;
     public bool touchRightWall => physicsCheck.touchRightWall;
 
-    public bool finishLoadScene = false;
+    [HideInInspector] public bool finishLoadScene = false;
     
     
     protected override void Awake()

@@ -5,19 +5,23 @@ using UnityEngine.Serialization;
 
 public class ItemAssets : Singleton<ItemAssets>
 {
-    public Transform itemPrefab;
+    [Serializable]
+    struct ItemSprite
+    {
+        public Item.ItemType itemType;
+        public Sprite sprite;
+    }    
     
-    public Sprite magnetSprite;
-    public Sprite metallicCardSprite;
-    public Sprite magneticNeedleSprite;
-    public Sprite bowlSprite;
-    public Sprite waterSprite;
-    public Sprite waterBowlSprite;
-    public Sprite foamSprite;
-    public Sprite foamNeedleSprite;
-    public Sprite compassSprite;
+    public Transform itemPrefab;
 
-    public RectTransform magnetTargetPos; 
-    public RectTransform metallicCardTargetPos;
-    public RectTransform magneticNeedleTargetPos;
+    [SerializeField] private List<ItemSprite> itemSprites = new List<ItemSprite>();
+    public Dictionary<Item.ItemType, Sprite> itemSpriteDictionary = new Dictionary<Item.ItemType, Sprite>();
+
+    protected override void Awake() 
+    {
+        base.Awake();
+        for (int i = 0; i < itemSprites.Count; i++) {
+            itemSpriteDictionary.Add(itemSprites[i].itemType, itemSprites[i].sprite);
+        }
+    }
 }

@@ -25,7 +25,7 @@ public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IS
 
         if (keys.Count != values.Count)
         {
-            //Debug.Log("键值数量不匹配");
+            Debug.LogError("键值数量不匹配");
         }
 
         for (int i = 0; i < keys.Count; i++)

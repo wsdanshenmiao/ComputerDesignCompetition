@@ -11,8 +11,6 @@ public class DragDrop : MonoBehaviour
 
     public Vector3 startPos;
 
-    private bool canDragging;
-
     private RectTransform rectTransform;
     
     private TMP_Text  text;
@@ -32,7 +30,6 @@ public class DragDrop : MonoBehaviour
 
     private void Start()
     {
-        canDragging = false;
         startPos = rectTransform.position;
     }
 

@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1f0259fc6bda04e9b31642218cd4f9, type: 3}
-  m_Name: Crusher
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Default Local Group_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  SceneType: 0
-  sceneReference:
-    m_AssetGUID: 15e32c42e8e6da745ab510212e39be58
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  m_Group: {fileID: 11400000, guid: 028cd92c55a59b741b5f545c73d8ca31, type: 2}
+  m_StaticContent: 0

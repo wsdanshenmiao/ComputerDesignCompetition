@@ -115,7 +115,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": ""WASD"",
                     ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
-                    ""path"": ""Dpad"",
+                    ""path"": ""Dpad(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -324,7 +324,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""dcab6b65-f84a-4cda-8d48-9d226cc7e50e"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -335,7 +335,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""f7a5ef38-8c39-4b46-a4ca-8f9784c23e8b"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -346,7 +346,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""ceed8fd0-02ae-46ec-bde1-8c582775f3a6"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -357,7 +357,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""d32b5afa-0dc7-4efe-9f56-1fefa94135d4"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -368,7 +368,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                 {
                     ""name"": """",
                     ""id"": ""d160e789-c1fe-4644-8ca1-35f2958ac256"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
