@@ -12,7 +12,7 @@ public class UI_Inventory : MonoBehaviour
         public Item.ItemType itemType;
         public Sprite infoSprite;
     }
-    
+
     #region Public
     public float itemCellSize;
     public float tableCellSize;
@@ -57,8 +57,8 @@ public class UI_Inventory : MonoBehaviour
 
         craftingTable = transform.Find("CraftingTable");
         craftingSlotTemplate = craftingTable.Find("SlotTemplate");
-        
-        compositionInfo = transform.Find("ObjectInfo").GetComponent<Image>();
+
+        compositionInfo = transform.Find("CompositionInfo").GetComponent<Image>();
     }
 
     private void OnEnable()
@@ -173,7 +173,8 @@ public class UI_Inventory : MonoBehaviour
         int x = 0, y = 0;
         foreach (var item in inventory.GetItems())
         {
-            for (int i = 0; i < item.amount; i++) {
+            for (int i = 0; i < item.amount; i++)
+            {
                 RectTransform trans = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
                 trans.gameObject.SetActive(true);
                 trans.anchoredPosition = new Vector2(trans.anchoredPosition.x + x * itemCellSize,
@@ -246,15 +247,17 @@ public class UI_Inventory : MonoBehaviour
     private void SetObjectInfo()
     {
         var drag = DragDrop.touchedDrop;
-        if (drag != null) {
+        if (drag != null)
+        {
             var type = drag.GetItem().itemScriptableObject.itemType;
-            var info = compositionInfos.Find(delegate(CompositionInfo info)
+            var info = compositionInfos.Find(delegate (CompositionInfo info)
             {
                 return info.itemType == type;
             });
             compositionInfo.sprite = info == null ? null : info.infoSprite;
         }
-        else {
+        else
+        {
             compositionInfo.sprite = null;
         }
     }

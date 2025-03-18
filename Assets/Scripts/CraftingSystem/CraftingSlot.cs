@@ -15,9 +15,9 @@ public class CraftingSlot : MonoBehaviour
     // 合成事件广播
     [SerializeField] private VoidEventSO CompoundEvent;
 
-    public bool isOutputSlot = false;
+    [HideInInspector] public bool isOutputSlot = false;
 
-    public RectTransform rectTransform;
+    [HideInInspector] public RectTransform rectTransform;
 
     private Image image;
 

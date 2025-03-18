@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
-    // 事件广播
-    [SerializeField] private SlotChangeEvent SlotChangeEvent;
-
     private Item item;
 
-    public Vector3 startPos;
+    [HideInInspector] public Vector3 startPos;
 
     private RectTransform rectTransform;
     
