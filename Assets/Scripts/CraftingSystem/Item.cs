@@ -5,9 +5,11 @@ using UnityEngine;
 [Serializable]
 public class Item
 {
-    public enum ItemType
+    public enum ItemType : int
     {
-        Magnet, MetallicCard, MagneticNeedle, Bowl, Water, WaterBowl, Foam, FoamNeedle, Compass
+        Magnet = 0, MetallicCard = 1, MagneticNeedle = 2, Bowl = 3, 
+        Water = 4, WaterBowl = 5, Foam = 6, FoamNeedle = 7, 
+        Compass = 8, ItemTypeCount = 9
     }
     
     public ItemScriptableObject itemScriptableObject;
@@ -25,12 +27,11 @@ public class Item
 
     static public Sprite GetSprite(ItemType itemType)
     {
-        Sprite sprite = null;
-        if (ItemAssets.Instance.itemSpriteDictionary.TryGetValue(itemType, out sprite)) {
+        Sprite sprite = CraftingSystem.Instance.GetItemSprite(itemType);
+        if (sprite != null) {
             return sprite;
         }
         else {
-            Debug.LogError("You should add " + itemType.GetType().Name);
             return null;
         }
     }

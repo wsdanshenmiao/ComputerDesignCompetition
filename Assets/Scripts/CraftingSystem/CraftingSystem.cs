@@ -8,6 +8,8 @@ public class CraftingSystem : Singleton<CraftingSystem>
     #region Public
     // 合成台的大小
     static public int2 craftingTableSize = new int2(3, 3);
+
+    public Transform itemPrefab;
     #endregion
 
 
@@ -80,6 +82,20 @@ public class CraftingSystem : Singleton<CraftingSystem>
         inventory.RemoveItem(item);
     }
 
+    public Sprite GetItemSprite(Item.ItemType itemType)
+    {
+        var item = items.Find(delegate(ItemScriptableObject item) {
+            return item.itemType == itemType;
+        });
+        if (item == null) {
+            Debug.LogError("You should add " + itemType.ToString());
+            return null;
+        }
+        else {
+            return item.itemSprite;
+        }
+    }
+    
     /// <summary>
     /// 根据现在合成台中的物品判断能合成什么物品
     /// </summary>
@@ -137,5 +153,5 @@ public class CraftingSystem : Singleton<CraftingSystem>
         var item = craftingSlots[y * craftingTableSize.x + x].item;
         return item == null ? null : item.itemScriptableObject;
     }
-
+    
 }

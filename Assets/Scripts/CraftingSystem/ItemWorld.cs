@@ -14,7 +14,7 @@ public class ItemWorld : MonoBehaviour
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {
-        Transform trans = Instantiate(ItemAssets.Instance.itemPrefab, position, Quaternion.identity);
+        Transform trans = Instantiate(CraftingSystem.Instance.itemPrefab, position, Quaternion.identity);
         
         ItemWorld itemWorld = trans.GetComponent<ItemWorld>();
         itemWorld.SetItem(item);
