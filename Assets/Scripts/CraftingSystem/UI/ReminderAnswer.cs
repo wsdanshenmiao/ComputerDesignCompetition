@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class ReminderAnswer : MonoBehaviour
 {
+    private RecipeReminder reminder;
+    
     private Transform selectTemplate;
 
     public float textInterval = 100;
@@ -13,7 +15,7 @@ public class ReminderAnswer : MonoBehaviour
     public TextAsset correctSelect;
     [SerializeField] List<TextAsset> selects = new List<TextAsset>();
     
-    public TMP_Text currSelect;
+    [HideInInspector] public TMP_Text currSelect;
 
     private void Awake()
     {
@@ -32,6 +34,16 @@ public class ReminderAnswer : MonoBehaviour
         }
     }
 
+    public void SetReminder(RecipeReminder reminder)
+    {
+        this.reminder = reminder;
+    }
+
+    public void RemoveReminder()
+    {
+        this.reminder = null;
+    }
+    
     public void Select(TMP_Text select)
     {
         currSelect = select;
@@ -40,8 +52,9 @@ public class ReminderAnswer : MonoBehaviour
     public void DetermineSelect()
     {
         if (currSelect != null && correctSelect.text.Equals(currSelect.text.Substring(2))) {
-            GetComponentInParent<RecipeReminder>().UnlockReminder();
+            reminder?.UnlockReminder();
         }
-        gameObject.SetActive(false);
+        reminder?.CloseAnswerUI();
+        
     }
 }

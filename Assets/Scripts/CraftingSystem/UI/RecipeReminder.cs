@@ -7,7 +7,7 @@ public class RecipeReminder : MonoBehaviour
     private Image image;
     private Button button;
 
-    private ReminderAnswer answerUI;
+    [SerializeField] private ReminderAnswer answerUI;
     
     [SerializeField] private Sprite lockedSprite;
     [SerializeField] private Sprite unlockedSprite;
@@ -16,7 +16,6 @@ public class RecipeReminder : MonoBehaviour
 
     private void Awake()
     {
-        answerUI = GetComponentInChildren<ReminderAnswer>();
         image = GetComponent<Image>();
         button = GetComponent<Button>();
     }
@@ -29,6 +28,7 @@ public class RecipeReminder : MonoBehaviour
     private void Start()
     {
         answerUI.gameObject.SetActive(false);
+        answerUI.SetReminder(this);
         LockReminder();
     }
 
@@ -53,11 +53,13 @@ public class RecipeReminder : MonoBehaviour
     {
         if (isLocked) {
             answerUI.gameObject.SetActive(true);
+            transform.parent.gameObject.SetActive(false);
         }
     }
 
     public void CloseAnswerUI()
     {
+        transform.parent.gameObject.SetActive(true);
         answerUI.gameObject.SetActive(false);
         answerUI.currSelect = null;
     }
