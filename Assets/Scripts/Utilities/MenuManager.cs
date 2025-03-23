@@ -71,7 +71,7 @@ public class MenuManager : Singleton<MenuManager>
         isContinueGame = false;
 
         //Debug.Log("NewGame");
-        SaveManager.Instance.NewGame();
+        //SaveManager.Instance.NewGame();
         OnNewGameEvent.RaiseEvent();
     }
 

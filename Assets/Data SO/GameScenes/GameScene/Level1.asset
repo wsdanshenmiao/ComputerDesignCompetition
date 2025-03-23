@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1f0259fc6bda04e9b31642218cd4f9, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  SceneType: 1
+  SceneType: 0
   sceneReference:
-    m_AssetGUID: c1b830c7fec53af459f669e9cf4dd03d
+    m_AssetGUID: 09564c80e3a346c4e94449f60e36b729
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

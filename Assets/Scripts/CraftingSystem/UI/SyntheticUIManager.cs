@@ -11,7 +11,7 @@ public class SyntheticUIManager : MonoBehaviour
     private void Awake()
     {
         craftingSystemUI = transform.Find("CraftingSystemUI");
-        reminderUI = transform.Find("ReminderUI");
+        reminderUI = transform.Find("QASystemUI");
     }
 
     public void CloseCraftingSystemUI()
