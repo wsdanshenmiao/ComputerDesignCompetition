@@ -97,12 +97,15 @@ public class DialogManager2 : MonoBehaviour
     {
         imageDic["角色A"] = sprites[0];
         imageDic["角色B"] = sprites[1];
+        imageDic["你"] = sprites[2];
+        imageDic["？？"] = sprites[3];
+        imageDic["大喵"] = sprites[4];
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        OpenDialog(0);
+        OpenDialog(1);
     }
 
     // Update is called once per frame

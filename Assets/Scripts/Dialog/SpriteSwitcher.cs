@@ -25,6 +25,7 @@ public class SpriteSwitcher : MonoBehaviour
         _overlayRenderer = new GameObject("OverlayRenderer").AddComponent<SpriteRenderer>();
         _overlayRenderer.transform.SetParent(transform);
         _overlayRenderer.transform.localPosition = Vector3.zero;
+        _overlayRenderer.transform.localScale = _baseRenderer.transform.localScale;
         _overlayRenderer.sortingOrder = _baseRenderer.sortingOrder + 1;
         _overlayRenderer.color = new Color(1, 1, 1, 0);
     }
