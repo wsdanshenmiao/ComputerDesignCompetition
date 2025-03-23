@@ -15,12 +15,12 @@ MonoBehaviour:
   outputItem: {fileID: 11400000, guid: ee9ed903a7f9aa641967584dcdbee668, type: 2}
   amount: 1
   inputItems:
-  - {fileID: 11400000, guid: 37b8348ed2d80724882798149457bb27, type: 2}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 9ecbd56ae1951874790ed82810f18431, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 9ecbd56ae1951874790ed82810f18431, type: 2}
   - {fileID: 11400000, guid: 9ecbd56ae1951874790ed82810f18431, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 37b8348ed2d80724882798149457bb27, type: 2}

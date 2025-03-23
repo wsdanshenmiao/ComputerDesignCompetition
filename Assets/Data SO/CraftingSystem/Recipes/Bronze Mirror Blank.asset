@@ -16,8 +16,8 @@ MonoBehaviour:
   amount: 1
   inputItems:
   - {fileID: 11400000, guid: 763886d59b80fe9459a2430fcf0a8ba5, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 763886d59b80fe9459a2430fcf0a8ba5, type: 2}
+  - {fileID: 11400000, guid: 763886d59b80fe9459a2430fcf0a8ba5, type: 2}
   - {fileID: 0}
   - {fileID: 11400000, guid: b6d3c8cca083bcd46accd416eaf3b89a, type: 2}
   - {fileID: 0}
