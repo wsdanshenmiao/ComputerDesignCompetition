@@ -43,6 +43,12 @@ public class ReminderAnswer : MonoBehaviour
         wrongAnswer.gameObject.SetActive(false);
     }
 
+    private void OnDisable()
+    {
+        correctAnswer.gameObject.SetActive(false);
+        wrongAnswer.gameObject.SetActive(false);
+    }
+
     public void SetReminder(RecipeReminder reminder)
     {
         this.reminder = reminder;
@@ -68,6 +74,11 @@ public class ReminderAnswer : MonoBehaviour
         else {
             StartCoroutine(AfterDetermineSelect(false));
         }
+    }
+
+    public void CloseAnswerUI()
+    {
+        reminder?.CloseAnswerUI();
     }
 
     // 显示回答结果并关闭

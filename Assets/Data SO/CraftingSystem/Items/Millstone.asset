@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0e4d2c5b5243439875f68e2dfe8d3e, type: 3}
-  m_Name: WaterItem
+  m_Name: Millstone
   m_EditorClassIdentifier: 
-  itemName: Water
-  itemType: 4
-  itemSprite: {fileID: 21300000, guid: c78addb49d4b0474cb939421524c5cf5, type: 3}
+  itemName: Millstone
+  itemType: 5
+  itemSprite: {fileID: 21300000, guid: 35551a364da5dfb488076c7791e5045a, type: 3}

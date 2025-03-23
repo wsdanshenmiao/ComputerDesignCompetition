@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0e4d2c5b5243439875f68e2dfe8d3e, type: 3}
-  m_Name: FoamItem
+  m_Name: Chinese Magic Mirror
   m_EditorClassIdentifier: 
-  itemName: Foam
-  itemType: 6
-  itemSprite: {fileID: 21300000, guid: 8a5cc453fba28334188d639009cdb8d1, type: 3}
+  itemName: Chinese Magic Mirror
+  itemType: 0
+  itemSprite: {fileID: 21300000, guid: acdd8e3f685f6614a92ae6113877ce42, type: 3}

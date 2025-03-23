@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
-  m_Name: MagneticNeedleRecipe
+  m_Name: Stress Mirror Body
   m_EditorClassIdentifier: 
-  outputItem: {fileID: 11400000, guid: a492e2bae6ff9d946af871ad603522a9, type: 2}
-  amount: 4
+  outputItem: {fileID: 11400000, guid: ee9ed903a7f9aa641967584dcdbee668, type: 2}
+  amount: 1
   inputItems:
-  - {fileID: 11400000, guid: afd5cdb9fc147e549ab9bd81559d5ca3, type: 2}
-  - {fileID: 11400000, guid: 233b3d8e38889ac419d0921029f6fb9a, type: 2}
+  - {fileID: 11400000, guid: 37b8348ed2d80724882798149457bb27, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 9ecbd56ae1951874790ed82810f18431, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

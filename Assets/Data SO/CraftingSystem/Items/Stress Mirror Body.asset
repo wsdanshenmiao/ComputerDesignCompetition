@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0e4d2c5b5243439875f68e2dfe8d3e, type: 3}
-  m_Name: MagneticNeedleItem
+  m_Name: Stress Mirror Body
   m_EditorClassIdentifier: 
-  itemName: MagneticNeedle
-  itemType: 2
-  itemSprite: {fileID: 21300000, guid: ee35bdc8ae989184db82d5e5189d51f4, type: 3}
+  itemName: Stress Mirror Body
+  itemType: 7
+  itemSprite: {fileID: 21300000, guid: 9abf05076d59d524e8244be28d61926c, type: 3}

@@ -7,9 +7,9 @@ public class Item
 {
     public enum ItemType : int
     {
-        Magnet = 0, MetallicCard = 1, MagneticNeedle = 2, Bowl = 3, 
-        Water = 4, WaterBowl = 5, Foam = 6, FoamNeedle = 7, 
-        Compass = 8, ItemTypeCount = 9
+        ChineseMagicMirror, BronzeIngot, BronzeMirrorBlank, PotteryMould, 
+        IceWater, Millstone, Calomelene, StressMirrorBody, 
+        ItemTypeCount
     }
     
     public ItemScriptableObject itemScriptableObject;

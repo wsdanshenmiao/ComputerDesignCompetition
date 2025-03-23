@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
-  m_Name: WaterBowlRecipe
+  m_Name: Bronze Mirror Blank
   m_EditorClassIdentifier: 
-  outputItem: {fileID: 11400000, guid: 0260b440a9d1d0a49955bd7f07eaaa71, type: 2}
-  amount: 2
+  outputItem: {fileID: 11400000, guid: 37b8348ed2d80724882798149457bb27, type: 2}
+  amount: 1
   inputItems:
+  - {fileID: 11400000, guid: 763886d59b80fe9459a2430fcf0a8ba5, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 707b2007a5db3014a9e89d3b5837d5f4, type: 2}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 65722223d820d5a40b402baed2e87097, type: 2}
+  - {fileID: 11400000, guid: b6d3c8cca083bcd46accd416eaf3b89a, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
