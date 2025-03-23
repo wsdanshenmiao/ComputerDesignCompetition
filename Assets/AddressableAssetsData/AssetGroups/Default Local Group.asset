@@ -27,6 +27,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09564c80e3a346c4e94449f60e36b729
+    m_Address: Assets/Scenes/GameScene/Level1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd68fee9e50bf924797110ec51b7c4b2
+    m_Address: Assets/Scenes/GameScene/Level2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a20c8dd0cde099848b8c8e3bbac02ff9
+    m_Address: Assets/Scenes/GameScene/Level3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1c9e6af2907ddc64f9fc0c41c0894e3b, type: 2}
   m_SchemaSet:

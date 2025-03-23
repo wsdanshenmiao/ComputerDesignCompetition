@@ -3,10 +3,10 @@ using UnityEngine;
 public class UIManager : Singleton<UIManager>
 {
     public CharacterEventSO HealthEvent;
-    public CharacterEventSO ManaEvent;
+    //public CharacterEventSO ManaEvent;
     public CharacterSO CharacterInfo;
     public PlayerSO PlayerInfo;
-    public PlayerStateBar PlayerState;
+    //public PlayerStateBar PlayerState;
 
     [Header("获取总UI")]
     public GameObject UICanvas;
@@ -17,13 +17,13 @@ public class UIManager : Singleton<UIManager>
     private void OnEnable()
     {
         HealthEvent.OnEventRaised += OnHealthChange;
-        ManaEvent.OnEventRaised += OnManaChange;
+        //ManaEvent.OnEventRaised += OnManaChange;
     }
 
     private void OnDisable()
     {
         HealthEvent.OnEventRaised -= OnHealthChange;
-        ManaEvent.OnEventRaised -= OnManaChange;
+        //ManaEvent.OnEventRaised -= OnManaChange;
     }
 
     // UI血量更改
@@ -33,7 +33,7 @@ public class UIManager : Singleton<UIManager>
         currentHealth = character.CurrHealth;
 
         float healthPercent = currentHealth / CharacterInfo.maxHealth;
-        PlayerState.ChangeHealth(healthPercent);
+        //PlayerState.ChangeHealth(healthPercent);
     }
 
     public void OnManaChange(Character character)
@@ -44,7 +44,7 @@ public class UIManager : Singleton<UIManager>
             currentMana = (character as PlayerCharacter).CurrMana;
         }
         float manaPercent = currentMana / PlayerInfo.maxMana;
-        PlayerState.ChangeMana(manaPercent);
+        //PlayerState.ChangeMana(manaPercent);
     }
 
     public void OnCloseCanvas()
