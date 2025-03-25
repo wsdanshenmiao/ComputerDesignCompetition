@@ -48,21 +48,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
         //Invoke("SetPlayerPosition", .1f);
     }
 
-    // private void ActiveCheckpoint(GameData _data)//激活摸过的存档点的动画
-    // {
-    //     foreach (Tent checkPoint in checkPoints)
-    //     {
-    //         foreach (KeyValuePair<string, bool> savedCheckPoint in _data.chekcpoints)
-    //         {
-    //             if (checkPoint.checkpointId == savedCheckPoint.Key && savedCheckPoint.Value == true)
-    //             {
-    //                 checkPoint.ActivateCheckpoint();
-    //             }
-
-    //         }
-    //     }
-    // }
-
     private void SetPlayerPosition()//将玩家位置设置到最近一次的存档点处
     {
         //TODO 把存档点绑定到checkPoints里面

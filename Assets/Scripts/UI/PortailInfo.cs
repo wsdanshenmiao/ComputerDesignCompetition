@@ -15,19 +15,4 @@ public class PortailInfo : MonoBehaviour
 {
     [HideInInspector] public GameSceneSO GameScene;
     [HideInInspector] public Vector3 Position;
-    [HideInInspector] public Sprite Sprite;
-    [HideInInspector] public string Description;
-    [HideInInspector] public string PortalName;
-
-    // Manager中Awak获取并赋值数据后,使用Start将内容写在文本上
-    private void Start()
-    {
-        WriteInChild();
-    }
-
-    // 把字符串写进子物体的文本框中
-    private void WriteInChild()
-	{
-		transform.GetComponentInChildren<TMP_Text>().text = PortalName;
-	}
 }

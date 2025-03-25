@@ -67,11 +67,10 @@ public class MenuManager : Singleton<MenuManager>
 
     public void NewGame()
     {
+        Debug.Log("NewGame");
         menuCancas.gameObject.SetActive(false);
         isContinueGame = false;
-
-        //Debug.Log("NewGame");
-        //SaveManager.Instance.NewGame();
+        
         OnNewGameEvent.RaiseEvent();
     }
 
