@@ -7,8 +7,12 @@ public class Item
 {
     public enum ItemType : int
     {
-        ChineseMagicMirror, BronzeIngot, BronzeMirrorBlank, PotteryMould, 
-        IceWater, Millstone, Calomelene, StressMirrorBody, 
+        StressMirrorBody, BronzeIngot, BronzeMirrorBlank, PotteryMould, 
+        IceWater, Millstone, Calomelene, ChineseMagicMirror, 
+        Wood, Chisel, IronNeedle, Magnet, JuncusRoemerianus, MagnetNeedle, 
+        FloatingMagnetNeedle, Bassie, ClearWater, Compass, 
+        StoneMortar, Saltpeter, SaltpeterPowder, CharcoalDust, BambooShovel,
+        SulfurPowder, MixedPowder, BambooSieve, Gunpowder, 
         ItemTypeCount
     }
     

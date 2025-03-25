@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
     public void Start()
     {
-        StartCoroutine(PlayBGM(AudioName.BGM1, AudioName.BGM2));
+        //StartCoroutine(PlayBGM(AudioName.BGM1, AudioName.BGM2));
     }
 
     private IEnumerator PlayBGM(string BGM1, string BGM2)

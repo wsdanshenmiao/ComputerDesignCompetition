@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
+  m_Name: Bronze Mirror Blank
+  m_EditorClassIdentifier: 
+  outputItem: {fileID: 11400000, guid: 5fd099c9bf4464c42ba1e6e7c8f7df5d, type: 2}
+  amount: 1
+  inputItems:
+  - {fileID: 11400000, guid: cd04ac0031b1c2e4e87ae3f6f3b0821a, type: 2}
+  - {fileID: 11400000, guid: cd04ac0031b1c2e4e87ae3f6f3b0821a, type: 2}
+  - {fileID: 11400000, guid: cd04ac0031b1c2e4e87ae3f6f3b0821a, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: c17297c7a4977734b92ebbf014d01062, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
