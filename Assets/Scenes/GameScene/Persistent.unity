@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &48055480
 Transform:
   m_ObjectHideFlags: 0
@@ -428,7 +428,6 @@ MonoBehaviour:
   - {fileID: 1611069417}
   - {fileID: 579676401}
   - {fileID: 1448379266}
-  currReminderMode: 0
 --- !u!1 &59383948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,9 +2167,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 48055480}
   - {fileID: 2044666026}
   - {fileID: 312592643}
+  - {fileID: 48055480}
   - {fileID: 289908530}
   - {fileID: 1409784154}
   m_Father: {fileID: 0}
@@ -9885,7 +9884,7 @@ PrefabInstance:
     - target: {fileID: 8961209356275226160, guid: 8de2278501b2d5142b98ee94f9f3d7f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9906,20 +9905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 372488253}
     m_Modifications:
-    - target: {fileID: 2002859916596695030, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2944461423858120435, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
         type: 3}
       propertyPath: m_Name
       value: FadeCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2944461423858120435, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5940532080376601527, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
         type: 3}
@@ -10181,7 +10170,7 @@ PrefabInstance:
     - target: {fileID: 7259749383279746286, guid: 87e9e6a5c5f6b30478129657d8910fa5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10531,7 +10520,7 @@ PrefabInstance:
     - target: {fileID: 3329765961312120684, guid: 2f560fb73a7d28143acd4514fc417efe,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8217188932245779562, guid: 2f560fb73a7d28143acd4514fc417efe,
         type: 3}
@@ -10740,7 +10729,7 @@ PrefabInstance:
     - target: {fileID: 1949426635418283952, guid: 162cbe3d93b07e048bfbe55990495952,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6378996744566619208, guid: 162cbe3d93b07e048bfbe55990495952,
         type: 3}
