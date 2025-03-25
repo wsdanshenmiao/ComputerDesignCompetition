@@ -3,13 +3,27 @@ using UnityEngine;
 
 public class ItemWorld : MonoBehaviour
 {
-    private Item item;
+    [SerializeField] private Item item;
     private SpriteRenderer spriteRenderer;
 
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        spriteRenderer.sprite = item.GetSprite();
+    }
+
+    protected void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Collision");
+        if (other.gameObject.CompareTag("Player") && item.amount > 0) {
+            CraftingSystem.Instance.AddItem(item);
+            DestroySelf();
+        }
     }
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)

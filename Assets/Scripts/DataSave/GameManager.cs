@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
     public void Start()
     {
-        StartCoroutine(PlayBGM(AudioName.BGM1, AudioName.BGM2));
+        //StartCoroutine(PlayBGM(AudioName.BGM1, AudioName.BGM2));
     }
 
     private IEnumerator PlayBGM(string BGM1, string BGM2)
@@ -47,21 +47,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
         lastCheckpointId = _data.lastCheckPoint;
         //Invoke("SetPlayerPosition", .1f);
     }
-
-    // private void ActiveCheckpoint(GameData _data)//激活摸过的存档点的动画
-    // {
-    //     foreach (Tent checkPoint in checkPoints)
-    //     {
-    //         foreach (KeyValuePair<string, bool> savedCheckPoint in _data.chekcpoints)
-    //         {
-    //             if (checkPoint.checkpointId == savedCheckPoint.Key && savedCheckPoint.Value == true)
-    //             {
-    //                 checkPoint.ActivateCheckpoint();
-    //             }
-
-    //         }
-    //     }
-    // }
 
     private void SetPlayerPosition()//将玩家位置设置到最近一次的存档点处
     {

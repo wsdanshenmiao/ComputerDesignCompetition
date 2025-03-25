@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class SyntheticUIManager : MonoBehaviour
 {
-    private Transform craftingSystemUI;
-    private Transform reminderUI;
-
-    private void Awake()
+    public enum ReminderMode : int
     {
-        craftingSystemUI = transform.Find("CraftingSystemUI");
-        reminderUI = transform.Find("QASystemUI");
+        ChineseMagicMirror, Compass, Gunpowder, NumReminderMode
     }
+    
+    [SerializeField] private Transform craftingSystemUI;
+    [SerializeField] private Transform[] reminderUI;
+    private ReminderMode currReminderMode = ReminderMode.ChineseMagicMirror;
+    
+    public ReminderMode CurrReminderMode { get { return currReminderMode; } set { currReminderMode = value; } }
 
     public void CloseCraftingSystemUI()
     {
@@ -26,11 +28,11 @@ public class SyntheticUIManager : MonoBehaviour
 
     public void CloseReminderUI()
     {
-        reminderUI.gameObject.SetActive(false);
+        reminderUI[(int)currReminderMode].gameObject.SetActive(false);
     }
 
     public void OpenReminderUI()
     {
-        reminderUI.gameObject.SetActive(true);
+        reminderUI[(int)currReminderMode].gameObject.SetActive(true);
     }
 }

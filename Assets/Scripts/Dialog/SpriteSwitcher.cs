@@ -15,7 +15,7 @@ public class SpriteSwitcher : MonoBehaviour
     private int _currentIndex = -1; // 初始索引改为-1
     private Sequence _transitionSequence;
 
-    void Start()
+    void Awake()
     {
         // 初始化基础渲染器
         _baseRenderer = GetComponent<SpriteRenderer>() ?? gameObject.AddComponent<SpriteRenderer>();

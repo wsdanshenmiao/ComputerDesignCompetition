@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e9ba5a67f646f1bff43ceefbd5c53f, type: 3}
+  m_Name: Chinese Magic Mirror
+  m_EditorClassIdentifier: 
+  outputItem: {fileID: 11400000, guid: f73d9d940f9682b45ab1b135c1aeadc1, type: 2}
+  amount: 1
+  inputItems:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 7492f39ebddc9ee428ee860da958e713, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: eb24b994f6c90874fafd230c90bbf5a5, type: 2}
+  - {fileID: 11400000, guid: 4054e3c2570ee964fbcbbcda647f6019, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

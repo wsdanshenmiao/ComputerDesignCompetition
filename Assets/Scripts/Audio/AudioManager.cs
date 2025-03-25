@@ -65,7 +65,7 @@ public class AudioManager : Singleton<AudioManager>
 
         if (!Instance.audioSources.ContainsKey(name))
         {
-            Debug.LogError($"AudioManager have no {name}");
+            //Debug.LogError($"AudioManager have no {name}");
             return;
         }
 
@@ -89,7 +89,7 @@ public class AudioManager : Singleton<AudioManager>
 
         if (!Instance.audioSources.ContainsKey(name))
         {
-            Debug.LogError($"AudioManager have no {name}");
+            //Debug.LogError($"AudioManager have no {name}");
             return;
         }
         Instance.audioSources[name].Stop();

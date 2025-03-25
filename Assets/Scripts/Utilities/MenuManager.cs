@@ -13,6 +13,7 @@ public class MenuManager : Singleton<MenuManager>
     [Header("事件广播")]
     [SerializeField] private VoidEventSO OnNewGameEvent;
     [SerializeField] private VoidEventSO AfterSceneLoadEvent;
+    [SerializeField] private IntEvent OnDiologEndEvent;
 
     [SerializeField] private RectTransform menuCancas;
 
@@ -22,6 +23,7 @@ public class MenuManager : Singleton<MenuManager>
     protected void OnEnable()
     {
         AfterSceneLoadEvent.OnEventRaised += AfterSceneLoad;
+        OnDiologEndEvent.OnEventRaised += OnDiologEnd;
     }
 
     protected void Start()
@@ -32,6 +34,15 @@ public class MenuManager : Singleton<MenuManager>
     protected void OnDisable()
     {
         AfterSceneLoadEvent.OnEventRaised -= AfterSceneLoad;
+        OnDiologEndEvent.OnEventRaised -= OnDiologEnd;
+    }
+
+    private void OnDiologEnd(int dialogIndex)
+    {
+        if (dialogIndex == 1) {
+            menuCancas.gameObject.SetActive(true);
+            NewGame();
+        }
     }
 
     private void AfterSceneLoad()
@@ -67,11 +78,10 @@ public class MenuManager : Singleton<MenuManager>
 
     public void NewGame()
     {
+        Debug.Log("NewGame");
         menuCancas.gameObject.SetActive(false);
         isContinueGame = false;
-
-        //Debug.Log("NewGame");
-        //SaveManager.Instance.NewGame();
+        
         OnNewGameEvent.RaiseEvent();
     }
 
