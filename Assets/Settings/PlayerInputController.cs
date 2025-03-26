@@ -98,6 +98,15 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenBackpacker"",
+                    ""type"": ""Button"",
+                    ""id"": ""df98b62a-8efa-4029-ad2c-7492f32aa446"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -373,6 +382,17 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MouseDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95fee307-55fe-4032-a368-e1fcddd3cd7e"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenBackpacker"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -968,6 +988,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
         m_GamePlay_Jump = m_GamePlay.FindAction("Jump", throwIfNotFound: true);
         m_GamePlay_Sprint = m_GamePlay.FindAction("Sprint", throwIfNotFound: true);
         m_GamePlay_MouseDown = m_GamePlay.FindAction("MouseDown", throwIfNotFound: true);
+        m_GamePlay_OpenBackpacker = m_GamePlay.FindAction("OpenBackpacker", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1049,6 +1070,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
     private readonly InputAction m_GamePlay_Jump;
     private readonly InputAction m_GamePlay_Sprint;
     private readonly InputAction m_GamePlay_MouseDown;
+    private readonly InputAction m_GamePlay_OpenBackpacker;
     public struct GamePlayActions
     {
         private @PlayerInputController m_Wrapper;
@@ -1061,6 +1083,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
         public InputAction @Jump => m_Wrapper.m_GamePlay_Jump;
         public InputAction @Sprint => m_Wrapper.m_GamePlay_Sprint;
         public InputAction @MouseDown => m_Wrapper.m_GamePlay_MouseDown;
+        public InputAction @OpenBackpacker => m_Wrapper.m_GamePlay_OpenBackpacker;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1094,6 +1117,9 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
             @MouseDown.started += instance.OnMouseDown;
             @MouseDown.performed += instance.OnMouseDown;
             @MouseDown.canceled += instance.OnMouseDown;
+            @OpenBackpacker.started += instance.OnOpenBackpacker;
+            @OpenBackpacker.performed += instance.OnOpenBackpacker;
+            @OpenBackpacker.canceled += instance.OnOpenBackpacker;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -1122,6 +1148,9 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
             @MouseDown.started -= instance.OnMouseDown;
             @MouseDown.performed -= instance.OnMouseDown;
             @MouseDown.canceled -= instance.OnMouseDown;
+            @OpenBackpacker.started -= instance.OnOpenBackpacker;
+            @OpenBackpacker.performed -= instance.OnOpenBackpacker;
+            @OpenBackpacker.canceled -= instance.OnOpenBackpacker;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -1312,6 +1341,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
         void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnMouseDown(InputAction.CallbackContext context);
+        void OnOpenBackpacker(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

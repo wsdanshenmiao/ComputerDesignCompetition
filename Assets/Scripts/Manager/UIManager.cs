@@ -65,4 +65,15 @@ public class UIManager : Singleton<UIManager>
     {
         UICanvas.SetActive(true);
     }
+
+    public void ChangeBackpacker()
+    {
+        Transform backpacker = UICanvas.transform.Find("Backpacker");
+        if (backpacker.gameObject.activeSelf) {
+            backpacker.gameObject.SetActive(false);
+        }
+        else {
+            backpacker.gameObject.SetActive(true);
+        }
+    }
 }

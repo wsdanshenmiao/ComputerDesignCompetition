@@ -181,7 +181,7 @@ public class DialogManager : Singleton<DialogManager>
         // {
         //     string[] cells = row.Split(',');
         // }
-        Debug.Log("读取成功");
+        Debug.Log("读取成功" + dialogRows[0]);
     }
 
     public void ShowDialogRow()
@@ -321,7 +321,8 @@ public class DialogManager : Singleton<DialogManager>
         // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
         spriteLeft.sprite = null;
         spriteRight.sprite = null;
-        
+        OpenNormalDialog();
+        Debug.Log("Open Dialog");
         ShowDialogRow();
     }
 

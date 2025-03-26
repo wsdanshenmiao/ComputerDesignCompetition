@@ -1,11 +1,3 @@
-/****************************************************************************************
-	Author:			danshenmiao
-	Versions:		1.0
-	Creation time:	2025.1.11
-	Finish time:	
-	Abstract:       通过InputSystem管理玩家的输入
-****************************************************************************************/
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,6 +18,8 @@ public class PlayerInput : MonoBehaviour
 
     public float moveSpeed => playerController.GetVelocityX();
     public float inputAxesX => inputAxes.x;
+    
+    public bool changeBackpacker => inputController.GamePlay.OpenBackpacker.WasPressedThisFrame();
 
 
     [SerializeField] private bool showEnableGamePlay;
