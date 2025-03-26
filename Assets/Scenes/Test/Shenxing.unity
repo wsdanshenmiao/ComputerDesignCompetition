@@ -521,6 +521,116 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog
       objectReference: {fileID: 0}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: e35c4423a7529294087ff49461de4823,
+        type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: d8441fc95e6f1bb40bd67e160b73283e,
+        type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: a17ac317326b22944a87d73e040ba944,
+        type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 3d42ca39bff0a6e4598913cf565700a4, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: aba4ce8f4cdf633498bfa47e1b6fe62f, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8d956a005c94e0040b956c04eafe22f2, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: b4573f8fc64425c43974752fc6dfeab6, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: c9084a900aa1ea14b937328bd8e3691d, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[5]
+      value: 
+      objectReference: {fileID: 4900000, guid: d4c9152d9bb1b984f95f12c5c930693f, type: 3}
+    - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: dialogDataFiles.Array.data[6]
+      value: 
+      objectReference: {fileID: 4900000, guid: ae3c9fd7c09fa3f45808dd31f6e0b5a4, type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b6b801b5e4627e498d47509864e8959,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c336387faa4ed55468ae062588676a23,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 733f16d9705aeb142bb6e5be3c8168f3,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ed90dfdf7d08a647862f950d8ed3737,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: fe183d2299aed1641bb06e2ccaa968fa,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: a8df752662428a04d9b2eb43da74c07b,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: c336387faa4ed55468ae062588676a23,
+        type: 3}
     - target: {fileID: 5118395339250866061, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: m_Camera

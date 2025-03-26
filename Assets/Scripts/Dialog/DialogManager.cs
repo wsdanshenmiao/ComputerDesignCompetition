@@ -102,6 +102,9 @@ public class DialogManager : Singleton<DialogManager>
         imageDic["你"] = sprites[2];
         imageDic["？？"] = sprites[3];
         imageDic["大喵"] = sprites[4];
+        imageDic["工匠"] = sprites[5];
+        imageDic["孙思邈"] = sprites[6];
+        imageDic["沈括"] = sprites[7];
     }
     
     /// <summary>
