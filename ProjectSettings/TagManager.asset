@@ -49,3 +49,15 @@ TagManager:
   - name: UI
     uniqueID: 593981975
     locked: 0
+  - name: Platform
+    uniqueID: 2808483473
+    locked: 0
+  - name: Water
+    uniqueID: 760133947
+    locked: 0
+  - name: Block
+    uniqueID: 1768040465
+    locked: 0
+  - name: Ground
+    uniqueID: 268870741
+    locked: 0
