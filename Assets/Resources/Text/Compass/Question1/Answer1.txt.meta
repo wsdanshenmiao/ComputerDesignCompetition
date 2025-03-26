@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Resources/PreArtResources/ShenXing/Dialog_CSV/Dialog_02_Before_1.csv.meta
-guid: b6f9dc61777f7c6438aa3840f7ba8259
-========
+<<<<<<<< HEAD:Assets/Resources/Text/Compass/Question1/Answer1.txt.meta
 guid: d9be1325bd03eb5438eed2aeee3a5e1d
->>>>>>>> origin/DSM:Assets/Resources/Text/Compass/Question1/Answer1.txt.meta
+========
+guid: aba4ce8f4cdf633498bfa47e1b6fe62f
+>>>>>>>> origin/ShenXing:Assets/Resources/PreArtResources/ShenXing/Dialog_CSV/Dialog_02_Before_1.csv.meta
 TextScriptImporter:
   externalObjects: {}
   userData: 
