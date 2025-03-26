@@ -42,6 +42,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df6476985455d5f418f2cc3d0eb6cfd2
+    m_Address: Assets/Scenes/GameScene/Portal Map.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1c9e6af2907ddc64f9fc0c41c0894e3b, type: 2}
   m_SchemaSet:

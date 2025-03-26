@@ -1,19 +1,3 @@
-/****************************************************************************************
-	Author:			danshenmiao
-	Versions:		1.0
-	Creation time:	2025.1.11
-	Finish time:	
-	Abstract:       统一管理玩家的控制
-****************************************************************************************/
-/****************************************************************************************
-	Author:			EFA
-	Versions:		2.0
-	Creation time:	2025.1.14
-	Finish time:	
-	Abstract:       绑定physicsCheck，增加touchLeftWall和touchRightWall用于检测玩家是否接触到墙壁
-****************************************************************************************/
-
-
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -67,6 +51,13 @@ public class PlayerController : Singleton<PlayerController>
         float scale = playerCharacter.playerPara.originSize;
         transform.localScale = new Vector3(scale, scale, scale);
         originGravity = rigidBody.gravityScale;
+    }
+
+    protected void Update()
+    {
+        if (playerInput.changeBackpacker) {
+            UIManager.Instance.ChangeBackpacker();
+        }
     }
 
     protected void OnDisable()

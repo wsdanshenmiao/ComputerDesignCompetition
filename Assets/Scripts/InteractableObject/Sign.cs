@@ -72,16 +72,16 @@ public class Sign : MonoBehaviour
 
     private void CanPress(Collider2D coll)
     {
-        if (coll.CompareTag("Interactable") && SceneLoader.Instance.OnFadeFinish() == true)
+        if (coll.CompareTag("Interactable"))
         {
             canPress = true;
             interactableObj = coll.GetComponent<I_Interactable>();
-            //Debug.Log("已经获取碰撞体");
+            Debug.Log("已经获取碰撞体");
         }
     }
 
     private void CantPress(Collider2D coll)
-    {
+    {    
         if (coll.CompareTag("Interactable"))
         {
             canPress = false;

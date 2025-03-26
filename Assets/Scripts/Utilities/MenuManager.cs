@@ -1,10 +1,3 @@
-/****************************************************************************************
-	Author:			danshenmiao
-	Versions:		1.0
-	Creation time:	2025.1.14
-	Finish time:	
-	Abstract:       主菜单管理
-****************************************************************************************/
 using System;
 using UnityEngine;
 
@@ -78,7 +71,6 @@ public class MenuManager : Singleton<MenuManager>
 
     public void NewGame()
     {
-        Debug.Log("NewGame");
         menuCancas.gameObject.SetActive(false);
         isContinueGame = false;
         

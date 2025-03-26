@@ -40,10 +40,12 @@ public class PortalManager : Singleton<PortalManager>
     public void ChoosePoint(PortailInfo portailInfo)
     {
         currentInfo = portailInfo;
+        StartPortal();
     }
 
     public void StartPortal()
     {
+        Debug.unityLogger.Log("StartPortal");
         SceneManager.Instance.PortalToNew(currentInfo.GameScene, currentInfo.Position);
     }
 }

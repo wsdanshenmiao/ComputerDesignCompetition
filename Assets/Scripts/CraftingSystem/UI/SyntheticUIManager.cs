@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SyntheticUIManager : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class SyntheticUIManager : MonoBehaviour
     private ReminderMode currReminderMode = ReminderMode.ChineseMagicMirror;
     
     public ReminderMode CurrReminderMode { get { return currReminderMode; } set { currReminderMode = value; } }
+
+    private void Update()
+    {
+        currReminderMode = (ReminderMode)(GameManager.currSceneIndex - 1);
+    }
 
     public void CloseCraftingSystemUI()
     {
