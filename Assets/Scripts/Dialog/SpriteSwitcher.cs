@@ -6,7 +6,7 @@ public class SpriteSwitcher : MonoBehaviour
     [Header("Settings")]
     public Sprite[] sprites;
     public float fadeDuration = 1f;
-    
+
     [Header("Events")]
     public UnityEngine.Events.UnityEvent onTransitionComplete;
 
@@ -45,7 +45,7 @@ public class SpriteSwitcher : MonoBehaviour
         // 计算下一个索引
         if (_nextIndex == -1) // 使用下一张背景图片
             _nextIndex = (_currentIndex + 1) % sprites.Length;
-        
+
         // 有效性检查
         if (_nextIndex >= sprites.Length || sprites[_nextIndex] == null)
         {
@@ -73,15 +73,15 @@ public class SpriteSwitcher : MonoBehaviour
                 _baseRenderer.sprite = sprites[_nextIndex];
                 _baseRenderer.color = Color.white;
                 _currentIndex = _nextIndex;
-                
+
                 // 重置覆盖层
                 _overlayRenderer.color = new Color(1, 1, 1, 0);
                 _overlayRenderer.sprite = null;
-                
+
                 // 触发回调
                 onTransitionComplete.Invoke();
             })
-            .OnKill(() => 
+            .OnKill(() =>
             {
                 if (_overlayRenderer != null)
                     _overlayRenderer.color = new Color(1, 1, 1, 0);
@@ -92,7 +92,7 @@ public class SpriteSwitcher : MonoBehaviour
         {
             _transitionSequence = DOTween.Sequence()
                 .Append(_baseRenderer.DOFade(1, fadeDuration).SetEase(Ease.Linear))
-                .OnComplete(() => 
+                .OnComplete(() =>
                 {
                     _currentIndex = _nextIndex;
                     onTransitionComplete.Invoke();
