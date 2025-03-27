@@ -20,6 +20,6 @@ public class Inventor : InteractableObject, I_Interactable
         DialogManager.Instance.OpenDialog(DialogIndex);
 
         // 禁止时间
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 }

@@ -96,6 +96,7 @@ public class DialogManager : Singleton<DialogManager>
     
     protected override void Awake()
     {
+        Debug.Log("sprites.Count:" + sprites.Count);
         base.Awake();
         imageDic["角色A"] = sprites[0];
         imageDic["角色B"] = sprites[1];
@@ -105,6 +106,7 @@ public class DialogManager : Singleton<DialogManager>
         imageDic["工匠"] = sprites[5];
         imageDic["孙思邈"] = sprites[6];
         imageDic["沈括"] = sprites[7];
+        
     }
     
     /// <summary>
@@ -189,6 +191,7 @@ public class DialogManager : Singleton<DialogManager>
 
     public void ShowDialogRow()
     {
+        Debug.Log("currDialogIndex:" + currDialogIndex);
         int index = 0;
         foreach (var row in dialogRows)
         {
@@ -228,6 +231,7 @@ public class DialogManager : Singleton<DialogManager>
             
             else if (cells[0] == "^" && int.Parse(cells[1]) == dialogIndex)
             {
+                Debug.Log("开始切换场景，cells[2]:" + cells[2]);
                 CloseButtonCanvas();
                 CloseKeyCanvas();
                 CloseNormalDialog();
@@ -318,6 +322,7 @@ public class DialogManager : Singleton<DialogManager>
     /// <param name="_index"></param>
     public void OpenDialog(int _index)
     {
+        Debug.Log(_index);
         currDialogIndex = _index;
         ReadText(dialogDataFiles[currDialogIndex]);
         
