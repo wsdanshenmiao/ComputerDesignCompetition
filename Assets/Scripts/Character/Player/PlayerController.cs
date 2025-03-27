@@ -56,7 +56,7 @@ public class PlayerController : Singleton<PlayerController>
     protected void Update()
     {
         if (playerInput.changeBackpacker) {
-            UIManager.Instance.ChangeBackpacker();
+            CraftingSystem.Instance.ChangeCanvasState();
         }
     }
 

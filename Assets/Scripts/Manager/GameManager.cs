@@ -8,12 +8,39 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>, ISaveable
 {
+    [SerializeField] private IntEvent OnDialogEndEvent;
+    
     public SavePriority LoadPriority => SavePriority.CoreSystem;
 
     [SerializeField] private SavePointSO[] checkPoints;
     private string lastCheckpointId;
     
+    // 当前所在的场景
     public static int currSceneIndex = 1;
+    // 当前锁住的关卡
+    public static bool[] lockScene= new bool[3]{true,true,true};
+    
+
+    [SerializeField] private int[] portalDialogIndexs;
+    [SerializeField] private GameSceneSO portalScene;
+
+    private void OnEnable()
+    {
+        OnDialogEndEvent.OnEventRaised += OnDialogEnd;
+    }
+
+    private void OnDialogEnd(int dialogIndex)
+    {
+        // 若是结尾的对话则传送到下一关
+        if (Array.Exists(portalDialogIndexs, x => x == dialogIndex)) {
+            SceneManager.Instance.PortalToNew(portalScene, Vector3.zero);
+        }
+    }
+
+    private void OnDisable()
+    {
+        OnDialogEndEvent.OnEventRaised -= OnDialogEnd;
+    }
 
     public void Start()
     {

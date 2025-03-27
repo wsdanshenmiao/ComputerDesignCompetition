@@ -52,15 +52,6 @@ public class PlayerCharacter : Character, ITargetable
 
     private void UpdateMana()
     {
-        SkillInputManager skillInput = SkillInputManager.Instance;
-        if (skillInput == null) return;
-
-        if (skillInput.SizeChangeSkill.IsEnlarged || skillInput.SizeChangeSkill.IsShrunk)
-        {
-            isCast = true;
-        }
-
-
         currManaDelay = isCast ? playerPara.manaDelay : (currManaDelay - Time.deltaTime);
         if (currManaDelay < 0)
         {

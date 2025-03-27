@@ -416,13 +416,13 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.42745098, g: 0.36862746, b: 0.4627451, a: 1}
-    m_PressedColor: {r: 0.3207971, g: 0.19582887, b: 0.38679248, a: 1}
-    m_SelectedColor: {r: 0.2509804, g: 0.15294118, b: 0.30980393, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e9f0296205e644c9d4dab2b19cb8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 2
   GameScene: {fileID: 0}
   Position: {x: 0, y: 0, z: 0}
 --- !u!114 &820469753 stripped
@@ -594,6 +595,26 @@ PrefabInstance:
         type: 3}
       propertyPath: postions.Array.data[0].y
       value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
+        type: 3}
+      propertyPath: postions.Array.data[1].x
+      value: -23.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
+        type: 3}
+      propertyPath: postions.Array.data[1].y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
+        type: 3}
+      propertyPath: postions.Array.data[2].x
+      value: -152.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
+        type: 3}
+      propertyPath: postions.Array.data[2].y
+      value: 2.64
       objectReference: {fileID: 0}
     - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
         type: 3}
@@ -804,6 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e9f0296205e644c9d4dab2b19cb8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 1
   GameScene: {fileID: 0}
   Position: {x: 0, y: 0, z: 0}
 --- !u!222 &1985106239
@@ -833,13 +855,13 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.42745098, g: 0.36862746, b: 0.4627451, a: 1}
-    m_PressedColor: {r: 0.3207971, g: 0.19582887, b: 0.38679248, a: 1}
-    m_SelectedColor: {r: 0.2509804, g: 0.15294118, b: 0.30980393, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -951,12 +973,22 @@ PrefabInstance:
     - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
         type: 3}
       propertyPath: m_Transition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
         type: 3}
       propertyPath: m_TargetGraphic
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
         type: 3}
@@ -975,6 +1007,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
         type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
+        type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -987,6 +1029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3381480716690987493, guid: 4887c305fdc1f514ba063e86cc46af0d,
         type: 3}
