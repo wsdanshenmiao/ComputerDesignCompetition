@@ -12,7 +12,7 @@ public class SpriteSwitcher : MonoBehaviour
     [Header("Events")] 
     public UnityEvent onTransitionComplete;
 
-    private Image _baseImage;
+    public Image _baseImage;
     private Image _overlayImage;
     private int _currentIndex = -1;
     private Coroutine _currentCoroutine;

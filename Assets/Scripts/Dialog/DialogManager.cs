@@ -191,7 +191,8 @@ public class DialogManager : Singleton<DialogManager>
 
     public void ShowDialogRow()
     {
-        Debug.Log("currDialogIndex:" + currDialogIndex);
+        Debug.Log("currDialogIndex: " + currDialogIndex);
+        Debug.Log("dialogIndex: " + dialogIndex);
         int index = 0;
         foreach (var row in dialogRows)
         {
@@ -250,10 +251,13 @@ public class DialogManager : Singleton<DialogManager>
                 CloseButtonCanvas();
                 CloseKeyCanvas();
                 CloseNormalDialog();
+                
+                //剧情结束后，需要将背景图片隐藏（调整颜色）
+                SpriteSwitcher._baseImage.color = new Color(0, 0, 0, 0);
 
                 Debug.Log("剧情结束");
                 OnDialogEnd.RaiseEvent(currDialogIndex);
-                break; //防止反复执行本代码段，从而反复出发结束事件
+                break; //防止反复执行本代码段，从而反复触发结束事件
             }
 
             index++;
@@ -324,14 +328,12 @@ public class DialogManager : Singleton<DialogManager>
     {
         Debug.Log(_index);
         currDialogIndex = _index;
+        dialogIndex = 0;
         ReadText(dialogDataFiles[currDialogIndex]);
-        Debug.Log("--------1--------");
         // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
         Debug.Log("有将sprite设置为null");
         spriteLeft.sprite = null;
-        Debug.Log("--------2--------");
         spriteRight.sprite = null;
-        Debug.Log("--------3--------");
         
         ShowDialogRow();
     }
