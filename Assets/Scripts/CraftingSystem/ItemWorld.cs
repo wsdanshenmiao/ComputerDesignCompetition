@@ -26,6 +26,15 @@ public class ItemWorld : MonoBehaviour
         }
     }
 
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Collision");
+        if (other.gameObject.CompareTag("Player") && item.amount > 0) {
+            CraftingSystem.Instance.AddItem(item);
+            DestroySelf();
+        }
+    }
+
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {
         Transform trans = Instantiate(CraftingSystem.Instance.itemPrefab, position, Quaternion.identity);

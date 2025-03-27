@@ -324,8 +324,7 @@ public class DialogManager : Singleton<DialogManager>
         // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
         spriteLeft.sprite = null;
         spriteRight.sprite = null;
-        OpenNormalDialog();
-        Debug.Log("Open Dialog");
+        
         ShowDialogRow();
     }
 
