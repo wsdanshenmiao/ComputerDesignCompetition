@@ -18,11 +18,11 @@ public class DialogManager : Singleton<DialogManager>
     /// <summary>
     /// 左侧角色图像组件
     /// </summary>
-    public SpriteRenderer spriteLeft;
+    public Image spriteLeft;
     /// <summary>
     /// 右侧角色图像组件
     /// </summary>
-    public SpriteRenderer spriteRight;
+    public Image spriteRight;
 
     /// <summary>
     /// 角色名字文本组件
@@ -325,10 +325,13 @@ public class DialogManager : Singleton<DialogManager>
         Debug.Log(_index);
         currDialogIndex = _index;
         ReadText(dialogDataFiles[currDialogIndex]);
-        
+        Debug.Log("--------1--------");
         // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
+        Debug.Log("有将sprite设置为null");
         spriteLeft.sprite = null;
+        Debug.Log("--------2--------");
         spriteRight.sprite = null;
+        Debug.Log("--------3--------");
         
         ShowDialogRow();
     }
@@ -342,6 +345,17 @@ public class DialogManager : Singleton<DialogManager>
         DialogCanvas.SetActive(true);
         spriteLeft.gameObject.SetActive(true);
         spriteRight.gameObject.SetActive(true);
+        
+        //将图片为none的透明度设置为0，防止出现白色方框
+        if (spriteLeft.sprite == null)
+        {
+            spriteLeft.color = new Color(1, 1, 1, 0);
+        }
+
+        if (spriteRight.sprite == null)
+        {
+            spriteRight.color = new Color(1, 1, 1, 0);
+        }
     }
 
     /// <summary>
@@ -350,6 +364,7 @@ public class DialogManager : Singleton<DialogManager>
     public void CloseNormalDialog()
     {
         DialogCanvas.SetActive(false);
+        Debug.Log("spriteLeft is Null? " + spriteLeft.sprite == null);
         spriteLeft.gameObject.SetActive(false);
         spriteRight.gameObject.SetActive(false);
     }

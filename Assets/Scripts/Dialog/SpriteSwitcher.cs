@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class SpriteSwitcher : MonoBehaviour
 {
@@ -11,25 +12,32 @@ public class SpriteSwitcher : MonoBehaviour
     [Header("Events")] 
     public UnityEvent onTransitionComplete;
 
-    private SpriteRenderer _baseRenderer;
-    private SpriteRenderer _overlayRenderer;
+    private Image _baseImage;
+    private Image _overlayImage;
     private int _currentIndex = -1;
     private Coroutine _currentCoroutine;
 
     void Awake()
     {
-        // 初始化基础渲染器
-        _baseRenderer = GetComponent<SpriteRenderer>() ?? gameObject.AddComponent<SpriteRenderer>();
-        _baseRenderer.sprite = null;
-        _baseRenderer.color = Color.clear;
+        // 初始化基础Image组件
+        _baseImage = GetComponent<Image>() ?? gameObject.AddComponent<Image>();
+        _baseImage.sprite = null;
+        _baseImage.color = Color.clear;
 
-        // 创建覆盖层渲染器
-        _overlayRenderer = new GameObject("OverlayRenderer").AddComponent<SpriteRenderer>();
-        _overlayRenderer.transform.SetParent(transform);
-        _overlayRenderer.transform.localPosition = Vector3.zero;
-        _overlayRenderer.transform.localScale = Vector3.one;
-        _overlayRenderer.sortingOrder = _baseRenderer.sortingOrder + 1;
-        _overlayRenderer.color = new Color(1, 1, 1, 0);
+        // 创建覆盖层Image组件
+        GameObject overlayObj = new GameObject("OverlayImage");
+        overlayObj.transform.SetParent(transform);
+        overlayObj.transform.localPosition = Vector3.zero;
+        overlayObj.transform.localScale = Vector3.one;
+        _overlayImage = overlayObj.AddComponent<Image>();
+        _overlayImage.rectTransform.anchorMin = Vector2.zero;
+        _overlayImage.rectTransform.anchorMax = Vector2.one;
+        _overlayImage.rectTransform.offsetMin = Vector2.zero;
+        _overlayImage.rectTransform.offsetMax = Vector2.zero;
+        _overlayImage.color = new Color(1, 1, 1, 0);
+        
+        // 确保渲染顺序
+        _overlayImage.transform.SetAsLastSibling();
     }
 
     public void NextSprite(int nextIndex)
@@ -66,18 +74,18 @@ public class SpriteSwitcher : MonoBehaviour
         // 首次切换的特殊处理
         if (_currentIndex == -1)
         {
-            _baseRenderer.sprite = sprites[targetIndex];
+            _baseImage.sprite = sprites[targetIndex];
             yield return FadeInBase();
             _currentIndex = targetIndex;
         }
         else
         {
             // 常规切换流程
-            _overlayRenderer.sprite = sprites[targetIndex];
+            _overlayImage.sprite = sprites[targetIndex];
             yield return FadeInOverlay();
             
-            _baseRenderer.sprite = sprites[targetIndex];
-            _baseRenderer.color = Color.white;
+            _baseImage.sprite = sprites[targetIndex];
+            _baseImage.color = Color.white;
             _currentIndex = targetIndex;
             
             yield return FadeOutOverlay();
@@ -94,11 +102,11 @@ public class SpriteSwitcher : MonoBehaviour
         while (elapsed < fadeDuration)
         {
             float alpha = Mathf.Lerp(0, 1, elapsed / fadeDuration);
-            _baseRenderer.color = new Color(1, 1, 1, alpha);
+            _baseImage.color = new Color(1, 1, 1, alpha);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        _baseRenderer.color = Color.white;
+        _baseImage.color = Color.white;
     }
 
     // 覆盖层淡入
@@ -108,27 +116,27 @@ public class SpriteSwitcher : MonoBehaviour
         while (elapsed < fadeDuration)
         {
             float alpha = Mathf.Lerp(0, 1, elapsed / fadeDuration);
-            _overlayRenderer.color = new Color(1, 1, 1, alpha);
+            _overlayImage.color = new Color(1, 1, 1, alpha);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        _overlayRenderer.color = Color.white;
+        _overlayImage.color = Color.white;
     }
 
     // 覆盖层淡出
     private IEnumerator FadeOutOverlay()
     {
-        _overlayRenderer.color = Color.white;
+        _overlayImage.color = Color.white;
         float elapsed = 0f;
         while (elapsed < fadeDuration)
         {
             float alpha = Mathf.Lerp(1, 0, elapsed / fadeDuration);
-            _overlayRenderer.color = new Color(1, 1, 1, alpha);
+            _overlayImage.color = new Color(1, 1, 1, alpha);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        _overlayRenderer.color = new Color(1, 1, 1, 0);
-        _overlayRenderer.sprite = null;
+        _overlayImage.color = new Color(1, 1, 1, 0);
+        _overlayImage.sprite = null;
     }
 
     void OnDestroy()
