@@ -22,6 +22,11 @@ public class SyntheticUIManager : MonoBehaviour
         currReminderMode = (ReminderMode)(GameManager.currSceneIndex - 1);
     }
 
+    public void CloseAllUI()
+    {
+        
+    }
+
     public void CloseCraftingSystemUI()
     {
         craftingSystemUI.gameObject.SetActive(false);

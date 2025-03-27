@@ -6188,7 +6188,7 @@ PrefabInstance:
     - target: {fileID: 2322160074888216899, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3409363419576784404, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
@@ -9501,6 +9501,11 @@ PrefabInstance:
       propertyPath: UICanvas
       value: 
       objectReference: {fileID: 1753332542}
+    - target: {fileID: 1688215240137403339, guid: aadaf9b8e70f8384688bf1918211f25a,
+        type: 3}
+      propertyPath: syntheticUI
+      value: 
+      objectReference: {fileID: 48055479}
     - target: {fileID: 2859138717779747837, guid: aadaf9b8e70f8384688bf1918211f25a,
         type: 3}
       propertyPath: m_Name
@@ -10562,6 +10567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690972745770054203, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7690972745770054203, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}

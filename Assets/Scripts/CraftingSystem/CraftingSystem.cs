@@ -39,13 +39,6 @@ public class CraftingSystem : Singleton<CraftingSystem>
     {
         uiInventory.SetInventory(inventory);
         craftingSlots = uiInventory.GetCraftingTable();
-
-        for (int i = 0; i < (int)Item.ItemType.ItemTypeCount; i++) {
-            var item = items.Find(delegate(ItemScriptableObject item) {
-                return item.itemType == (Item.ItemType)i;
-            });
-            AddItem(new Item(){ itemScriptableObject = item, amount = 1 });
-        }
     }
 
     public void AddItem(Item item)
