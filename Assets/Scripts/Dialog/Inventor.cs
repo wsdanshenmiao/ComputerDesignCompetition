@@ -18,8 +18,5 @@ public class Inventor : InteractableObject, I_Interactable
     {
         // 触发与导师的对话行为,打开DialogCanvans
         DialogManager.Instance.OpenDialog(DialogIndex);
-
-        // 禁止时间
-        Time.timeScale = 0;
     }
 }
