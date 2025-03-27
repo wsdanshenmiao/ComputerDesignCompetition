@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 40747720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 60175540}
   - component: {fileID: 60175539}
   - component: {fileID: 60175538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 167915568}
   - component: {fileID: 167915567}
   - component: {fileID: 167915566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 251222777}
   - component: {fileID: 251222776}
   - component: {fileID: 251222775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 265478304}
   - component: {fileID: 265478303}
   - component: {fileID: 265478302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319596007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 437582753}
   - component: {fileID: 437582752}
   - component: {fileID: 437582751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 494886094}
   - component: {fileID: 494886093}
   - component: {fileID: 494886092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 614271625}
   - component: {fileID: 614271624}
   - component: {fileID: 614271623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,7 +1968,7 @@ GameObject:
   - component: {fileID: 715942174}
   - component: {fileID: 715942173}
   - component: {fileID: 715942172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2212,7 +2212,7 @@ GameObject:
   - component: {fileID: 752271841}
   - component: {fileID: 752271840}
   - component: {fileID: 752271839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2453,7 +2453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787372801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2611,7 +2611,7 @@ GameObject:
   - component: {fileID: 899450980}
   - component: {fileID: 899450979}
   - component: {fileID: 899450978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2929,7 +2929,7 @@ GameObject:
   - component: {fileID: 972115568}
   - component: {fileID: 972115567}
   - component: {fileID: 972115566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 1022938162}
   - component: {fileID: 1022938161}
   - component: {fileID: 1022938160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3735,7 +3735,7 @@ GameObject:
   - component: {fileID: 1305667981}
   - component: {fileID: 1305667980}
   - component: {fileID: 1305667979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4522,7 +4522,7 @@ GameObject:
   - component: {fileID: 1522488868}
   - component: {fileID: 1522488867}
   - component: {fileID: 1522488866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4748,7 +4748,7 @@ GameObject:
   - component: {fileID: 1626853909}
   - component: {fileID: 1626853908}
   - component: {fileID: 1626853907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4992,7 +4992,7 @@ GameObject:
   - component: {fileID: 1640584250}
   - component: {fileID: 1640584249}
   - component: {fileID: 1640584248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5345,7 @@ GameObject:
   - component: {fileID: 1710985413}
   - component: {fileID: 1710985412}
   - component: {fileID: 1710985411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5833,7 +5833,7 @@ GameObject:
   - component: {fileID: 1765395168}
   - component: {fileID: 1765395167}
   - component: {fileID: 1765395166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5992,7 +5992,7 @@ GameObject:
   - component: {fileID: 1769212632}
   - component: {fileID: 1769212631}
   - component: {fileID: 1769212630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6236,7 +6236,7 @@ GameObject:
   - component: {fileID: 1964200915}
   - component: {fileID: 1964200914}
   - component: {fileID: 1964200913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6639,7 +6639,7 @@ GameObject:
   - component: {fileID: 1989340019}
   - component: {fileID: 1989340018}
   - component: {fileID: 1989340017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6907,7 +6907,7 @@ GameObject:
   - component: {fileID: 2019541746}
   - component: {fileID: 2019541745}
   - component: {fileID: 2019541744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7066,7 +7066,7 @@ GameObject:
   - component: {fileID: 2120436853}
   - component: {fileID: 2120436852}
   - component: {fileID: 2120436851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

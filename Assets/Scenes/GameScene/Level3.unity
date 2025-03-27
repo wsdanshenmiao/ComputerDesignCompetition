@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 40747720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 91342626}
   - component: {fileID: 91342625}
   - component: {fileID: 91342624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 94961926}
   - component: {fileID: 94961925}
   - component: {fileID: 94961924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 111430256}
   - component: {fileID: 111430255}
   - component: {fileID: 111430254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 115889650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 150572223}
   - component: {fileID: 150572222}
   - component: {fileID: 150572221}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   - component: {fileID: 244956536}
   - component: {fileID: 244956535}
   - component: {fileID: 244956534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 265478304}
   - component: {fileID: 265478303}
   - component: {fileID: 265478302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294410390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -1646,7 +1646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319596007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,7 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427296841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 2
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430548829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 2
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -1923,7 +1923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441520657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving Platform Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2046,7 +2046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 480491069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2080,7 +2080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519938911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rotation Moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 564267770}
   - component: {fileID: 564267769}
   - component: {fileID: 564267768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 758358479}
   - component: {fileID: 758358478}
   - component: {fileID: 758358477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2863,7 +2863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787372801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3186,7 +3186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 930074097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -3301,7 +3301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964956203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -3541,7 +3541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087032646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3911,7 +3911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1251868422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3945,7 +3945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1258112891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -3979,7 +3979,7 @@ GameObject:
   - component: {fileID: 1271462575}
   - component: {fileID: 1271462574}
   - component: {fileID: 1271462573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4135,7 +4135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1310117834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4339,7 +4339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327567273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4542,7 +4542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1478504325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -4973,7 +4973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1610698658}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5040,7 +5040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631957902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -5159,7 +5159,7 @@ GameObject:
   - component: {fileID: 1640584250}
   - component: {fileID: 1640584249}
   - component: {fileID: 1640584248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5596,7 +5596,7 @@ GameObject:
   - component: {fileID: 1757582478}
   - component: {fileID: 1757582477}
   - component: {fileID: 1757582476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5752,7 +5752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768431618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5789,7 +5789,7 @@ GameObject:
   - component: {fileID: 1777036422}
   - component: {fileID: 1777036421}
   - component: {fileID: 1777036420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5945,7 +5945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782817539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -5976,7 +5976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1845845209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -6007,7 +6007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1895065671}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -6038,7 +6038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923245947}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -6431,7 +6431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017879406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -6465,7 +6465,7 @@ GameObject:
   - component: {fileID: 2019541746}
   - component: {fileID: 2019541745}
   - component: {fileID: 2019541744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6624,7 +6624,7 @@ GameObject:
   - component: {fileID: 2047989838}
   - component: {fileID: 2047989837}
   - component: {fileID: 2047989836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6783,7 +6783,7 @@ GameObject:
   - component: {fileID: 2050946921}
   - component: {fileID: 2050946920}
   - component: {fileID: 2050946919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7024,7 +7024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097041426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotatingPlatformCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
