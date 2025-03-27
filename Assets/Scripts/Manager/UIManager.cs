@@ -11,6 +11,8 @@ public class UIManager : Singleton<UIManager>
     [Header("获取总UI")]
     public GameObject UICanvas;
 
+    public GameObject syntheticUI;
+
     private float currentHealth;
     private float currentMana;
 
@@ -68,12 +70,11 @@ public class UIManager : Singleton<UIManager>
 
     public void ChangeBackpacker()
     {
-        Transform backpacker = UICanvas.transform.Find("Backpacker");
-        if (backpacker.gameObject.activeSelf) {
-            backpacker.gameObject.SetActive(false);
+        if (syntheticUI.activeSelf) {
+            syntheticUI.SetActive(false);
         }
         else {
-            backpacker.gameObject.SetActive(true);
+            syntheticUI.SetActive(true);
         }
     }
 }
