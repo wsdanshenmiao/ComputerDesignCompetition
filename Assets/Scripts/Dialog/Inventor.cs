@@ -21,5 +21,8 @@ public class Inventor : InteractableObject, I_Interactable
         GameManager.lockScene[unlockSceneIndex] = false;
         GameManager.currSceneIndex++;
         DialogManager.Instance.OpenDialog(DialogIndex);
+
+        // 禁止时间
+        // Time.timeScale = 0;
     }
 }
