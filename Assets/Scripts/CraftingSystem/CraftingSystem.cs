@@ -43,6 +43,13 @@ public class CraftingSystem : Singleton<CraftingSystem>
         inventoryCanvas.enabled = false;
     }
 
+    public bool ContainsItem(ItemScriptableObject item)
+    {
+        if(item == null) return false;
+        
+        return inventory.GetItems().Exists(havedItem => havedItem.itemScriptableObject.itemType == item.itemType);
+    }
+
     public void ChangeCanvasState()
     {
         if (inventoryCanvas.enabled) {

@@ -1,10 +1,4 @@
-/****************************************************************************************
-	Author:			Crusher
-	Versions:		1.0
-	Creation time:	2025.1.14
-	Finish time:	
-	Abstract:       用于管理传送系统的Manager
-****************************************************************************************/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

@@ -6192,6 +6192,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1025341646275679122, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2322160074888216899, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: m_Name
@@ -7166,7 +7171,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612689857}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -10740,6 +10745,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 317959793
       objectReference: {fileID: 0}
+    - target: {fileID: 2860582391856276456, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 87737ad7fad6cb4489b4e394a6c4cf9c, type: 2}
     - target: {fileID: 2932302094203056117, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
       propertyPath: m_SortingLayer

@@ -4,6 +4,10 @@ public class Inventor : InteractableObject, I_Interactable
 {
     public int DialogIndex;
     public int unlockSceneIndex;
+    // 通关需要的合成物品
+    [SerializeField] private ItemScriptableObject passItem;
+
+    [SerializeField] private bool enablePass = false;
 
     protected override void Start()
     {
@@ -17,7 +21,11 @@ public class Inventor : InteractableObject, I_Interactable
 
     public void TriggerAction()
     {
-        // 触发与导师的对话行为,打开DialogCanvans
+        if (!CraftingSystem.Instance.ContainsItem(passItem) && !enablePass) return;
+        
+        for (int i = 0; i < GameManager.lockScene.Length; ++i) {
+            GameManager.lockScene[i] = true;
+        }
         GameManager.lockScene[unlockSceneIndex] = false;
         GameManager.currSceneIndex++;
         DialogManager.Instance.OpenDialog(DialogIndex);

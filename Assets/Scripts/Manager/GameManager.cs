@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
     private string lastCheckpointId;
     
     // 当前所在的场景
-    public static int currSceneIndex = 1;
+    public static int currSceneIndex = 0;
     // 当前锁住的关卡
     public static bool[] lockScene= new bool[3]{true,true,true};
     
@@ -89,10 +89,10 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
     public void PauseGame(bool _pause)
     {
-        if (_pause)
+        /*if (_pause)
             Time.timeScale = 0;
         else
-            Time.timeScale = 1;
+            Time.timeScale = 1;*/
     }
 
     public void UpdateLastCheckpointId(string newCheckpointId)
