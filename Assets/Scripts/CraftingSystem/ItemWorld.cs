@@ -21,7 +21,11 @@ public class ItemWorld : MonoBehaviour
     {
         Debug.Log("Collision");
         if (other.gameObject.CompareTag("Player") && item.amount > 0) {
-            CraftingSystem.Instance.AddItem(item);
+            CraftingSystem.Instance.AddItem(new Item()
+            {
+                itemScriptableObject = item.itemScriptableObject, 
+                amount = item.amount,
+            });
             DestroySelf();
         }
     }

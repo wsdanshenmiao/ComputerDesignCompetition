@@ -11,8 +11,6 @@ public class UIManager : Singleton<UIManager>
     [Header("获取总UI")]
     public GameObject UICanvas;
 
-    public GameObject syntheticUI;
-
     private float currentHealth;
     private float currentMana;
 
@@ -68,13 +66,4 @@ public class UIManager : Singleton<UIManager>
         UICanvas.SetActive(true);
     }
 
-    public void ChangeBackpacker()
-    {
-        if (syntheticUI.activeSelf) {
-            syntheticUI.SetActive(false);
-        }
-        else {
-            syntheticUI.SetActive(true);
-        }
-    }
 }

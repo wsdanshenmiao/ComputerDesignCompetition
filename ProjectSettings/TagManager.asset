@@ -43,9 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Character
-    uniqueID: 317959793
-    locked: 0
   - name: UI
     uniqueID: 593981975
     locked: 0
@@ -63,4 +60,7 @@ TagManager:
     locked: 0
   - name: Block
     uniqueID: 1768040465
+    locked: 0
+  - name: Character
+    uniqueID: 317959793
     locked: 0

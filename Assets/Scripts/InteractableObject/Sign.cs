@@ -76,7 +76,7 @@ public class Sign : MonoBehaviour
         {
             canPress = true;
             interactableObj = coll.GetComponent<I_Interactable>();
-            Debug.Log("已经获取碰撞体");
+            //Debug.Log("已经获取碰撞体");
         }
     }
 

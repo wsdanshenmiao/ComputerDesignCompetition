@@ -1,10 +1,4 @@
-/****************************************************************************************
-	Author:			Crusher
-	Versions:		1.0
-	Creation time:	2025.1.14
-	Finish time:	
-	Abstract:       用于管理传送系统的Manager
-****************************************************************************************/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -39,8 +33,11 @@ public class PortalManager : Singleton<PortalManager>
     // 选中方法
     public void ChoosePoint(PortailInfo portailInfo)
     {
-        currentInfo = portailInfo;
-        StartPortal();
+        // 检测场景是否解锁
+        if (!GameManager.lockScene[portailInfo.sceneIndex]) {
+            currentInfo = portailInfo;
+            StartPortal();
+        }
     }
 
     public void StartPortal()

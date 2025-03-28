@@ -21,8 +21,7 @@ public class UI_Inventory : MonoBehaviour
     public List<CompositionInfo> compositionInfos;
     #endregion
 
-    #region Private
-
+    #region Privat
     private Inventory inventory;
 
     // 合成事件监听

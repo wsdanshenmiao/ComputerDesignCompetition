@@ -15,16 +15,12 @@ public class SyntheticUIManager : MonoBehaviour
     [SerializeField] private Transform[] reminderUI;
     private ReminderMode currReminderMode = ReminderMode.ChineseMagicMirror;
     
+    
     public ReminderMode CurrReminderMode { get { return currReminderMode; } set { currReminderMode = value; } }
 
     private void Update()
     {
         currReminderMode = (ReminderMode)(GameManager.currSceneIndex - 1);
-    }
-
-    public void CloseAllUI()
-    {
-        
     }
 
     public void CloseCraftingSystemUI()

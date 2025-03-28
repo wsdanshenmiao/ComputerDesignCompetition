@@ -34,6 +34,8 @@ public class MenuManager : Singleton<MenuManager>
     {
         if (dialogIndex == 1) {
             menuCancas.gameObject.SetActive(true);
+            GameManager.lockScene[0] = false;
+            GameManager.currSceneIndex++;
             NewGame();
         }
     }

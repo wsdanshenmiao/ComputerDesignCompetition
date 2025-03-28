@@ -14,7 +14,7 @@ public class CraftingSystem : Singleton<CraftingSystem>
 
 
     #region Private
-
+    private Canvas inventoryCanvas;
     // 背包的UI
     [SerializeField] private UI_Inventory uiInventory;
     // 现有库存
@@ -33,12 +33,41 @@ public class CraftingSystem : Singleton<CraftingSystem>
     {
         base.Awake();
         inventory = new Inventory();
+        inventoryCanvas = GetComponent<Canvas>();
     }
 
     private void Start()
     {
         uiInventory.SetInventory(inventory);
         craftingSlots = uiInventory.GetCraftingTable();
+        inventoryCanvas.enabled = false;
+    }
+
+    public bool ContainsItem(ItemScriptableObject item)
+    {
+        if(item == null) return false;
+        
+        return inventory.GetItems().Exists(havedItem => havedItem.itemScriptableObject.itemType == item.itemType);
+    }
+
+    public void ChangeCanvasState()
+    {
+        if (inventoryCanvas.enabled) {
+            CloseCanvas();
+        }
+        else {
+            OpenCanvas();
+        }
+    }
+    
+    public void CloseCanvas()
+    {
+        inventoryCanvas.enabled = false;
+    }
+
+    public void OpenCanvas()
+    {
+        inventoryCanvas.enabled = true;
     }
 
     public void AddItem(Item item)
