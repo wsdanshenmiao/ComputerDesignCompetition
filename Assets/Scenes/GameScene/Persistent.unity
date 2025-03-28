@@ -6200,7 +6200,7 @@ PrefabInstance:
     - target: {fileID: 2322160074888216899, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2593230644971359342, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
@@ -10047,12 +10047,12 @@ PrefabInstance:
     - target: {fileID: 1789677011482679571, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.393
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1789677011482679571, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.261
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 2311095639307732645, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
@@ -10122,12 +10122,12 @@ PrefabInstance:
     - target: {fileID: 6566870334174670108, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.393
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6566870334174670108, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.261
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 6947742845395040582, guid: eb3a4df21ab7c1045ab41aef124c99a1,
         type: 3}
@@ -10661,12 +10661,12 @@ PrefabInstance:
     - target: {fileID: 5398898380117753831, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.393
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5398898380117753831, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.261
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 5398898380117753831, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
