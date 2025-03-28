@@ -8,6 +8,8 @@ public class PlayerController : Singleton<PlayerController>
     public SceneLoadEventSO SceneLoadEvent;
     public VoidEventSO AfterSceneLoadEvent;
 
+    [SerializeField] private PhysicsMaterial2D glossMaterial;
+    
     private PlayerInput playerInput;
     private PhysicsCheck physicsCheck;
     private Rigidbody2D rigidBody;
@@ -58,6 +60,13 @@ public class PlayerController : Singleton<PlayerController>
         //Debug.Log(playerCharacter.IsDeath);
         if (playerInput.changeBackpacker) {
             CraftingSystem.Instance.ChangeCanvasState();
+        }
+
+        if (isGround) {
+            rigidBody.sharedMaterial = null;
+        }
+        else {
+            rigidBody.sharedMaterial = glossMaterial;
         }
     }
 

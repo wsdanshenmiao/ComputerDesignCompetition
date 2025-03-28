@@ -18,7 +18,7 @@ MonoBehaviour:
   jumpHeight: 4.5
   sprintDuration: 0.3
   jumpDuration: 0.35
-  coyoteDuration: 0.1
+  coyoteDuration: 0
   sprintCD: 0.5
   maxMana: 100
   manaCD: 0.5

@@ -838,8 +838,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
@@ -1840,8 +1840,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
@@ -2449,6 +2449,7 @@ GameObject:
   - component: {fileID: 963881782}
   - component: {fileID: 963881781}
   - component: {fileID: 963881780}
+  - component: {fileID: 963881783}
   m_Layer: 0
   m_Name: Water (2)
   m_TagString: Untagged
@@ -2465,8 +2466,8 @@ Transform:
   m_GameObject: {fileID: 963881778}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.5416, y: -2, z: 0}
-  m_LocalScale: {x: 7.554211, y: 3.8637, z: 1}
+  m_LocalPosition: {x: 70.3, y: -2, z: 0}
+  m_LocalScale: {x: 8.46, y: 3.8637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709521800}
@@ -2586,7 +2587,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.031372547, g: 1, b: 0.98277545, a: 1}
+  m_Color: {r: 0.031372547, g: 0.84675044, b: 1, a: 0.63529414}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2596,6 +2597,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &963881783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963881778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b201e971e895244e8d022a41a266c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  attackRate: 0.2
+  knockFactor: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &972115564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,8 +2843,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5,
     type: 3}
@@ -3080,8 +3099,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5,
     type: 3}
@@ -3355,7 +3374,7 @@ GameObject:
   - component: {fileID: 1285930145}
   - component: {fileID: 1285930144}
   m_Layer: 0
-  m_Name: "\u5173\u53612\u80CC\u666F"
+  m_Name: Background
   m_TagString: Bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3710,8 +3729,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5,
     type: 3}
@@ -4718,7 +4737,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4870243, y: 0.631945}
+  m_Offset: {x: 0.898098, y: 1.8377609}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -4729,7 +4748,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.966423, y: 3.9221451}
+  m_Size: {x: 4.7885704, y: 6.3337774}
   m_EdgeRadius: 0
 --- !u!1 &1640584246
 GameObject:
@@ -4901,6 +4920,7 @@ GameObject:
   - component: {fileID: 1663819202}
   - component: {fileID: 1663819201}
   - component: {fileID: 1663819200}
+  - component: {fileID: 1663819203}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -5038,7 +5058,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.031372547, g: 1, b: 0.98277545, a: 1}
+  m_Color: {r: 0.031372547, g: 0.84675044, b: 1, a: 0.63529414}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5048,6 +5068,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1663819203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663819198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b201e971e895244e8d022a41a266c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  attackRate: 0.2
+  knockFactor: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1709521799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5338,6 +5376,7 @@ GameObject:
   - component: {fileID: 1741328731}
   - component: {fileID: 1741328730}
   - component: {fileID: 1741328729}
+  - component: {fileID: 1741328732}
   m_Layer: 0
   m_Name: Water (1)
   m_TagString: Untagged
@@ -5475,7 +5514,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.031372547, g: 1, b: 0.98277545, a: 1}
+  m_Color: {r: 0.031372547, g: 0.84675044, b: 1, a: 0.63529414}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5485,6 +5524,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1741328732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741328727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b201e971e895244e8d022a41a266c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  attackRate: 0.2
+  knockFactor: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1754273305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5882,7 @@ GameObject:
   - component: {fileID: 1970691647}
   - component: {fileID: 1970691646}
   - component: {fileID: 1970691645}
+  - component: {fileID: 1970691648}
   m_Layer: 0
   m_Name: Water (3)
   m_TagString: Untagged
@@ -5962,7 +6020,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.031372547, g: 1, b: 0.98277545, a: 1}
+  m_Color: {r: 0.031372547, g: 0.84675044, b: 1, a: 0.63529414}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5972,6 +6030,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1970691648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970691643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b201e971e895244e8d022a41a266c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  attackRate: 0.2
+  knockFactor: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1984109782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,8 +6569,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1768040465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}

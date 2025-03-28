@@ -10,6 +10,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "State/PlayerState/Idle", fileName = "PlayerIdle")]
 public class PlayerStateIdle : PlayerState
 {
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        playerController.SetVelocityY(0);
+    }
+
     public override void LogicUpdate()
     {
         if (playerController.playerCharacter.IsHurt)

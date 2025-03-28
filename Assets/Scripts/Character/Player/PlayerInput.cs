@@ -18,6 +18,7 @@ public class PlayerInput : MonoBehaviour
 
     public float moveSpeed => playerController.GetVelocityX();
     public float inputAxesX => inputAxes.x;
+    public float inputAxesY => inputAxes.y;
     
     public bool changeBackpacker => inputController.GamePlay.OpenBackpacker.WasPressedThisFrame();
 

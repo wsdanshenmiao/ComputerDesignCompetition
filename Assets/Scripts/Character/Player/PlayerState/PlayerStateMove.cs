@@ -48,6 +48,9 @@ public class PlayerStateMove : PlayerState
 
     public override void PhysicsUpdate()
     {
+        if (!playerController.isGround) {
+            playerController.SetVelocityY(0);
+        }
         playerController.Move(GetCurrSpeed());
     }
 
