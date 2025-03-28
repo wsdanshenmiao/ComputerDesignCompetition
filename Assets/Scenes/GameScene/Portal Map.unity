@@ -599,12 +599,12 @@ PrefabInstance:
     - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
         type: 3}
       propertyPath: postions.Array.data[1].x
-      value: -23.2
+      value: -22.76
       objectReference: {fileID: 0}
     - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
         type: 3}
       propertyPath: postions.Array.data[1].y
-      value: 3.2
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8327465531147097705, guid: 494d11f53fa38dc4eb5aecf7f50a3558,
         type: 3}
