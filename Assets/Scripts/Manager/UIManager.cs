@@ -36,17 +36,6 @@ public class UIManager : Singleton<UIManager>
         //PlayerState.ChangeHealth(healthPercent);
     }
 
-    public void OnManaChange(Character character)
-    {
-        // 获取当前的蓝量
-        if (character is PlayerCharacter)
-        {
-            currentMana = (character as PlayerCharacter).CurrMana;
-        }
-        float manaPercent = currentMana / PlayerInfo.maxMana;
-        //PlayerState.ChangeMana(manaPercent);
-    }
-
     public void OnCloseCanvas()
     {
         UICanvas.SetActive(false);

@@ -10,9 +10,9 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [Header("攻击的各项属性")]
-    private int damage;          // 攻击力
-    private float attackRate;    // 攻击频率
-    private float knockFactor;   // 击退
+    [SerializeField] private int damage;          // 攻击力
+    [SerializeField] private float attackRate;    // 攻击频率
+    [SerializeField] private float knockFactor;   // 击退
     public LayerMask attackLayer;
 
     private float currAttackRate;

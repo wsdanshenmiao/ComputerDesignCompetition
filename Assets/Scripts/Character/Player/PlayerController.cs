@@ -55,6 +55,7 @@ public class PlayerController : Singleton<PlayerController>
 
     protected void Update()
     {
+        //Debug.Log(playerCharacter.IsDeath);
         if (playerInput.changeBackpacker) {
             CraftingSystem.Instance.ChangeCanvasState();
         }

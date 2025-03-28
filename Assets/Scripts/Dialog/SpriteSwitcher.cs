@@ -92,7 +92,7 @@ public class SpriteSwitcher : MonoBehaviour
         }
 
         onTransitionComplete.Invoke();
-        Debug.Log($"Transition complete to index: {targetIndex}");
+        //Debug.Log($"Transition complete to index: {targetIndex}");
     }
 
     // 基础层淡入（首次使用）

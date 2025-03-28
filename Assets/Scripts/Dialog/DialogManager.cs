@@ -96,7 +96,7 @@ public class DialogManager : Singleton<DialogManager>
     
     protected override void Awake()
     {
-        Debug.Log("sprites.Count:" + sprites.Count);
+        //Debug.Log("sprites.Count:" + sprites.Count);
         base.Awake();
         imageDic["角色A"] = sprites[0];
         imageDic["角色B"] = sprites[1];
@@ -186,13 +186,11 @@ public class DialogManager : Singleton<DialogManager>
         // {
         //     string[] cells = row.Split(',');
         // }
-        Debug.Log("读取成功" + dialogRows[0]);
+        //Debug.Log("读取成功" + dialogRows[0]);
     }
 
     public void ShowDialogRow()
     {
-        Debug.Log("currDialogIndex: " + currDialogIndex);
-        Debug.Log("dialogIndex: " + dialogIndex);
         int index = 0;
         foreach (var row in dialogRows)
         {
@@ -232,7 +230,7 @@ public class DialogManager : Singleton<DialogManager>
             
             else if (cells[0] == "^" && int.Parse(cells[1]) == dialogIndex)
             {
-                Debug.Log("开始切换场景，cells[2]:" + cells[2]);
+                //Debug.Log("开始切换场景，cells[2]:" + cells[2]);
                 CloseButtonCanvas();
                 CloseKeyCanvas();
                 CloseNormalDialog();
@@ -255,7 +253,7 @@ public class DialogManager : Singleton<DialogManager>
                 //剧情结束后，需要将背景图片隐藏（调整颜色）
                 SpriteSwitcher._baseImage.color = new Color(0, 0, 0, 0);
 
-                Debug.Log("剧情结束");
+                //Debug.Log("剧情结束");
                 OnDialogEnd.RaiseEvent(currDialogIndex);
                 break; //防止反复执行本代码段，从而反复触发结束事件
             }
@@ -326,12 +324,12 @@ public class DialogManager : Singleton<DialogManager>
     /// <param name="_index"></param>
     public void OpenDialog(int _index)
     {
-        Debug.Log(_index);
+        //Debug.Log(_index);
         currDialogIndex = _index;
         dialogIndex = 0;
         ReadText(dialogDataFiles[currDialogIndex]);
         // 防止开始人物对话是残留上次对话用到的人物立绘（可以在DialogCanvas未激活的情况下调整其子物体的组件吗？）
-        Debug.Log("有将sprite设置为null");
+        //Debug.Log("有将sprite设置为null");
         spriteLeft.sprite = null;
         spriteRight.sprite = null;
         
@@ -366,7 +364,7 @@ public class DialogManager : Singleton<DialogManager>
     public void CloseNormalDialog()
     {
         DialogCanvas.SetActive(false);
-        Debug.Log("spriteLeft is Null? " + spriteLeft.sprite == null);
+        //Debug.Log("spriteLeft is Null? " + spriteLeft.sprite == null);
         spriteLeft.gameObject.SetActive(false);
         spriteRight.gameObject.SetActive(false);
     }

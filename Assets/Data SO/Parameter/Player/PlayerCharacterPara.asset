@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a69eec813387ad54596a9d269c5c501b, type: 3}
   m_Name: PlayerCharacterPara
   m_EditorClassIdentifier: 
-  maxHealth: 60
+  maxHealth: 1
   invalidTime: 0.1
-  knockFactor: 2
+  hurtStopTime: 0.5
   damage: 20
   attackRange: 25
   attackRate: 0.5
+  knockFactor: 2
+  knockDuring: 0.3

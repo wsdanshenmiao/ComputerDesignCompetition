@@ -32,7 +32,7 @@ public class ItemWorld : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision");
+        //Debug.Log("Collision");
         if (other.gameObject.CompareTag("Player") && item.amount > 0) {
             CraftingSystem.Instance.AddItem(item);
             DestroySelf();

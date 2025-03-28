@@ -1,27 +1,9 @@
-/****************************************************************************************
-	Author:			danshenmiao
-	Versions:		1.0
-	Creation time:	2025.1.11
-	Finish time:	2025.1.11
-	Abstract:       管理玩家的属性
-****************************************************************************************/
-/****************************************************************************************
-	Author:			EFA
-	Versions:		2.0
-	Creation time:	2025.1.13
-	Finish time:	2025.1.13
-	Abstract:       添加魔力变化的事件广播和能否被设为目标
-****************************************************************************************/
-
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerCharacter : Character, ITargetable
 {
-    [Header("事件广播")]
-    public UnityEvent<Character> OnManaChange;
-
     public PlayerSO templatePlayerPara;
     [HideInInspector] public PlayerSO playerPara;
 
@@ -31,31 +13,15 @@ public class PlayerCharacter : Character, ITargetable
     [HideInInspector] public bool isCast = false;
 
     [HideInInspector] public float currSprintCD;
-
-    private float currMana;
-    private float currManaDelay;
-
-    #region 玩家数据读取及获取
-    public float CurrMana
-    {
-        get { return currMana; }
-        set { currMana = MathF.Max(0, value); OnManaChange.Invoke(this); }
-    }
-    #endregion
-
+    
     protected override void Update()
     {
         base.Update();
         currSprintCD -= Time.deltaTime;
-        UpdateMana();
-    }
-
-    private void UpdateMana()
-    {
-        currManaDelay = isCast ? playerPara.manaDelay : (currManaDelay - Time.deltaTime);
-        if (currManaDelay < 0)
-        {
-            CurrMana += playerPara.manaRestorate * Time.deltaTime;
+        
+        if (IsDeath) {
+            GameManager.Instance.SetPlayerPosition();
+            ResetData();
         }
     }
 
@@ -74,8 +40,6 @@ public class PlayerCharacter : Character, ITargetable
         base.ResetData();
         playerPara = Instantiate(templatePlayerPara);
         currSprintCD = playerPara.sprintCD;
-        CurrMana = playerPara.maxMana;
-        currManaDelay = playerPara.manaDelay;
         canBeTargeted = true;
         isCast = false;
     }
@@ -94,7 +58,6 @@ public class PlayerCharacter : Character, ITargetable
         if (_data.floatDatas.ContainsKey(maxManaID))
         {
             playerPara.maxMana = _data.floatDatas[maxManaID];
-            CurrMana = _data.floatDatas[currManaID];
             playerPara.manaRestorate = _data.floatDatas[manaRestorateID];
             playerPara.jumpHeight = _data.floatDatas[jumpHeightID];
             playerPara.sprintDuration = _data.floatDatas[sprintDurID];
@@ -120,7 +83,6 @@ public class PlayerCharacter : Character, ITargetable
         if (_data.floatDatas.ContainsKey(maxManaID))
         {
             _data.floatDatas[maxManaID] = playerPara.maxMana;
-            _data.floatDatas[currManaID] = CurrMana;
             _data.floatDatas[manaRestorateID] = playerPara.manaRestorate;
             _data.floatDatas[jumpHeightID] = playerPara.jumpHeight;
             _data.floatDatas[sprintDurID] = playerPara.sprintDuration;
@@ -128,7 +90,6 @@ public class PlayerCharacter : Character, ITargetable
         else
         {
             _data.floatDatas.Add(maxManaID, playerPara.maxMana);
-            _data.floatDatas.Add(currManaID, CurrMana);
             _data.floatDatas.Add(manaRestorateID, playerPara.manaRestorate);
             _data.floatDatas.Add(jumpHeightID, playerPara.jumpHeight);
             _data.floatDatas.Add(sprintDurID, playerPara.sprintDuration);

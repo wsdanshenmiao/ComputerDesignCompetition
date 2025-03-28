@@ -57,13 +57,10 @@ public class GameManager : Singleton<GameManager>, ISaveable
     
     public void LoadData(GameData _data)//获取上次存档点，并将玩家坐标设置到此处
     {
-        // ActiveCheckpoint(_data);
-
         lastCheckpointId = _data.lastCheckPoint;
-        //Invoke("SetPlayerPosition", .1f);
     }
 
-    private void SetPlayerPosition()//将玩家位置设置到最近一次的存档点处
+    public void SetPlayerPosition()//将玩家位置设置到最近一次的存档点处
     {
         //TODO 把存档点绑定到checkPoints里面
         foreach (SavePointSO savePointData in checkPoints)
