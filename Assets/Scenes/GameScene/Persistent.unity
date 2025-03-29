@@ -7169,15 +7169,21 @@ MonoBehaviour:
   itemCellX: 10
   compositionInfos:
   - itemType: 0
-    infoSprite: {fileID: 21300000, guid: acdd8e3f685f6614a92ae6113877ce42, type: 3}
+    infoSprite: {fileID: 21300000, guid: c71169f2bbee90a4da01fea7ed197891, type: 3}
   - itemType: 1
-    infoSprite: {fileID: 21300000, guid: 9981907189a125a4d987d05971a0b5dc, type: 3}
+    infoSprite: {fileID: 21300000, guid: 087c8199ceaa33947afbbf30d62490d0, type: 3}
   - itemType: 2
-    infoSprite: {fileID: 21300000, guid: ee35bdc8ae989184db82d5e5189d51f4, type: 3}
+    infoSprite: {fileID: 21300000, guid: 8e99097a71ff405419a9c4546db78d68, type: 3}
   - itemType: 3
-    infoSprite: {fileID: 21300000, guid: 1ceac77038f98884ba0767ba29da1f4c, type: 3}
+    infoSprite: {fileID: 21300000, guid: a155d81a53b0e70439d5b5a9ba26cdff, type: 3}
   - itemType: 4
-    infoSprite: {fileID: 21300000, guid: c78addb49d4b0474cb939421524c5cf5, type: 3}
+    infoSprite: {fileID: 21300000, guid: e6a4fb9ac7baeeb459f6e7f8617ee5e3, type: 3}
+  - itemType: 5
+    infoSprite: {fileID: 21300000, guid: 1616b3a73abd91646b756476db9919cd, type: 3}
+  - itemType: 6
+    infoSprite: {fileID: 21300000, guid: a34d2edd9fc51644da9de0befec63ef6, type: 3}
+  - itemType: 7
+    infoSprite: {fileID: 21300000, guid: 04e521e2c39a40e459d87b7d01810f94, type: 3}
   CompoundEvent: {fileID: 11400000, guid: bf769ca5ff90be6448c4620b75797182, type: 2}
 --- !u!114 &1612689861
 MonoBehaviour:
