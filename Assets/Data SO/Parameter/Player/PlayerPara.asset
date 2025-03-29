@@ -24,6 +24,6 @@ MonoBehaviour:
   manaCD: 0.5
   manaDelay: 2
   manaRestorate: 10
-  originSize: 0.66
+  originSize: 0.9
   bigSize: 1.32
   smallSize: 0.33

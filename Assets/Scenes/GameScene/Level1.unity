@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1893,7 +1893,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29432833, y: -2.8352504}
+  m_Offset: {x: -0.22189677, y: -2.8352504}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1904,7 +1904,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.666582, y: 0.39949894}
+  m_Size: {x: 4.811445, y: 0.39949894}
   m_EdgeRadius: 0
 --- !u!1 &590818371
 GameObject:
@@ -3237,8 +3237,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1508328038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &878621659
-BoxCollider2D:
+--- !u!60 &878621659
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3279,9 +3279,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 19.2, y: 10.8}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -9.599999, y: 5.4}
+      - {x: -9.599999, y: -3.6452615}
+      - {x: 9.631333, y: -3.7706003}
+      - {x: 9.599999, y: 5.4}
+  m_UseDelaunayMesh: 0
 --- !u!1 &934426962
 GameObject:
   m_ObjectHideFlags: 0
