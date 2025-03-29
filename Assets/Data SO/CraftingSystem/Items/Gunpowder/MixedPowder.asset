@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: MixedPowder
   itemType: 24
-  itemSprite: {fileID: 21300000, guid: f5fdba31623b5a947ad9a813ac0a1047, type: 3}
+  itemSprite: {fileID: 21300000, guid: bb4cb2e3d6c24de48b2983e4879b5e77, type: 3}

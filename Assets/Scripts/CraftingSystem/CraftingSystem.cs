@@ -41,6 +41,9 @@ public class CraftingSystem : Singleton<CraftingSystem>
         uiInventory.SetInventory(inventory);
         craftingSlots = uiInventory.GetCraftingTable();
         inventoryCanvas.enabled = false;
+        /*for (int i = 0; i < items.Count; i++) {
+            AddItem(new Item(){itemScriptableObject = items[i], amount = 1});
+        }*/
     }
 
     public bool ContainsItem(ItemScriptableObject item)

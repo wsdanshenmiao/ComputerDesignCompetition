@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BambooShovel
   itemType: 22
-  itemSprite: {fileID: 21300000, guid: 5051af05f5a4754449067cdd20506ef7, type: 3}
+  itemSprite: {fileID: 21300000, guid: 4c7706ff6907c7a4cac8ac21d9e89359, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: StressMirrorBody
   itemType: 0
-  itemSprite: {fileID: 21300000, guid: fd22839e60fffe44382f668988b3ddc9, type: 3}
+  itemSprite: {fileID: 21300000, guid: 9a87b9f2f4763c347bbab434785040f4, type: 3}

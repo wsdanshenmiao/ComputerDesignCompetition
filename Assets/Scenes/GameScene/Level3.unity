@@ -239,7 +239,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -803,8 +803,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &92202712
-BoxCollider2D:
+--- !u!60 &92202712
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -845,9 +845,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 19.2, y: 10.8}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -9.599999, y: 5.4}
+      - {x: -9.587096, y: -3.9704037}
+      - {x: 9.555614, y: -4.0240765}
+      - {x: 9.599999, y: 5.4}
+  m_UseDelaunayMesh: 0
 --- !u!1 &94961922
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +880,7 @@ Transform:
   m_GameObject: {fileID: 94961922}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -135.28, y: 24.58, z: 0}
+  m_LocalPosition: {x: -135.28, y: 23.61, z: 0}
   m_LocalScale: {x: 6.5499997, y: 7.2111216, z: 1.2242991}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1549,7 +1553,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1930,7 +1934,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2768,7 +2772,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3955,7 +3959,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4305,7 +4309,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4348,12 +4352,12 @@ PrefabInstance:
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.7
+      value: -75.47
       objectReference: {fileID: 0}
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.92
+      value: 22.22
       objectReference: {fileID: 0}
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
@@ -6418,7 +6422,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6651,12 +6655,12 @@ PrefabInstance:
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -130.1
+      value: -129.8
       objectReference: {fileID: 0}
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.11
+      value: 26.14
       objectReference: {fileID: 0}
     - target: {fileID: 1170571080718682959, guid: 77c368e42ddb002459f8fa224ec10763,
         type: 3}
@@ -7152,7 +7156,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

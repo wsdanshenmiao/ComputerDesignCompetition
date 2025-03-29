@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Calomelene
   itemType: 6
-  itemSprite: {fileID: 21300000, guid: f7c7eedf614f34b418e4739f4f0822a8, type: 3}
+  itemSprite: {fileID: 21300000, guid: cca9b9d87c1726b439b15abee1b4e678, type: 3}

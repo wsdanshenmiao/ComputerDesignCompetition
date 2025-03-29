@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Gunpowder
   itemType: 26
-  itemSprite: {fileID: 21300000, guid: 054444d9feb7ed442baba555f61796a7, type: 3}
+  itemSprite: {fileID: 21300000, guid: 76088812f9721e843b79a8f4bf8919b3, type: 3}

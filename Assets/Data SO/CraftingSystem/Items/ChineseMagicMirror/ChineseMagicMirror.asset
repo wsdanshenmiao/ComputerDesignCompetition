@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: ChineseMagicMirror
   itemType: 7
-  itemSprite: {fileID: 21300000, guid: 46255f4625e06fb4f8ebf0e2667e9987, type: 3}
+  itemSprite: {fileID: 21300000, guid: 2b32768e094e57e43965171daf68b230, type: 3}
