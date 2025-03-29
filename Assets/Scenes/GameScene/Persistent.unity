@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6278,13 +6278,13 @@ PrefabInstance:
         type: 3}
       propertyPath: sprites.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: d8441fc95e6f1bb40bd67e160b73283e,
+      objectReference: {fileID: -1436066234, guid: d8441fc95e6f1bb40bd67e160b73283e,
         type: 3}
     - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: sprites.Array.data[7]
       value: 
-      objectReference: {fileID: 21300000, guid: a17ac317326b22944a87d73e040ba944,
+      objectReference: {fileID: -1348761111, guid: a17ac317326b22944a87d73e040ba944,
         type: 3}
     - target: {fileID: 3717244540067544889, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
@@ -6374,7 +6374,7 @@ PrefabInstance:
     - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
       propertyPath: sprites.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
@@ -6393,6 +6393,12 @@ PrefabInstance:
       propertyPath: sprites.Array.data[8]
       value: 
       objectReference: {fileID: 21300000, guid: e8eac802019915646a0fd1d904012d67,
+        type: 3}
+    - target: {fileID: 4151991175404791446, guid: b2009aa6e1268fa47ba87d31fa15966c,
+        type: 3}
+      propertyPath: sprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3be4e356b89018243aa08a0c3ba19474,
         type: 3}
     - target: {fileID: 4712747503009845676, guid: b2009aa6e1268fa47ba87d31fa15966c,
         type: 3}
@@ -10764,6 +10770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161708360907179950, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
+        type: 3}
+      propertyPath: checkRadius
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1161708360907179950, guid: 46142cf9ac6fc5f4ea5f8db5061cd718,
         type: 3}
