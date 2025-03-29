@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310783842f509124ab2e6ebffa3d0ec6, type: 3}
   m_Name: Level2_4
   m_EditorClassIdentifier: 
-  savePointId: Level1_3
+  savePointId: Level2_4
   isActivated: 1
   pos: {x: 105.4, y: 22.8, z: 0}
