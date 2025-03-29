@@ -229,6 +229,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SavePoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7685714583472080344, guid: 77c368e42ddb002459f8fa224ec10763,
+        type: 3}
+      propertyPath: savePointData
+      value: 
+      objectReference: {fileID: 11400000, guid: af9d7416f3c1fd846a4f94bc58eb390b,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6263,6 +6269,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SavePoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7685714583472080344, guid: 77c368e42ddb002459f8fa224ec10763,
+        type: 3}
+      propertyPath: savePointData
+      value: 
+      objectReference: {fileID: 11400000, guid: 70a95bc190aeee747beed163237e6f5c,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
