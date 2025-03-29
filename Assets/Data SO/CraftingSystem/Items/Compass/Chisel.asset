@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Chisel
   itemType: 9
-  itemSprite: {fileID: 21300000, guid: dbe43f638b22228499eda8826b0033bc, type: 3}
+  itemSprite: {fileID: 21300000, guid: 68f02baa41f5ab94eaa2e810adc61bf1, type: 3}

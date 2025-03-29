@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magnet
   itemType: 11
-  itemSprite: {fileID: 21300000, guid: 8b5df078be0a1bc48874429ede6fff9a, type: 3}
+  itemSprite: {fileID: 21300000, guid: 0429b58a67320f045b19e13ca8a8796c, type: 3}

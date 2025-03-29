@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: CharcoalDust
   itemType: 21
-  itemSprite: {fileID: 21300000, guid: c98ae49738a3c274ab1eb353e1326518, type: 3}
+  itemSprite: {fileID: 21300000, guid: 6b50321835226eb45a36bf869bcd374a, type: 3}

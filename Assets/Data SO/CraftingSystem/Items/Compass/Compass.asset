@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Compass
   itemType: 17
-  itemSprite: {fileID: 21300000, guid: f1a9ff6032579c24f9fdb273d990e032, type: 3}
+  itemSprite: {fileID: 21300000, guid: 60367dd4c85a3734cbf99e1f4fd94165, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: JuncusRoemerianus
   itemType: 12
-  itemSprite: {fileID: 21300000, guid: 44906fff6c1857e44a47c09be9d8800c, type: 3}
+  itemSprite: {fileID: 21300000, guid: 43fa0c7c80e8de049b3a67c447251daf, type: 3}

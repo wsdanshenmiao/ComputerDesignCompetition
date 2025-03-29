@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Saltpeter
   itemType: 19
-  itemSprite: {fileID: 21300000, guid: 0a62ebcc934aa084eacf0c7bf3850c98, type: 3}
+  itemSprite: {fileID: 21300000, guid: 78fe58c3d38e43c4886fccb79a544ef0, type: 3}

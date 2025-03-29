@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BronzeIngot
   itemType: 1
-  itemSprite: {fileID: 21300000, guid: 422ef0900d4aa1e45910733f904139c8, type: 3}
+  itemSprite: {fileID: 21300000, guid: de4eeb5d3fabbf543a108f015350ca88, type: 3}

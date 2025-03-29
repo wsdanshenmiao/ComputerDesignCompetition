@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: FloatingMagnetNeedle
   itemType: 14
-  itemSprite: {fileID: 21300000, guid: 6ae7d67b020b71249853c5269b7e3b43, type: 3}
+  itemSprite: {fileID: 21300000, guid: af1f934d4d03d70488d8a23f3a64e3cf, type: 3}
