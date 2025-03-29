@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bassie
   itemType: 15
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 190ca98a67e84ab4ea6b51118c603888, type: 3}

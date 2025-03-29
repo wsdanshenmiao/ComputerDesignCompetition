@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wood
   itemType: 8
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 823b8ed8ac789aa49b13f102b876c97d, type: 3}
