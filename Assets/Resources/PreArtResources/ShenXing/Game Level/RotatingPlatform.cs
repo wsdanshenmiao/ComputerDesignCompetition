@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RotatingPlatform : MonoBehaviour
@@ -9,6 +10,8 @@ public class RotatingPlatform : MonoBehaviour
 
     private Rigidbody2D rb;
     private float currentAngle;
+    
+    private Transform player;
 
     void Start()
     {
@@ -22,22 +25,31 @@ public class RotatingPlatform : MonoBehaviour
         currentAngle += angularSpeed * Time.fixedDeltaTime;
         float angleRad = currentAngle * Mathf.Deg2Rad;
 
+        Vector3 prepos = transform.position;
+        
         // 计算新位置
         Vector2 newPos = new Vector2(
             Mathf.Cos(angleRad) * radius,
             Mathf.Sin(angleRad) * radius
         );
 
+
         // 移动平台
         rb.MovePosition(center.position + new Vector3(newPos.x, newPos.y, 0));
         transform.rotation = Quaternion.identity; // 保持水平
+        
+        if (player != null)
+        {
+            player.position += transform.position - prepos;
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.SetParent(transform);
+            player = other.GetComponent<Transform>();
+            // other.gameObject.transform.SetParent(transform);
         }
     }
 
@@ -45,7 +57,19 @@ public class RotatingPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.SetParent(null);
+            player = null;
+            Debug.Log("-------2--------");
+            // other.gameObject.transform.SetParent(null);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player = other.GetComponent<Transform>();
+            player = other.gameObject.transform;
+            Debug.Log("-------1--------");
         }
     }
 }
