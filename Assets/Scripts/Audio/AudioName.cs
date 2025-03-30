@@ -36,7 +36,7 @@ public class AudioName
     /// <summary>
     /// 场景音效
     /// </summary>
-    public static string BGM1 { get => "BGM1"; }
+    public static string BGM1 { get => "bgm"; }
     public static string BGM2 { get => "BGM2"; }
     public static string VineDestory { get => "VineDestory"; }
     public static string PasswordTileDisappeared { get => "PasswordTileDisappeared"; }
