@@ -36,6 +36,7 @@ public class Attack : MonoBehaviour
 
     protected void OnCollisionStay2D(Collision2D coll)
     {
+        Debug.Log("Attack!");
         if (IsInLayerMask(coll.gameObject, attackLayer) && currAttackRate < 0)
         {
             coll.collider.GetComponent<Character>()?.TakeDamege(this);
