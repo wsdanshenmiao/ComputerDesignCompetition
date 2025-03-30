@@ -43,6 +43,10 @@ public class PlayerStateJump : PlayerState
             playerStateMachine.SwitchState(typeof(PlayerStateFall));
             return;
         }
+        if (playerController.isGround && playerController.GetVelocityY() <= 0) {
+            playerStateMachine.SwitchState(typeof(PlayerStateIdle));
+            return;
+        }
         if (playerInput.canSprint)
         {
             playerStateMachine.SwitchState(typeof(PlayerStateSprint));
