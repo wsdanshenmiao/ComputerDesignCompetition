@@ -10915,7 +10915,7 @@ PrefabInstance:
     - target: {fileID: 1483862138656174751, guid: 15d1360d0173f3c4f829cb6fe262c1b5,
         type: 3}
       propertyPath: soundList.Array.data[0].volume
-      value: 0.365
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1483862138656174751, guid: 15d1360d0173f3c4f829cb6fe262c1b5,
         type: 3}

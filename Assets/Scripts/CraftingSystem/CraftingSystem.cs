@@ -40,7 +40,7 @@ public class CraftingSystem : Singleton<CraftingSystem>
     {
         uiInventory.SetInventory(inventory);
         craftingSlots = uiInventory.GetCraftingTable();
-        inventoryCanvas.enabled = false;
+        CloseCanvas();
         // for (int i = 18; i < items.Count; i++) {
         //     AddItem(new Item(){itemScriptableObject = items[i], amount = 4});
         // }

@@ -5,6 +5,14 @@ public class SavePoint : MonoBehaviour
 {
     public SavePointSO savePointData;
 
+    private void Start()
+    {
+        var renderer = GetComponent<SpriteRenderer>();
+        if (renderer != null) {
+            renderer.enabled = false;
+        }
+    }
+
     private void Update()
     {
         savePointData.pos = transform.position;
