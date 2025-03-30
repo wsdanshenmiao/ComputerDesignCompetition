@@ -4126,7 +4126,7 @@ PrefabInstance:
     - target: {fileID: 2260716475232634144, guid: 88a94148f66fff04b9e7126dc45b40b1,
         type: 3}
       propertyPath: DialogIndex
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2260716475232634144, guid: 88a94148f66fff04b9e7126dc45b40b1,
         type: 3}

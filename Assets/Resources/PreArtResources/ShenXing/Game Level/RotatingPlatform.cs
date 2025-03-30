@@ -10,6 +10,10 @@ public class RotatingPlatform : MonoBehaviour
     private Rigidbody2D rb;
     private float currentAngle;
 
+    private Transform player;
+
+    private Vector3 prePos;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,24 +32,30 @@ public class RotatingPlatform : MonoBehaviour
             Mathf.Sin(angleRad) * radius
         );
 
+        var newPosition = center.position + new Vector3(newPos.x, newPos.y, 0);
         // 移动平台
-        rb.MovePosition(center.position + new Vector3(newPos.x, newPos.y, 0));
+        rb.MovePosition(newPosition);
         transform.rotation = Quaternion.identity; // 保持水平
+
+        if (player != null) {
+            var offset = transform.position - prePos;
+            player.position += offset;
+        }
+
+        prePos = transform.position;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.transform.SetParent(transform);
+        if (other.gameObject.CompareTag("Player")) {
+            player = other.GetComponent<Transform>();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.transform.SetParent(null);
+        if (other.gameObject.CompareTag("Player")) {
+            player = null;
         }
     }
 }

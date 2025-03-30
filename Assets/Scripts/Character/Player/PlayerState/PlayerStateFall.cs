@@ -28,6 +28,10 @@ public class PlayerStateFall : PlayerState
 
     public override void LogicUpdate()
     {
+        if (playerInput.isJump) {
+            playerStateMachine.SwitchState(typeof(PlayerStateJump));
+            return;
+        }
         if (playerController.playerCharacter.IsHurt)
         {
             playerStateMachine.SwitchState(typeof(PlayerStateHurt));

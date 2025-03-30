@@ -3429,8 +3429,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260716475232634144, guid: 88a94148f66fff04b9e7126dc45b40b1,
         type: 3}
+      propertyPath: passItem
+      value: 
+      objectReference: {fileID: 11400000, guid: aee8fc5a185c9e142951e3e0cc6f32cd,
+        type: 2}
+    - target: {fileID: 2260716475232634144, guid: 88a94148f66fff04b9e7126dc45b40b1,
+        type: 3}
       propertyPath: DialogIndex
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2260716475232634144, guid: 88a94148f66fff04b9e7126dc45b40b1,
         type: 3}

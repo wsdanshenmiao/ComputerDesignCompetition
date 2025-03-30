@@ -29,6 +29,10 @@ public class GameManager : Singleton<GameManager>, ISaveable
         OnDialogEndEvent.OnEventRaised += OnDialogEnd;
     }
 
+    /// <summary>
+    /// 通关一关之后传送到选图地点
+    /// </summary>
+    /// <param name="dialogIndex"></param>
     private void OnDialogEnd(int dialogIndex)
     {
         // 若是结尾的对话则传送到下一关

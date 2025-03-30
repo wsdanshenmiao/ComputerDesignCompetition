@@ -48,7 +48,7 @@ public class PlayerState : ScriptableObject, IState
 
     public virtual void OnEnter()
     {
-        playerAnimator.CrossFade(stateHash, tranditionTime);
+        playerAnimator?.CrossFade(stateHash, tranditionTime);
     }
 
     public virtual void LogicUpdate() { }

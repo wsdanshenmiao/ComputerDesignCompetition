@@ -13,7 +13,7 @@ public class PlayerStateMove : PlayerState
     public override void OnEnter()
     {
         string currStateName = playerController.isBigSize ? "Walk" : "Run";
-        playerAnimator.CrossFade(stateName + currStateName, tranditionTime);
+        playerAnimator?.CrossFade(stateName + currStateName, tranditionTime);
         AudioManager.PlayAudio(AudioName.PlayerWalk);
     }
 
@@ -48,7 +48,7 @@ public class PlayerStateMove : PlayerState
 
     public override void PhysicsUpdate()
     {
-        if (!playerController.isGround && !playerInput.isJump) {
+        if (!playerController.isGround && !playerInput.isJump && !playerInput.isFalling) {
             playerController.SetVelocityY(0);
         }
         playerController.Move(GetCurrSpeed());

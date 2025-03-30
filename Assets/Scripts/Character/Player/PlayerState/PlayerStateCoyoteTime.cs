@@ -16,7 +16,7 @@ public class PlayerStateCoyoteTime : PlayerState
     public override void OnEnter()
     {
         string currStateName = playerController.isBigSize ? "Walk" : "Run";
-        playerAnimator.CrossFade(stateName + currStateName, tranditionTime);
+        playerAnimator?.CrossFade(stateName + currStateName, tranditionTime);
 
         PlayerSO playerPara = playerController.playerCharacter.playerPara;
 
