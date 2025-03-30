@@ -37,11 +37,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a20c8dd0cde099848b8c8e3bbac02ff9
-    m_Address: Assets/Scenes/GameScene/Level3.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df6476985455d5f418f2cc3d0eb6cfd2
     m_Address: Assets/Scenes/GameScene/Portal Map.unity
     m_ReadOnly: 0

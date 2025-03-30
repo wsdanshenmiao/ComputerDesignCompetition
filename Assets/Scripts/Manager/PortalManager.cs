@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PortalManager : Singleton<PortalManager>
 {
+    [SerializeField] private VoidEventSO AfterSceneLoadEvent;
+    
     [Header("传送列表")]
     public List<PortailInfo> portailInfos = new List<PortailInfo>();
 
@@ -16,9 +18,27 @@ public class PortalManager : Singleton<PortalManager>
 
     private PortailInfo currentInfo;
 
+    // 防止重复点击
+    private bool isPortal = false;
+
     protected override void Awake()
     {
         DistributeInfo();
+    }
+
+    protected void OnEnable()
+    {
+        AfterSceneLoadEvent.OnEventRaised += AfterSceneLoad;
+    }
+
+    protected void OnDisable()
+    {
+        AfterSceneLoadEvent.OnEventRaised -= AfterSceneLoad;
+    }
+
+    private void AfterSceneLoad()
+    {
+        isPortal = false;
     }
 
     public void DistributeInfo()
@@ -34,7 +54,8 @@ public class PortalManager : Singleton<PortalManager>
     public void ChoosePoint(PortailInfo portailInfo)
     {
         // 检测场景是否解锁
-        if (!GameManager.lockScene[portailInfo.sceneIndex]) {
+        if (!isPortal && !GameManager.lockScene[portailInfo.sceneIndex]) {
+            isPortal = true;
             currentInfo = portailInfo;
             StartPortal();
         }
@@ -42,7 +63,7 @@ public class PortalManager : Singleton<PortalManager>
 
     public void StartPortal()
     {
-        //Debug.unityLogger.Log("StartPortal");
+        Debug.Log("StartPortal");
         SceneManager.Instance.PortalToNew(currentInfo.GameScene, currentInfo.Position);
     }
 }

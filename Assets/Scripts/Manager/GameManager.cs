@@ -62,7 +62,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
     public void SetPlayerPosition()//将玩家位置设置到最近一次的存档点处
     {
-        //TODO 把存档点绑定到checkPoints里面
         foreach (SavePointSO savePointData in checkPoints)
         {
             if (savePointData.savePointId == lastCheckpointId)

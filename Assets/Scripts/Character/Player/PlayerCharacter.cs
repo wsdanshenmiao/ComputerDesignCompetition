@@ -13,18 +13,29 @@ public class PlayerCharacter : Character, ITargetable
     [HideInInspector] public bool isCast = false;
 
     [HideInInspector] public float currSprintCD;
-    
+
+    private void OnEnable()
+    {
+        OnDieEvent.AddListener(ResurgencePlayer);
+    }
+
     protected override void Update()
     {
         base.Update();
         currSprintCD -= Time.deltaTime;
-        
-        if (IsDeath) {
-            GameManager.Instance.SetPlayerPosition();
-            ResetData();
-        }
     }
 
+    private void OnDisable()
+    {
+        OnDieEvent.RemoveListener(ResurgencePlayer);
+    }
+
+    public void ResurgencePlayer()
+    {
+        GameManager.Instance.SetPlayerPosition();
+        ResetData();
+    }
+    
     public void SetTargetable(bool targetable)
     {
         canBeTargeted = targetable;

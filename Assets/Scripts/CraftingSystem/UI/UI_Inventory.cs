@@ -26,6 +26,8 @@ public class UI_Inventory : MonoBehaviour
 
     // 合成事件监听
     [SerializeField] private VoidEventSO CompoundEvent;
+    
+    [SerializeField] private Sprite compositionInfoDefaultSprite;
 
     // 合成台
     private Transform craftingTable;
@@ -65,7 +67,10 @@ public class UI_Inventory : MonoBehaviour
         CompoundEvent.OnEventRaised += OnCompound;
     }
 
-
+    private void Start()
+    {
+        compositionInfo.sprite = compositionInfoDefaultSprite;
+    }
 
     private void Update()
     {
@@ -253,11 +258,11 @@ public class UI_Inventory : MonoBehaviour
             {
                 return info.itemType == type;
             });
-            compositionInfo.sprite = info == null ? null : info.infoSprite;
+            compositionInfo.sprite = info == null ? compositionInfoDefaultSprite : info.infoSprite;
         }
         else
         {
-            compositionInfo.sprite = null;
+            compositionInfo.sprite = compositionInfoDefaultSprite;
         }
     }
 }
