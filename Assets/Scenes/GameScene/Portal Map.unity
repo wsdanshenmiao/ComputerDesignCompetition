@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e9f0296205e644c9d4dab2b19cb8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  sceneIndex: 0
   GameScene: {fileID: 0}
   Position: {x: 0, y: 0, z: 0}
 --- !u!1 &1985106237
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e9f0296205e644c9d4dab2b19cb8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  sceneIndex: 1
   GameScene: {fileID: 0}
   Position: {x: 0, y: 0, z: 0}
 --- !u!222 &1985106239
