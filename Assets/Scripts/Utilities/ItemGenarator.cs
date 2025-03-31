@@ -3,7 +3,7 @@ using UnityEditor;
 
 public class ItemGenarator : MonoBehaviour  
 {  
-    [ContextMenu("Create Scriptable Object")]  
+    /*[ContextMenu("Create Scriptable Object")]  
     public void CreateScriptableObject()
     {
         string[] finalItem = new[] { "ChineseMagicMirror", "Compass", "Gunpowder" };
@@ -34,5 +34,5 @@ public class ItemGenarator : MonoBehaviour
             // 打印信息  
             Debug.Log($"Created ScriptableObject at {path}");  
         }
-    }  
+    }  */
 }  

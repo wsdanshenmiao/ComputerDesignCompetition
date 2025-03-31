@@ -123,7 +123,6 @@ public class UI_Inventory : MonoBehaviour
         if (recipe == null)
         {
             outputCraftingSlot.item = null;
-
         }
         else if (outputCraftingSlot.item == null)
         {

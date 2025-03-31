@@ -62,7 +62,7 @@ public class PlayerController : Singleton<PlayerController>
             CraftingSystem.Instance.ChangeCanvasState();
         }
 
-        if (isGround) {
+        if (isGround && !physicsCheck.touchLeftWall && !physicsCheck.touchRightWall) {
             rigidBody.sharedMaterial = null;
         }
         else {

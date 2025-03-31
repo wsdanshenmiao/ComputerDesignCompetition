@@ -106,7 +106,7 @@ public class Character : MonoBehaviour
         float damege = attacker.GetDamage();
         if (damege == 0) return;
         CurrHealth = Mathf.Max(0, CurrHealth - damege);
-        Debug.Log("Attack! " + CurrHealth);
+        //Debug.Log("Attack! " + CurrHealth);
         OnHealthChangeEvent?.Invoke(this);  // 广播受伤事件
         if (CurrHealth <= 0)
         {

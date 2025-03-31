@@ -2,7 +2,6 @@ using System;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
 
 /// <summary>
 /// 制作槽
