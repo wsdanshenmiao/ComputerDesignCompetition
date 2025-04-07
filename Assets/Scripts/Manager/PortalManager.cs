@@ -20,11 +20,50 @@ public class PortalManager : Singleton<PortalManager>
 
     // 防止重复点击
     private bool isPortal = false;
+    
+    // 在通关某一关后解锁对应的图片
+    [SerializeField] private GameObject[] imageArray;
 
     protected override void Awake()
     {
         DistributeInfo();
     }
+
+    protected void Start()
+    {
+        ActivateImage();
+    }
+
+    private void ActivateImage()
+    {
+        //加载本场景后，更新过关图片的显示
+        for (int i = 0; i < portailInfos.Count; i++)
+        {
+            //DEBUG
+            // if (GameManager.lockScene[i] == true)
+            // {
+            //     Debug.Log("Level " + i + " is locked");
+            // }
+            // else
+            // {
+            //     Debug.Log("Level " + i + " is not locked");
+            // }
+
+            //如果当前关卡处于锁的状态，则解锁的关卡在后面，所以当前关一定为已通关的状态
+            if (GameManager.lockScene[i])
+            {
+                if (i >= 0 && i < imageArray.Length)
+                {
+                    imageArray[i].SetActive(true);
+                }
+            }
+            else //当前关处于解锁的状态，则还没进入，不要加载过关图标
+            {
+                break; //后面的关卡更加不可能需要加载过关图标
+            }
+        }
+    }
+
 
     protected void OnEnable()
     {
