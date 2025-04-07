@@ -66,6 +66,9 @@ public class CraftingSystem : Singleton<CraftingSystem>
     public void CloseCanvas()
     {
         inventoryCanvas.enabled = false;
+        foreach (var slot in craftingSlots) {
+            slot.item = null;
+        }
     }
 
     public void OpenCanvas()

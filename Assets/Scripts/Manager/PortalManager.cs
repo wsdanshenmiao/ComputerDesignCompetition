@@ -63,7 +63,7 @@ public class PortalManager : Singleton<PortalManager>
 
     public void StartPortal()
     {
-        Debug.Log("StartPortal");
+        //Debug.Log("StartPortal");
         SceneManager.Instance.PortalToNew(currentInfo.GameScene, currentInfo.Position);
     }
 }
