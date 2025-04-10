@@ -20,7 +20,7 @@ public class PhysicsCheck : MonoBehaviour
     private void Update()
     {
         Cheack();
-       // Debug.Log("isGround: " + isGround);
+        //Debug.Log("isGround: " + isGround);
     }
 
     public void Cheack()

@@ -18,32 +18,32 @@ MonoBehaviour:
   m_GUID: d1682df7ad1489343b642ac69c032262
   m_SerializeEntries:
   - m_GUID: 94754044f8ff49848976c2a91602d854
-    m_Address: Assets/Scenes/GameScene/Persistent.unity
+    m_Address: Persistent
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1b830c7fec53af459f669e9cf4dd03d
-    m_Address: Assets/Scenes/GameScene/Menu.unity
+    m_Address: Menu
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 09564c80e3a346c4e94449f60e36b729
-    m_Address: Assets/Scenes/GameScene/Level1.unity
+    m_Address: Level1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bd68fee9e50bf924797110ec51b7c4b2
-    m_Address: Assets/Scenes/GameScene/Level2.unity
+    m_Address: Level2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df6476985455d5f418f2cc3d0eb6cfd2
-    m_Address: Assets/Scenes/GameScene/Portal Map.unity
+    m_Address: Portal Map
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a20c8dd0cde099848b8c8e3bbac02ff9
-    m_Address: Assets/Scenes/GameScene/Level3.unity
+    m_Address: Level3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
