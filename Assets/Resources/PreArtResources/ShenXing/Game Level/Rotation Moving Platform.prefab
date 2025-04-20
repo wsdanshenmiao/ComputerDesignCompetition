@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1123785234986209005}
   - component: {fileID: 8061936158154252637}
   - component: {fileID: 42997207026265763}
-  - component: {fileID: -2020648337623422242}
   - component: {fileID: 5929490302251494533}
+  - component: {fileID: 7151779119422408956}
   m_Layer: 6
   m_Name: Rotation Moving Platform
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7799581603944033764}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -77.9, y: 31.6, z: 0}
   m_LocalScale: {x: 4.68, y: 4.5239997, z: 1.56}
   m_ConstrainProportionsScale: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1486483823
-  m_SortingLayer: 2
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 264e28f1cfd66274b8b318f05bead220, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -160,22 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5694758, y: 0.10336646}
   m_EdgeRadius: 0
---- !u!114 &-2020648337623422242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7799581603944033764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad86e02491707f4b895b4e47a72fd88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  center: {fileID: 0}
-  radius: 15
-  angularSpeed: 30
-  initialAngleOffset: 0
 --- !u!61 &5929490302251494533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -221,3 +205,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5868269, y: 0.04175487}
   m_EdgeRadius: 0
+--- !u!114 &7151779119422408956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799581603944033764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a879dbf402df8a4d94f0a673e79b1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePoints:
+  - {x: -59.2, y: 36.3, z: 0}
+  - {x: -70, y: 32.2, z: 0}
+  - {x: -74.7, y: 20.28, z: 0}
+  - {x: -69.5, y: 9.27, z: 0}
+  - {x: -59.6, y: 6.69, z: 0}
+  - {x: -47.9, y: 9.93, z: 0}
+  - {x: -41.6, y: 21.95, z: 0}
+  - {x: -48.2, y: 31.8, z: 0}
+  moveSpeed: 15
+  stopDistance: 0.001
+  waitTime: 0.001
