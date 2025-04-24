@@ -226,6 +226,6 @@ MonoBehaviour:
   - {x: -47.9, y: 9.93, z: 0}
   - {x: -41.6, y: 21.95, z: 0}
   - {x: -48.2, y: 31.8, z: 0}
-  moveSpeed: 10
+  moveSpeed: 7
   stopDistance: 0.001
   waitTime: 0.001

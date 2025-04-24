@@ -47,6 +47,7 @@ public class PlayerStateMove : PlayerState
 
     public override void PhysicsUpdate()
     {
+        // Changed By ShenXing
         if (!playerController.isGround && !playerInput.isJump && !playerInput.isFalling) {
             playerController.SetVelocityY(0);
         }
