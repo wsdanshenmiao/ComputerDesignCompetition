@@ -15,7 +15,9 @@ public class PhysicsCheck : MonoBehaviour
     [SerializeField] private Vector2 leftOffset; // 记录左边的位移差值
     [SerializeField] private Vector2 rightOffset; // 记录右边的位移差值
     [SerializeField] private LayerMask groundLayer; // Ground图层
-    [SerializeField] private float checkRadius;
+    [SerializeField] private float bottomCheckRadius; // 记录脚底检测半径
+    [SerializeField] private float leftCheckRadius; // 记录左边的检测半径
+    [SerializeField] private float rightCheckRadius; // 记录右边的检测半径
 
     private void Update()
     {
@@ -26,21 +28,21 @@ public class PhysicsCheck : MonoBehaviour
     public void Cheack()
     {
         // 检查地面(需要正面位置)
-        isGround = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), checkRadius, groundLayer); // 如果在半径范围内检测到了地面的图层，就返回isGround
+        isGround = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), bottomCheckRadius, groundLayer); // 如果在半径范围内检测到了地面的图层，就返回isGround
         // layerMask是指图层掩码,而不是索引值
         // 检查左侧墙体
-        touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, checkRadius, groundLayer);
+        touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, leftCheckRadius, groundLayer);
         // 检查右侧墙体
-        touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, checkRadius, groundLayer);
+        touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, rightCheckRadius, groundLayer);
     }
 
     private void OnDrawGizmosSelected()
     {
         // 绘制底部虚球
-        Gizmos.DrawWireSphere(((Vector2)transform.position) + new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), checkRadius);
+        Gizmos.DrawWireSphere(((Vector2)transform.position) + new Vector2(bottomOffset.x * transform.localScale.x, bottomOffset.y), bottomCheckRadius);
         // 绘制左侧虚球
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, checkRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, leftCheckRadius);
         // 绘制右侧虚球
-        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, checkRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, rightCheckRadius);
     }
 }

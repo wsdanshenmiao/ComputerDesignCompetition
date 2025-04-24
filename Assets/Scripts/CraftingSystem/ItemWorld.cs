@@ -18,7 +18,10 @@ public class ItemWorld : MonoBehaviour
     }
 
     protected void OnCollisionEnter2D(Collision2D other)
-    {
+    {        
+        // Changed By ShenXing
+        if (other.collider is BoxCollider2D) return; // 忽略圆形碰撞体
+        
         Debug.Log("Collision");
         if (other.gameObject.CompareTag("Player") && item.amount > 0) {
             CraftingSystem.Instance.AddItem(new Item()
@@ -32,6 +35,9 @@ public class ItemWorld : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
+        // Changed By ShenXing
+        if (other is BoxCollider2D) return; // 忽略圆形碰撞体
+        
         //Debug.Log("Collision");
         if (other.gameObject.CompareTag("Player") && item.amount > 0) {
             CraftingSystem.Instance.AddItem(item);

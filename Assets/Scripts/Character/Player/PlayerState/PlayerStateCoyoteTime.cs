@@ -24,8 +24,10 @@ public class PlayerStateCoyoteTime : PlayerState
         currTime = playerPara.coyoteDuration;
 
         // 土狼时间不下坠
-        playerController.SetVelocityY(0);
-        playerController.SetGravityScale(0);
+        // （就算把土狼时间设置为0也会重置Y的速度啊啊啊，只好把你禁用了）
+        // Changed By ShenXing
+        // playerController.SetVelocityY(0);
+        // playerController.SetGravityScale(0);
     }
 
     public override void LogicUpdate()
