@@ -2682,7 +2682,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[1].y
-      value: 9.27
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -2692,7 +2692,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[2].y
-      value: 6.69
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -2702,7 +2702,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[3].y
-      value: 9.93
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -3492,7 +3492,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[0].y
-      value: 6.69
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -3502,7 +3502,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[1].y
-      value: 9.93
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -3562,7 +3562,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[7].y
-      value: 9.27
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7799581603944033764, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -6931,7 +6931,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[5].y
-      value: 9.27
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -6941,7 +6941,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[6].y
-      value: 6.69
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -6951,7 +6951,7 @@ PrefabInstance:
     - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
       propertyPath: movePoints.Array.data[7].y
-      value: 9.93
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 7799581603944033764, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
@@ -8028,6 +8028,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
+        type: 3}
+      propertyPath: movePoints.Array.data[3].y
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
+        type: 3}
+      propertyPath: movePoints.Array.data[4].y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151779119422408956, guid: fd28b0915aa3c69429e20d7565ae2e6d,
+        type: 3}
+      propertyPath: movePoints.Array.data[5].y
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 7799581603944033764, guid: fd28b0915aa3c69429e20d7565ae2e6d,
         type: 3}
