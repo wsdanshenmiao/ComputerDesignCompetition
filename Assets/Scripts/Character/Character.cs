@@ -38,8 +38,6 @@ public class Character : MonoBehaviour
     protected bool isDeath = false;
     [HideInInspector] public bool canMove = true;
 
-    public SavePriority LoadPriority => SavePriority.PlayerData;
-
     #region
     public float CurrHealth
     {
@@ -153,58 +151,4 @@ public class Character : MonoBehaviour
         canMove = true;
     }
 
-    public virtual void LoadData(GameData _data)
-    {
-        string maxHPID = "MaxHealth" + dataDef.dataID;
-        string currHPID = "CurrHP" + dataDef.dataID;
-        string posXID = "PosX" + dataDef.dataID;
-        string posYID = "PosY" + dataDef.dataID;
-        string posZID = "PosZ" + dataDef.dataID;
-        Vector3 pos;
-
-        if (_data.floatDatas.ContainsKey(maxHPID))
-        {
-            charaPara.maxHealth = _data.floatDatas[maxHPID];
-            CurrHealth = _data.floatDatas[currHPID];
-            pos.x = _data.floatDatas[posXID];
-            pos.y = _data.floatDatas[posYID];
-            pos.z = _data.floatDatas[posZID];
-            transform.position = pos;
-            if (CurrHealth > 0)
-            {
-                IsDeath = false;
-            }
-            else
-            {
-                IsDeath = true;
-            }
-        }
-    }
-
-    public virtual void SaveData(ref GameData _data)
-    {
-        string maxHPID = "MaxHealth" + dataDef.dataID;
-        string currHPID = "CurrHP" + dataDef.dataID;
-        string posXID = "PosX" + dataDef.dataID;
-        string posYID = "PosY" + dataDef.dataID;
-        string posZID = "PosZ" + dataDef.dataID;
-        Vector3 pos = transform.position;
-
-        if (_data.floatDatas.ContainsKey(maxHPID))
-        {
-            _data.floatDatas[maxHPID] = charaPara.maxHealth;
-            _data.floatDatas[currHPID] = CurrHealth;
-            _data.floatDatas[posXID] = pos.x;
-            _data.floatDatas[posYID] = pos.y;
-            _data.floatDatas[posZID] = pos.z;
-        }
-        else
-        {
-            _data.floatDatas.Add(maxHPID, charaPara.maxHealth);
-            _data.floatDatas.Add(currHPID, CurrHealth);
-            _data.floatDatas.Add(posXID, pos.x);
-            _data.floatDatas.Add(posYID, pos.y);
-            _data.floatDatas.Add(posZID, pos.z);
-        }
-    }
 }

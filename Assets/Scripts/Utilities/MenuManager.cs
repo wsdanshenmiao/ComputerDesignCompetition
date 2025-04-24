@@ -44,7 +44,6 @@ public class MenuManager : Singleton<MenuManager>
     {
         if (isContinueGame)
         {
-            SaveManager.Instance.LoadGame();
         }
     }
 
@@ -57,18 +56,6 @@ public class MenuManager : Singleton<MenuManager>
     public void ContinueGame()
     {
         menuCancas.gameObject.SetActive(false);
-
-        Debug.Log("ContinueGame");
-        if (SaveManager.Instance.LoadLastScene())
-        {
-            isContinueGame = true;
-        }
-        else
-        {
-            SaveManager.Instance.NewGame();
-            OnNewGameEvent.RaiseEvent();
-            isContinueGame = false;
-        }
     }
 
     public void NewGame()

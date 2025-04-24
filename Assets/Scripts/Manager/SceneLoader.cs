@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
-    public SavePriority LoadPriority => SavePriority.CoreSystem;
     [Header("事件")]
     public ExitSceneEventSO ExitSceneEvent;
     public SceneLoadEventSO SceneLoadEvent;
@@ -178,46 +177,6 @@ public class SceneLoader : Singleton<SceneLoader>
             return true;
         }
         return false;
-    }
-
-    public bool LoadData(GameData _data)
-    {
-        string playerID = PlayerController.Instance.GetComponent<DataDefiantion>().dataID;
-        string posXID = "PosX" + playerID;
-        string posYID = "PosY" + playerID;
-        string posZID = "PosZ" + playerID;
-        if (_data.floatDatas.ContainsKey(posXID))
-        {
-            Vector3 pos;
-            pos.x = _data.floatDatas[posXID];
-            pos.y = _data.floatDatas[posYID];
-            pos.z = _data.floatDatas[posZID];
-
-            SceneToLoad = _data.GetScene();
-            if (SceneToLoad != null)
-            {
-                RequestLoadEvent(SceneToLoad, pos, true);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        return false;
-    }
-
-    public bool SaveData(ref GameData _data)
-    {
-        if (CurrentLoadScene != null && CurrentLoadScene.SceneType != SceneType.Menu)
-        {
-            _data.SaveScene(CurrentLoadScene);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
 
     public bool GetFadeOrNot()

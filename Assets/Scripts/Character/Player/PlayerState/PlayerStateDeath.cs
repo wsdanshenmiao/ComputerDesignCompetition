@@ -30,7 +30,6 @@ public class PlayerStateDeath : PlayerState
         playerController.SetVelocityX(0);
         playerController.SetVelocityY(0);
 
-        SaveManager.Instance.LoadLastScene();
 
         //OnFadeEvent.FadeIn(fadeDuration);
         //playerController.StartCoroutine(SwitchToIdle());
@@ -41,7 +40,6 @@ public class PlayerStateDeath : PlayerState
         base.LogicUpdate();
         if (playerController.finishLoadScene)
         {
-            SaveManager.Instance.LoadGame();
             playerStateMachine.SwitchState(typeof(PlayerStateIdle));
         }
     }
