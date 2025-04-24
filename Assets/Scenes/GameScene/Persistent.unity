@@ -10627,6 +10627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2859138717779747837, guid: aadaf9b8e70f8384688bf1918211f25a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7098805749644935002, guid: aadaf9b8e70f8384688bf1918211f25a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11242,6 +11247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944461423858120435, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5940532080376601527, guid: 5b6a90bab6f6ef74b9578d06c4af79f4,
         type: 3}
